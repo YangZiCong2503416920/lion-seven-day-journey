@@ -183,6 +183,7 @@
     .stage-photo figcaption{position:absolute;z-index:1;left:18px;right:18px;bottom:16px;color:#fff;font-size:12px}
     .stage-photo figcaption b{display:block;margin-bottom:2px;color:var(--gold-light);font-family:Georgia,serif;font-size:18px}
     .stage-action{display:inline-flex;align-items:center;gap:7px;margin-top:6px;border:0;padding:0;color:var(--red-deep);font-weight:800;background:transparent}
+    .stage-note{margin:0 0 10px;color:var(--red-deep);font-size:14px;font-weight:800}
 
     .interactive-tray{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
     .tray-chip{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink);background:rgba(255,255,255,.48);font-size:12px}
@@ -351,6 +352,56 @@
       .wish{padding-top:78px;padding-bottom:88px}.wish-form{flex-direction:column}
       .final{padding-top:95px;padding-bottom:55px}
     }
+    /* --- 01 醒狮：三声鼓唤醒 --- */
+    .stage-photo .lion-tap{
+      position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);
+      width:92px;height:92px;border-radius:50%;border:1px solid rgba(244,211,138,.65);
+      color:var(--gold-light);background:rgba(15,6,12,.55);backdrop-filter:blur(8px);
+      display:grid;place-items:center;box-shadow:0 0 0 0 rgba(244,211,138,0);cursor:pointer;
+      transition:transform .2s ease,background .2s ease;
+    }
+    .stage-photo .lion-tap:hover{transform:translate(-50%,-50%) scale(1.07);background:rgba(196,38,59,.82)}
+    .stage-photo .lion-tap svg{width:38px;height:38px;pointer-events:none}
+    .stage-photo .lion-tap.ring{animation:ring .5s ease}
+    @keyframes ring{0%{box-shadow:0 0 0 0 rgba(244,211,138,.55)}100%{box-shadow:0 0 0 38px rgba(244,211,138,0)}}
+    .stage-photo .lion-tap.awake{background:rgba(196,38,59,.9)}
+    .lion-race{position:absolute;z-index:3;left:16px;top:16px;right:16px;display:flex;align-items:center;gap:9px;color:#fff;font-size:12px}
+    .lion-race b{color:var(--gold-light);letter-spacing:.14em}
+    .lion-beats{margin-left:auto;display:flex;gap:6px}
+    .lion-beats i{width:11px;height:11px;border-radius:50%;border:1px solid rgba(255,255,255,.75);background:transparent;transition:background .2s ease,border-color .2s ease}
+    .lion-beats i.on{background:var(--gold-light);border-color:var(--gold-light)}
+    .roar-word{position:absolute;z-index:4;left:50%;top:30%;transform:translate(-50%,-50%) scale(.5);opacity:0;color:var(--gold-light);font-family:Georgia,"Noto Serif SC",serif;font-size:70px;font-weight:700;letter-spacing:.04em;pointer-events:none;text-shadow:0 6px 26px rgba(0,0,0,.4);transition:opacity .3s ease,transform .3s ease}
+    .roar-word.show{opacity:1;transform:translate(-50%,-50%) scale(1)}
+
+    /* --- 02 漆扇：选色滴漆 --- */
+    .paint-swatches{position:absolute;z-index:4;left:50%;bottom:16px;transform:translateX(-50%);display:flex;gap:10px}
+    .paint-swatches .swatch{width:32px;height:32px;border-radius:50%;border:2px solid rgba(255,255,255,.9);box-shadow:0 6px 14px rgba(0,0,0,.18);cursor:pointer;transition:transform .2s ease}
+    .paint-swatches .swatch:hover{transform:scale(1.16)}
+    .paint-swatches .swatch:active{transform:scale(.9)}
+    .paint-drop{position:absolute;z-index:2;width:18px;height:18px;border-radius:50%;filter:blur(1px);opacity:0;transform:translate(-50%,-50%) scale(.4);animation:dropIn .6s ease forwards}
+    @keyframes dropIn{0%{opacity:0;transform:translate(-50%,-50%) scale(.4)}55%{opacity:1;transform:translate(-50%,-50%) scale(1.3)}100%{opacity:.92;transform:translate(-50%,-50%) scale(1)}}
+    .paint-counter{position:absolute;z-index:4;right:18px;top:16px;color:var(--red-deep);font-size:11px;letter-spacing:.1em;background:rgba(255,255,255,.72);padding:4px 9px;border-radius:999px}
+    .paint-pad.done .paint-counter{color:#fff;background:rgba(126,22,41,.4)}
+
+    /* --- 03 水火箭：打气 → 发射 --- */
+    .rocket-gauge{position:absolute;z-index:4;left:16px;bottom:54px;width:132px;color:#284c4b}
+    .rocket-gauge small{display:block;font-size:10px;letter-spacing:.12em;margin-bottom:6px;font-weight:800}
+    .rocket-gauge .bar{height:13px;border-radius:999px;background:rgba(40,76,75,.18);overflow:hidden}
+    .rocket-gauge .bar i{display:block;width:0;height:100%;border-radius:999px;background:linear-gradient(90deg,#8fd0d8,#4d9ba0);transition:width .25s ease}
+    .rocket-zone.shake{animation:shake .4s ease}
+    @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+
+    /* --- 04 红色：翻开来信 --- */
+    .red-flip{position:relative;margin-top:16px;perspective:1000px;cursor:pointer}
+    .red-flip .flip-inner{position:relative;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.75,.25,1)}
+    .red-flip.flipped .flip-inner{transform:rotateY(180deg)}
+    .red-flip .face{backface-visibility:hidden;border-radius:16px;overflow:hidden}
+    .red-flip .front{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);padding:15px 17px;color:#fff;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:space-between;gap:9px}
+    .red-flip .front .tag{font-size:10px;letter-spacing:.12em;background:rgba(196,38,59,.65);padding:3px 8px;border-radius:999px}
+    .red-flip .back{position:absolute;inset:0;transform:rotateY(180deg);background:#f8f0e5;color:#1b0d13;padding:17px 18px;font-size:13px;line-height:1.72}
+    .red-flip .back b{color:var(--red-deep);font-family:Georgia,"Noto Serif SC",serif;font-size:16px}
+    .red-flip .back .cite{display:block;margin-top:10px;color:var(--muted);font-size:11px}
+
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
       *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
@@ -361,7 +412,7 @@
   <nav class="topbar" aria-label="页面导航">
     <a class="top-brand" href="#top">
       <span class="brand-logo"><img id="brandLogo" src="assets/team_logo.png" alt="启智润心实践队队徽"></span>
-      <span>启智润心 · 连州</span>
+      <span>启智润心实践队</span>
     </a>
     <div class="top-chapters" aria-label="章节导航">
       <a class="chapter-dot active" href="#top" aria-label="首页"></a>
@@ -434,9 +485,15 @@
             <h3>把狮头交给孩子</h3>
             <p class="stage-quote">当孩子第一次举起狮头，传统才真正开始传承。</p>
             <p>从“老师讲、孩子看”，到“孩子举、孩子学、孩子演”。非遗从展柜里走出来，变成一双可以握住的手。</p>
-            <button id="lionHint" class="stage-action" type="button">点醒首页的醒狮 <span>↗</span></button>
+            <p class="stage-note">连打三声鼓，把右边这头醒狮唤醒。</p>
+            <button id="lionHint" class="stage-action" type="button">点醒这头醒狮 <span>↗</span></button>
           </div>
-          <figure class="stage-photo"><img src="assets/heritage_liondance_1024x768.jpg" alt="醒狮教学现场" loading="lazy" decoding="async"><figcaption><b>醒狮工作坊</b>可动手 · 可表演 · 可带走</figcaption></figure>
+          <figure class="stage-photo"><img src="assets/heritage_liondance_1024x768.jpg" alt="醒狮教学现场" loading="lazy" decoding="async">
+            <div class="lion-race"><b>鼓点</b><span class="lion-beats"><i></i><i></i><i></i></span></div>
+            <div class="roar-word">醒</div>
+            <button id="stageLion" class="lion-tap" type="button" aria-label="点醒这头醒狮"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1.8 2.1 4.6 2.6 6.7 1.9.1 2.2-1.2 3.8-3 4.8 2.4.5 4.3 2.3 4.3 4.8 0 3.6-3.4 6.2-8 6.2s-8-2.6-8-6.2c0-2.5 1.9-4.3 4.3-4.8-1.8-1-3.1-2.6-3-4.8C7.4 5.6 10.2 5.1 12 3Z"/><circle cx="9" cy="13" r="1"/><circle cx="15" cy="13" r="1"/><path d="M9 16c1.8 1.1 4.2 1.1 6 0"/></svg></button>
+            <figcaption><b>醒狮工作坊</b>可动手 · 可表演 · 可带走</figcaption>
+          </figure>
         </div>
       </article>
 
@@ -446,6 +503,13 @@
           <div id="paintPad" class="paint-pad clickable" role="button" tabindex="0" aria-label="点击展开漆扇纹样">
             <div class="paint-copy">点击水面，看看这一把“只属于今天”的漆扇。</div>
             <div class="paint-surface" aria-hidden="true"></div>
+            <span class="paint-counter">已入水 0 色</span>
+            <div class="paint-swatches" aria-label="选择颜色滴漆">
+              <button class="swatch" type="button" data-c="#c4263b" style="background:#c4263b" aria-label="红"></button>
+              <button class="swatch" type="button" data-c="#dca23f" style="background:#dca23f" aria-label="金"></button>
+              <button class="swatch" type="button" data-c="#4d9ba0" style="background:#4d9ba0" aria-label="青"></button>
+              <button class="swatch" type="button" data-c="#6c254e" style="background:#6c254e" aria-label="紫"></button>
+            </div>
             <button id="paintSave" class="paint-save" type="button">存下这把扇子</button>
           </div>
           <div class="stage-copy">
@@ -466,8 +530,9 @@
           </div>
           <div id="rocketZone" class="rocket-zone">
             <span class="cloud" aria-hidden="true"></span><span class="cloud two" aria-hidden="true"></span><div class="rocket" aria-hidden="true"></div>
+            <div class="rocket-gauge"><small>气压</small><span class="bar"><i id="pressureFill"></i></span></div>
             <div id="rocketWish" class="rocket-wish" role="status">“我要造一艘能飞到星星去的船！”</div>
-            <span class="rocket-label">可点击发射</span><button id="rocketButton" class="rocket-btn" type="button">发射水火箭</button>
+            <span class="rocket-label">打气 · 发射</span><button id="rocketButton" class="rocket-btn" type="button">打气发射水火箭</button>
           </div>
         </div>
       </article>
@@ -475,7 +540,7 @@
       <article class="stage reveal">
         <div class="stage-index">04<small>红色 · 讲述</small></div>
         <div class="stage-content flip">
-          <div class="red-card"><img src="assets/red_spirit_1024x768.jpg" alt="红色主题课堂与舞台剧" loading="lazy" decoding="async"><div class="red-card-content"><h4>在连州，重新认识冯达飞。</h4><p>红色精神不是远方的故事，而是家乡真实存在过的名字，也是今天的孩子可以继续讲下去的故事。</p><button id="factCardButton" class="fact-btn" type="button">打开史实表达提示</button></div></div>
+          <div class="red-card"><img src="assets/red_spirit_1024x768.jpg" alt="红色主题课堂与舞台剧" loading="lazy" decoding="async"><div class="red-card-content"><h4>在连州，重新认识冯达飞。</h4><p>红色精神不是远方的故事，而是家乡真实存在过的名字，也是今天的孩子可以继续讲下去的故事。</p><div id="redFlip" class="red-flip clickable" role="button" tabindex="0" aria-label="翻开红色来信"><div class="flip-inner"><div class="face front">翻开这封红色来信<span class="tag">冯达飞</span></div><div class="face back"><b>冯达飞</b>，广东连州人，中共党员，黄埔军校首期学员，参加过南昌起义，是中国空军早期飞行员之一。他用生命践行了理想。<span class="cite">据公开史料整理；本页为艺术化演绎，表达经可核验资料与指导老师把关。</span></div></div></div><button id="factCardButton" class="fact-btn" type="button">打开史实表达提示</button></div></div>
           <div class="stage-copy">
             <h3>从“老师讲”到“学生演 + 学生讲”</h3>
             <p>我们用舞台剧、长征体验和数字创作，把“听故事”变成“演故事、讲故事”。技术只做放大器，真正被留下的，是孩子们对家乡和国家的情感。</p>
@@ -654,7 +719,7 @@
       showToast('醒狮已醒 · 咚！');
     }
     document.getElementById('lionButton').addEventListener('click',wakeLion);
-    document.getElementById('lionHint').addEventListener('click',()=>{document.getElementById('lionButton').scrollIntoView({behavior:'smooth',block:'center'});setTimeout(wakeLion,500)});
+    document.getElementById('lionHint').addEventListener('click',()=>{document.getElementById('stageLion').scrollIntoView({behavior:'smooth',block:'center'});setTimeout(beatLion,500)});
 
     /* ---------- 漆扇 ---------- */
     const paintPad=document.getElementById('paintPad');
@@ -680,7 +745,7 @@
       setTimeout(()=>rocketZone.classList.remove('launch'),1500);
       setTimeout(()=>rocketWish.classList.remove('show'),4200);
     }
-    document.getElementById('rocketButton').addEventListener('click',launchRocket);
+    document.getElementById('rocketButton').addEventListener('click',pumpRocket);
     document.getElementById('launchHint').addEventListener('click',()=>{rocketZone.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(launchRocket,500)});
 
     /* ---------- 史实弹窗 ---------- */
@@ -816,6 +881,68 @@
       showToast(soundOn?'环境音已开启（点击醒狮可听到鼓点）':'环境音已关闭');
       if(soundOn)playDrum();
     });
+
+    /* ---------- 01 醒狮：三声鼓唤醒 ---------- */
+    const stageLion=document.getElementById('stageLion');
+    const lionBeatsEls=[...document.querySelectorAll('.stage-photo .lion-beats i')];
+    const roarWord=document.querySelector('.roar-word');
+    let lionBeats=0;
+    function beatLion(){
+      if(!stageLion)return;
+      lionBeats=Math.min(lionBeats+1,3);
+      stageLion.classList.remove('ring');void stageLion.offsetWidth;stageLion.classList.add('ring');
+      try{playDrum()}catch(e){}
+      showToast(lionBeats>=3?'醒狮醒啦！锣鼓一响，好戏开场！':'咚——第 '+lionBeats+' 声鼓点');
+      lionBeatsEls.forEach((el,i)=>el.classList.toggle('on',i<lionBeats));
+      if(lionBeats>=3){
+        roarWord.classList.add('show');stageLion.classList.add('awake');
+        setTimeout(()=>{lionBeats=0;roarWord.classList.remove('show');stageLion.classList.remove('awake');lionBeatsEls.forEach(el=>el.classList.remove('on'))},2200);
+      }
+    }
+    if(stageLion)stageLion.addEventListener('click',e=>{e.stopPropagation();beatLion()});
+
+    /* ---------- 02 漆扇：选色滴漆 ---------- */
+    const paintSurfaceEl=document.querySelector('.paint-surface');
+    const paintCounter=document.querySelector('.paint-counter');
+    let paintDrops=0;
+    document.querySelectorAll('.paint-swatches .swatch').forEach(sw=>{
+      sw.addEventListener('click',e=>{
+        e.stopPropagation();
+        const c=sw.dataset.c;paintDrops++;
+        const s=document.createElement('span');s.className='paint-drop';
+        s.style.background=c;s.style.left=(20+Math.random()*58)+'%';s.style.top=(26+Math.random()*48)+'%';
+        if(paintSurfaceEl)paintSurfaceEl.appendChild(s);
+        if(paintCounter)paintCounter.textContent='已入水 '+paintDrops+' 色';
+        showToast(paintDrops>=3?'颜色入水，纹样在展开……':'又滴入了一滴颜色');
+        if(paintDrops>=3&&!paintPad.classList.contains('done'))revealPaint();
+      });
+    });
+
+    /* ---------- 03 水火箭：打气 → 发射 ---------- */
+    const pressureFill=document.getElementById('pressureFill');
+    const rocketBtn=document.getElementById('rocketButton');
+    let rocketCharged=false;
+    function pumpRocket(){
+      if(!rocketZone)return;
+      if(rocketCharged){launchRocket();return;}
+      rocketCharged=true;rocketZone.classList.add('charged');
+      if(pressureFill)pressureFill.style.width='100%';
+      if(rocketBtn)rocketBtn.textContent='发射！';
+      try{playDrum()}catch(e){}
+      showToast('正在打气——气压拉满');
+      setTimeout(()=>{
+        rocketZone.classList.add('shake');rocketZone.classList.remove('charged');
+        if(pressureFill)pressureFill.style.width='0%';
+        launchRocket();rocketCharged=false;
+        setTimeout(()=>rocketZone.classList.remove('shake'),450);
+        if(rocketBtn)rocketBtn.textContent='打气发射水火箭';
+      },900);
+    }
+
+    /* ---------- 04 红色：翻开来信 ---------- */
+    const redFlip=document.getElementById('redFlip');
+    const flipLetter=()=>{redFlip&&redFlip.classList.toggle('flipped')};
+    if(redFlip){redFlip.addEventListener('click',flipLetter);redFlip.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flipLetter()}})}
 
     initReveal();
     updateProgress();

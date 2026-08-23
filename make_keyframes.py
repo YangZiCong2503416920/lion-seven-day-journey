@@ -50,7 +50,7 @@ with sync_playwright() as p:
     page.locator("#rocketZone").scroll_into_view_if_needed()
     page.wait_for_timeout(300)
     page.locator("#rocketButton").click()
-    page.wait_for_timeout(650)  # 火箭升空(.launch 1500ms) + 愿望(.show 4200ms)
+    page.wait_for_timeout(1300)  # 打气约900ms后发射；愿望.show持续4200ms
     save_jpeg(page.screenshot(), "kf_03_rocket.jpg")
 
     # 04 纸飞机祝福卡生成
