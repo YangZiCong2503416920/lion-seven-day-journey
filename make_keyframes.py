@@ -39,12 +39,18 @@ with sync_playwright() as p:
     page.wait_for_timeout(700)  # 抓住盖章/粒子瞬间（1500ms 内）
     save_jpeg(page.screenshot(), "kf_01_hero_lion.jpg")
 
-    # 02 漆扇展开
+    # 02 扎染：捆扎→浸染→解开，成纹
     page.locator("#paintPad").scroll_into_view_if_needed()
     page.wait_for_timeout(300)
-    page.locator("#paintPad").click()
-    page.wait_for_timeout(500)
-    save_jpeg(page.screenshot(), "kf_02_paint.jpg")
+    page.locator(".bind-opt").nth(2).click()
+    page.wait_for_timeout(120)
+    page.locator(".dye-opt").nth(1).click()
+    page.wait_for_timeout(120)
+    page.locator("#dyeSoak").click()
+    page.wait_for_timeout(160)
+    page.locator("#dyeUntie").click()
+    page.wait_for_timeout(400)
+    save_jpeg(page.screenshot(), "kf_02_dye.jpg")
 
     # 03 水火箭发射 + 孩子愿望
     page.locator("#rocketZone").scroll_into_view_if_needed()

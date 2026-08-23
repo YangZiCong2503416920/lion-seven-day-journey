@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#170b11">
   <meta name="description" content="一头醒狮的七日远行——连州孩子的非遗、科创与红色成长课">
-  <meta name="keywords" content="粤港澳大湾区,岭南非遗,醒狮,漆扇,乡村科创,红色南粤,冯达飞,青年建功,三下乡,连州,广东建院">
+  <meta name="keywords" content="粤港澳大湾区,岭南非遗,醒狮,漆扇,扎染,乡村科创,红色南粤,冯达飞,青年建功,三下乡,连州,广东建院">
   <!-- 分享/传播 meta（转发卡片第一眼） -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="一头醒狮的七日远行｜连州孩子的非遗、科创与红色成长课">
@@ -211,8 +211,8 @@
 
     /* 漆扇（可保存成卡） */
     .paint-pad{position:relative;min-height:340px;overflow:hidden;border-radius:22px;background:linear-gradient(135deg,#f6efe2,#d6e9e3);box-shadow:var(--shadow);padding:24px}
-    .paint-pad::before{content:"漆扇";position:absolute;right:-12px;top:-18px;color:rgba(126,22,41,.08);font-family:Georgia,serif;font-size:152px;font-weight:700;line-height:1}
-    .paint-pad::after{content:"";position:absolute;inset:auto -44px -70px;height:180px;background:radial-gradient(ellipse,#c4263b 0 16%,transparent 17%),radial-gradient(ellipse,#4d9ba0 0 16%,transparent 17%),radial-gradient(ellipse,#dca23f 0 16%,transparent 17%);background-size:108px 75px,130px 94px,92px 86px;background-position:8% 78%,53% 58%,88% 86%;opacity:.74;transform:rotate(-8deg);transition:transform .6s ease}
+    .paint-pad::before{content:"扎染";position:absolute;right:-12px;top:-18px;color:rgba(126,22,41,.08);font-family:Georgia,serif;font-size:132px;font-weight:700;line-height:1;pointer-events:none}
+    .paint-pad::after{content:"";position:absolute;inset:auto -44px -70px;height:180px;background:radial-gradient(ellipse,#c4263b 0 16%,transparent 17%),radial-gradient(ellipse,#4d9ba0 0 16%,transparent 17%),radial-gradient(ellipse,#dca23f 0 16%,transparent 17%);background-size:108px 75px,130px 94px,92px 86px;background-position:8% 78%,53% 58%,88% 86%;opacity:.74;transform:rotate(-8deg);transition:transform .6s ease;pointer-events:none}
     .paint-pad.done::after{transform:rotate(5deg) scale(1.18)}
     .paint-copy{position:relative;z-index:2;max-width:230px;color:var(--muted);font-size:14px}
     .paint-surface{position:absolute;z-index:1;left:50%;top:48%;width:72%;height:112px;border-radius:50%;transform:translate(-50%,-50%) rotate(-12deg);background:linear-gradient(120deg,#c4263b,#dca23f 40%,#4d9ba0 75%,#6c254e);filter:saturate(.65);opacity:.2;transition:opacity .45s ease,filter .45s ease,transform .45s ease}
@@ -373,15 +373,29 @@
     .roar-word{position:absolute;z-index:4;left:50%;top:30%;transform:translate(-50%,-50%) scale(.5);opacity:0;color:var(--gold-light);font-family:Georgia,"Noto Serif SC",serif;font-size:70px;font-weight:700;letter-spacing:.04em;pointer-events:none;text-shadow:0 6px 26px rgba(0,0,0,.4);transition:opacity .3s ease,transform .3s ease}
     .roar-word.show{opacity:1;transform:translate(-50%,-50%) scale(1)}
 
-    /* --- 02 漆扇：选色滴漆 --- */
-    .paint-swatches{position:absolute;z-index:4;left:50%;bottom:16px;transform:translateX(-50%);display:flex;gap:10px}
-    .paint-swatches .swatch{width:32px;height:32px;border-radius:50%;border:2px solid rgba(255,255,255,.9);box-shadow:0 6px 14px rgba(0,0,0,.18);cursor:pointer;transition:transform .2s ease}
-    .paint-swatches .swatch:hover{transform:scale(1.16)}
-    .paint-swatches .swatch:active{transform:scale(.9)}
-    .paint-drop{position:absolute;z-index:2;width:18px;height:18px;border-radius:50%;filter:blur(1px);opacity:0;transform:translate(-50%,-50%) scale(.4);animation:dropIn .6s ease forwards}
-    @keyframes dropIn{0%{opacity:0;transform:translate(-50%,-50%) scale(.4)}55%{opacity:1;transform:translate(-50%,-50%) scale(1.3)}100%{opacity:.92;transform:translate(-50%,-50%) scale(1)}}
+    /* --- 02 扎染：捆扎 → 浸染 → 解开 --- */
+    .dye-surface{position:relative;z-index:1;margin-top:12px;width:100%;height:190px;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#efe6d8,#e4d7c2);box-shadow:inset 0 0 0 1px rgba(126,22,41,.08)}
+    .dye-cloth{position:absolute;inset:14px;border-radius:12px;background:#f6efe2;transition:background .5s ease}
+    .dye-cloth.fold{background-image:repeating-linear-gradient(90deg,transparent 0 20px,rgba(126,22,41,.16) 20px 24px)}
+    .dye-cloth.tie{background-image:repeating-linear-gradient(0deg,transparent 0 18px,rgba(126,22,41,.15) 18px 24px),repeating-linear-gradient(90deg,transparent 0 18px,rgba(126,22,41,.15) 18px 24px)}
+    .dye-cloth.pinch{background-image:radial-gradient(circle at 38% 46%,transparent 0 10px,rgba(126,22,41,.2) 10px 13px,transparent 13px 28px)}
+    .dye-cloth.soaked{background-color:var(--dye,#3b5b8c);background-image:none;filter:saturate(.9)}
+    .dye-pattern{position:absolute;inset:14px;border-radius:12px;opacity:0;transition:opacity .5s ease}
+    .paint-pad.done .dye-pattern{opacity:1}
+    .dye-pattern.stripes{background:repeating-linear-gradient(45deg,transparent 0 22px,var(--dye,#3b5b8c) 22px 34px,transparent 34px 56px)}
+    .dye-pattern.ring{background:repeating-radial-gradient(circle at 50% 50%,var(--dye,#3b5b8c) 0 9px,transparent 9px 26px)}
+    .dye-pattern.circle{background:radial-gradient(circle at 34% 42%,transparent 0 12px,var(--dye,#3b5b8c) 12px 17px,transparent 17px 32px,var(--dye,#3b5b8c) 32px 37px,transparent 37px 52px)}
     .paint-counter{position:absolute;z-index:4;right:18px;top:16px;color:var(--red-deep);font-size:11px;letter-spacing:.1em;background:rgba(255,255,255,.72);padding:4px 9px;border-radius:999px}
     .paint-pad.done .paint-counter{color:#fff;background:rgba(126,22,41,.4)}
+    .dye-controls{margin-top:12px;display:flex;flex-direction:column;gap:9px}
+    .dye-row{display:flex;align-items:center;gap:8px}
+    .dye-labels{font-size:11px;letter-spacing:.12em;color:var(--red-deep);font-weight:800;width:36px;flex:none}
+    .dye-row .opt{min-width:46px;padding:8px 11px;border:1px solid rgba(126,22,41,.22);border-radius:999px;color:var(--ink);background:rgba(255,255,255,.82);font-size:12px;font-weight:700;cursor:pointer;transition:transform .2s ease,border-color .2s ease}
+    .dye-row .opt:hover{transform:translateY(-2px);border-color:var(--red)}
+    .dye-row .opt.sel{background:var(--red);border-color:var(--red);color:#fff}
+    .dye-row .dye-opt{width:30px;height:30px;min-width:30px;padding:0;border-radius:50%;border:2px solid rgba(255,255,255,.9)}
+    .dye-soak,.dye-untie{margin-left:auto;padding:8px 13px;border:0;border-radius:999px;color:#fff;background:var(--red);font-size:12px;font-weight:800;cursor:pointer}
+    .dye-untie{background:#7e1629}
 
     /* --- 03 水火箭：打气 → 发射 --- */
     .rocket-gauge{position:absolute;z-index:4;left:16px;bottom:54px;width:132px;color:#284c4b}
@@ -391,16 +405,19 @@
     .rocket-zone.shake{animation:shake .4s ease}
     @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
 
-    /* --- 04 红色：翻开来信 --- */
-    .red-flip{position:relative;margin-top:16px;perspective:1000px;cursor:pointer}
-    .red-flip .flip-inner{position:relative;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.75,.25,1)}
-    .red-flip.flipped .flip-inner{transform:rotateY(180deg)}
-    .red-flip .face{backface-visibility:hidden;border-radius:16px;overflow:hidden}
-    .red-flip .front{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);padding:15px 17px;color:#fff;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:space-between;gap:9px}
-    .red-flip .front .tag{font-size:10px;letter-spacing:.12em;background:rgba(196,38,59,.65);padding:3px 8px;border-radius:999px}
-    .red-flip .back{position:absolute;inset:0;transform:rotateY(180deg);background:#f8f0e5;color:#1b0d13;padding:17px 18px;font-size:13px;line-height:1.72}
-    .red-flip .back b{color:var(--red-deep);font-family:Georgia,"Noto Serif SC",serif;font-size:16px}
-    .red-flip .back .cite{display:block;margin-top:10px;color:var(--muted);font-size:11px}
+    /* --- 04 红色：翻开来信 → 淡入小窗 --- */
+    .letter-open{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:12px 15px;border:1px solid rgba(255,255,255,.34);border-radius:999px;color:#fff;background:rgba(255,255,255,.12);font-size:13px;font-weight:800;cursor:pointer;transition:background .25s ease,border-color .25s ease}
+    .letter-open:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.6)}
+    .letter-card{width:min(480px,100%);border:1px solid rgba(126,22,41,.18);background:linear-gradient(180deg,#fbf5ea,#f3e7d4);position:relative}
+    .letter-card::before{content:"";position:absolute;inset:0;border-radius:24px;box-shadow:inset 0 0 0 6px rgba(126,22,41,.06),inset 0 0 0 7px rgba(220,162,63,.16);pointer-events:none}
+    .letter-card .letter-body{padding:4px 8px 8px;border:1px solid rgba(126,22,41,.18);border-radius:10px;background:rgba(255,255,255,.45);font-family:Georgia,"Noto Serif SC","Songti SC",serif}
+    .letter-card .letter-body p{margin:0 0 12px;font-size:15px;line-height:1.95;color:#251820}
+    .letter-card .letter-sign{text-align:right;color:var(--red-deep);font-weight:800;font-style:italic}
+    .letter-card .cite{display:block;margin-top:12px;color:var(--muted);font-size:11px}
+    .modal.open{animation:modalIn .35s ease}
+    .modal.open .modal-card{animation:cardIn .4s cubic-bezier(.2,.75,.25,1)}
+    @keyframes modalIn{from{opacity:0}to{opacity:1}}
+    @keyframes cardIn{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
 
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
@@ -498,24 +515,40 @@
       </article>
 
       <article class="stage reveal">
-        <div class="stage-index">02<small>漆扇 · 颜色</small></div>
+        <div class="stage-index">02<small>扎染 · 颜色</small></div>
         <div class="stage-content flip">
-          <div id="paintPad" class="paint-pad clickable" role="button" tabindex="0" aria-label="点击展开漆扇纹样">
-            <div class="paint-copy">点击水面，看看这一把“只属于今天”的漆扇。</div>
-            <div class="paint-surface" aria-hidden="true"></div>
-            <span class="paint-counter">已入水 0 色</span>
-            <div class="paint-swatches" aria-label="选择颜色滴漆">
-              <button class="swatch" type="button" data-c="#c4263b" style="background:#c4263b" aria-label="红"></button>
-              <button class="swatch" type="button" data-c="#dca23f" style="background:#dca23f" aria-label="金"></button>
-              <button class="swatch" type="button" data-c="#4d9ba0" style="background:#4d9ba0" aria-label="青"></button>
-              <button class="swatch" type="button" data-c="#6c254e" style="background:#6c254e" aria-label="紫"></button>
+          <div id="paintPad" class="paint-pad clickable" role="button" tabindex="0" aria-label="扎染体验">
+            <div class="paint-copy">选一种捆扎法，再浸上颜色，解开看看这匹“只属于今天”的扎染。</div>
+            <div class="dye-surface" aria-hidden="true">
+              <div class="dye-cloth"></div>
+              <div class="dye-pattern stripes"></div>
             </div>
-            <button id="paintSave" class="paint-save" type="button">存下这把扇子</button>
+            <span class="paint-counter">第 1 步 · 捆扎</span>
+            <div class="dye-controls">
+              <div class="dye-row" data-step="bind">
+                <span class="dye-labels">捆扎</span>
+                <button class="opt bind-opt" type="button" data-bind="fold">对折</button>
+                <button class="opt bind-opt" type="button" data-bind="tie">捆扎</button>
+                <button class="opt bind-opt" type="button" data-bind="pinch">夹扎</button>
+              </div>
+              <div class="dye-row" data-step="dye" hidden>
+                <span class="dye-labels">染</span>
+                <button class="opt dye-opt" type="button" data-c="#3b5b8c" style="background:#3b5b8c" aria-label="靛蓝"></button>
+                <button class="opt dye-opt" type="button" data-c="#c4263b" style="background:#c4263b" aria-label="朱红"></button>
+                <button class="opt dye-opt" type="button" data-c="#4d9ba0" style="background:#4d9ba0" aria-label="青"></button>
+                <button id="dyeSoak" class="dye-soak" type="button">浸 染</button>
+              </div>
+              <div class="dye-row" data-step="untie" hidden>
+                <span class="dye-labels">解开</span>
+                <button id="dyeUntie" class="dye-untie" type="button">解开看纹</button>
+              </div>
+            </div>
+            <button id="paintSave" class="paint-save" type="button">存下这匹扎染</button>
           </div>
           <div class="stage-copy">
-            <h3>把岭南颜色留在扇面上</h3>
-            <p>滴漆入水、轻拨成纹，孩子们在漆扇和扎染里认识岭南色彩，也第一次感受到：传统技艺可以在自己的手上重新长出来。</p>
-            <button id="paintHint" class="stage-action" type="button">展开一面漆扇 <span>↗</span></button>
+            <h3>把岭南颜色染进布里</h3>
+            <p>捆扎、浸染、拧开，孩子们在扎染里认识岭南色彩，也第一次感受到：传统技艺可以在自己的手上重新长出来。</p>
+            <button id="paintHint" class="stage-action" type="button">展开这匹扎染 <span>↗</span></button>
           </div>
         </div>
       </article>
@@ -540,7 +573,7 @@
       <article class="stage reveal">
         <div class="stage-index">04<small>红色 · 讲述</small></div>
         <div class="stage-content flip">
-          <div class="red-card"><img src="assets/red_spirit_1024x768.jpg" alt="红色主题课堂与舞台剧" loading="lazy" decoding="async"><div class="red-card-content"><h4>在连州，重新认识冯达飞。</h4><p>红色精神不是远方的故事，而是家乡真实存在过的名字，也是今天的孩子可以继续讲下去的故事。</p><div id="redFlip" class="red-flip clickable" role="button" tabindex="0" aria-label="翻开红色来信"><div class="flip-inner"><div class="face front">翻开这封红色来信<span class="tag">冯达飞</span></div><div class="face back"><b>冯达飞</b>，广东连州人，中共党员，黄埔军校首期学员，参加过南昌起义，是中国空军早期飞行员之一。他用生命践行了理想。<span class="cite">据公开史料整理；本页为艺术化演绎，表达经可核验资料与指导老师把关。</span></div></div></div><button id="factCardButton" class="fact-btn" type="button">打开史实表达提示</button></div></div>
+          <div class="red-card"><img src="assets/red_spirit_1024x768.jpg" alt="红色主题课堂与舞台剧" loading="lazy" decoding="async"><div class="red-card-content"><h4>在连州，重新认识冯达飞。</h4><p>红色精神不是远方的故事，而是家乡真实存在过的名字，也是今天的孩子可以继续讲下去的故事。</p><button id="letterOpen" class="letter-open" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>翻开这封红色来信</button><button id="factCardButton" class="fact-btn" type="button">打开史实表达提示</button></div></div>
           <div class="stage-copy">
             <h3>从“老师讲”到“学生演 + 学生讲”</h3>
             <p>我们用舞台剧、长征体验和数字创作，把“听故事”变成“演故事、讲故事”。技术只做放大器，真正被留下的，是孩子们对家乡和国家的情感。</p>
@@ -610,6 +643,8 @@
   <div id="lionStamp" class="stamp" aria-live="polite"><div class="stamp-inner">已醒<small>THE LION WAKES</small></div></div>
 
   <div id="factModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="factTitle"><div class="modal-card"><button id="modalClose" class="modal-close" type="button" aria-label="关闭资料卡片">×</button><h3 id="factTitle">史实与合规表达提示</h3><p>冯达飞是连州本土红色人物。正式参赛版建议使用<b>可核验的历史资料、公开照片和学生真实舞台表达</b>；如果使用 AI 生成形象，应标注“基于史实的艺术化演绎”，避免虚构历史人物原话。这样既保留数字创意，也能让作品的立场、真实性和教育意义更稳。</p><p>提交前请由指导老师核对：数据（7 天 / 26 课时 / 25+ 名孩子）、全部作者与学校署名、真实素材与视频、作品网络链接与二维码。</p></div></div>
+
+  <div id="letterModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="letterTitle"><div class="modal-card letter-card"><button id="letterClose" class="modal-close" type="button" aria-label="关闭来信">×</button><h3 id="letterTitle">致连州孩子的一封信</h3><div class="letter-body"><p>这封信，写给今天的孩子，也写给当年的冯达飞。</p><p><b>冯达飞</b>，广东连州人，中共党员，黄埔军校首期学员，参加过南昌起义，是中国空军最早的飞行员之一。他把“为中华”三个字，写在了一次次起飞里。</p><p>今天我们站在他的家乡，把这段历史讲给下一代听——讲故事的人换了一批，故事里的赤诚没有变。</p><p class="letter-sign">—— 启智润心实践队</p></div><span class="cite">据公开史料整理；本页为艺术化演绎，表达经可核验资料与指导老师把关。</span></div></div>
 
   <script>
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -725,8 +760,8 @@
     const paintPad=document.getElementById('paintPad');
     function revealPaint(){
       paintPad.classList.add('done');
-      paintPad.querySelector('.paint-copy').textContent='纹样展开了：每一把扇子，都只属于完成它的那个孩子。';
-      showToast('漆扇纹样已展开');
+      paintPad.querySelector('.paint-copy').textContent='扎染纹样展开了：这匹布，只属于完成它的那个孩子。';
+      showToast('扎染纹样已展开');
     }
     paintPad.addEventListener('click',revealPaint);
     paintPad.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();revealPaint()}});
@@ -853,14 +888,14 @@
       ctx.fillStyle=fan;ctx.fillRect(-22,-140,44,280);
       ctx.restore();
       ctx.fillStyle='#7e1629';ctx.textAlign='center';ctx.font='700 32px "Noto Serif SC",Georgia,serif';
-      ctx.fillText('一把“只属于今天”的漆扇',300,640);
+      ctx.fillText('这匹“只属于今天”的扎染',300,640);
       ctx.fillStyle='rgba(126,22,41,.75)';ctx.font='400 24px "PingFang SC","Microsoft YaHei",sans-serif';
       ctx.fillText('岭南颜色，在孩子的指尖重新长出来',300,690);
       ctx.fillStyle='rgba(126,22,41,.6)';ctx.font='700 22px "PingFang SC","Microsoft YaHei",sans-serif';
       ctx.fillText('启智润心 · 广东建院',300,H-48);
       return c;
     }
-    function savePaintCard(){saveCanvas(paintCardCanvas().toDataURL('image/png'),'这把扇子只属于完成它的那个孩子.png');}
+    function savePaintCard(){saveCanvas(paintCardCanvas().toDataURL('image/png'),'这匹扎染只属于完成它的那个孩子.png');}
 
     /* ---------- 结尾：引导生成传播卡 / 通用分享 ---------- */
     document.getElementById('goWish').addEventListener('click',()=>{document.getElementById('wish').scrollIntoView({behavior:'smooth'});setTimeout(()=>wishInput.focus(),600);});
@@ -901,22 +936,40 @@
     }
     if(stageLion)stageLion.addEventListener('click',e=>{e.stopPropagation();beatLion()});
 
-    /* ---------- 02 漆扇：选色滴漆 ---------- */
-    const paintSurfaceEl=document.querySelector('.paint-surface');
-    const paintCounter=document.querySelector('.paint-counter');
-    let paintDrops=0;
-    document.querySelectorAll('.paint-swatches .swatch').forEach(sw=>{
-      sw.addEventListener('click',e=>{
-        e.stopPropagation();
-        const c=sw.dataset.c;paintDrops++;
-        const s=document.createElement('span');s.className='paint-drop';
-        s.style.background=c;s.style.left=(20+Math.random()*58)+'%';s.style.top=(26+Math.random()*48)+'%';
-        if(paintSurfaceEl)paintSurfaceEl.appendChild(s);
-        if(paintCounter)paintCounter.textContent='已入水 '+paintDrops+' 色';
-        showToast(paintDrops>=3?'颜色入水，纹样在展开……':'又滴入了一滴颜色');
-        if(paintDrops>=3&&!paintPad.classList.contains('done'))revealPaint();
+    /* ---------- 02 扎染：捆扎 → 浸染 → 解开 ---------- */
+    const dyeCloth=document.querySelector('.dye-cloth');
+    const dyePatternEl=document.querySelector('.dye-pattern');
+    const paintCounterEl=document.querySelector('.paint-counter');
+    const dyeRows=[...document.querySelectorAll('.dye-row')];
+    let bindSel='fold',dyeSel='#3b5b8c';
+    const bindMap={fold:'stripes',tie:'ring',pinch:'circle'};
+    const showDyeStep=(n)=>dyeRows.forEach((r,i)=>r.hidden=(i!==n));
+    document.querySelectorAll('.bind-opt').forEach(b=>{
+      b.addEventListener('click',e=>{
+        e.stopPropagation();bindSel=b.dataset.bind;
+        dyeCloth.className='dye-cloth '+bindSel;
+        dyePatternEl.className='dye-pattern '+bindMap[bindSel];
+        document.querySelectorAll('.bind-opt').forEach(x=>x.classList.toggle('sel',x===b));
+        if(paintCounterEl)paintCounterEl.textContent='第 2 步 · 选染料';
+        showDyeStep(1);showToast('已选「'+b.textContent+'」捆扎法');
       });
     });
+    document.querySelectorAll('.dye-opt').forEach(b=>{
+      b.addEventListener('click',e=>{
+        e.stopPropagation();dyeSel=b.dataset.c;
+        document.querySelectorAll('.dye-opt').forEach(x=>x.classList.toggle('sel',x===b));
+        dyeCloth.style.setProperty('--dye',dyeSel);dyePatternEl.style.setProperty('--dye',dyeSel);
+      });
+    });
+    const dyeSoak=document.getElementById('dyeSoak');
+    if(dyeSoak)dyeSoak.addEventListener('click',e=>{
+      e.stopPropagation();
+      dyeCloth.classList.add('soaked');
+      if(paintCounterEl)paintCounterEl.textContent='第 3 步 · 解开';
+      showDyeStep(2);showToast('布已浸入染缸，等它上色');
+    });
+    const dyeUntie=document.getElementById('dyeUntie');
+    if(dyeUntie)dyeUntie.addEventListener('click',e=>{e.stopPropagation();revealPaint()});
 
     /* ---------- 03 水火箭：打气 → 发射 ---------- */
     const pressureFill=document.getElementById('pressureFill');
@@ -939,10 +992,16 @@
       },900);
     }
 
-    /* ---------- 04 红色：翻开来信 ---------- */
-    const redFlip=document.getElementById('redFlip');
-    const flipLetter=()=>{redFlip&&redFlip.classList.toggle('flipped')};
-    if(redFlip){redFlip.addEventListener('click',flipLetter);redFlip.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flipLetter()}})}
+    /* ---------- 04 红色：信件淡入小窗 ---------- */
+    const letterModal=document.getElementById('letterModal');
+    const letterOpenBtn=document.getElementById('letterOpen');
+    const letterCloseBtn=document.getElementById('letterClose');
+    const openLetter=()=>{if(letterModal){letterModal.classList.add('open');if(letterCloseBtn)letterCloseBtn.focus()}};
+    const closeLetter=()=>{if(letterModal)letterModal.classList.remove('open')};
+    if(letterOpenBtn)letterOpenBtn.addEventListener('click',openLetter);
+    if(letterCloseBtn)letterCloseBtn.addEventListener('click',closeLetter);
+    if(letterModal)letterModal.addEventListener('click',e=>{if(e.target===letterModal)closeLetter()});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLetter()});
 
     initReveal();
     updateProgress();

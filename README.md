@@ -6,7 +6,7 @@
 
 - 移动端优先纵向滚动，顶部章节导航 + 故事进度条；
 - 首屏 hero：醒狮 + 金色数据带 + 队徽 + 逐字入场；
-- 交互：点醒醒狮 / 展开漆扇纹样 / 发射水火箭（含孩子愿望随机句）；
+- 交互：点醒醒狮 / 扎染体验（捆扎→浸染→解开看纹）/ 发射水火箭（含孩子愿望随机句）/ 翻开关于冯达飞的红色来信；
 - 红色南粤：冯达飞「学生演 + 学生讲」史实表达提示卡；
 - **传播引擎**：「为连州孩子，留下一句话」→ 输入祝福，生成专属纸飞机分享卡片（Canvas 出图 + 分享/复制）；
 - **合规**：队徽（topbar + 结尾落款）、学校/学院/实践队署名、AI 辅助生成标注、`og:*`/微信分享 meta、`prefers-reduced-motion` 降级；
@@ -26,7 +26,7 @@ python3 make_shots.py   # 输出 shots/{full_desktop,hero_desktop,full_mobile,he
 ## 互动点亮瞬间关键帧（提交图集加分）
 
 ```bash
-python3 make_keyframes.py  # 输出 shots/keyframes/{kf_01_hero_lion,kf_02_paint,kf_03_rocket,kf_04_wish_card,kf_05_hero_desktop}.jpg
+python3 make_keyframes.py  # 输出 shots/keyframes/{kf_01_hero_lion,kf_02_dye,kf_03_rocket,kf_04_wish_card,kf_05_hero_desktop}.jpg
 ```
 
 ## 自动化检查

@@ -33,8 +33,19 @@ def run():
         page.locator("#startJourney").click()
         page.locator("#lionButton").click()
         assert page.locator("#lionStatus").inner_text() == "已经醒来", "醒狮状态未变‘已经醒来’"
-        page.locator("#paintPad").click()
-        assert "展开了" in page.locator("#paintPad .paint-copy").inner_text(), "漆扇文案未含‘展开了’"
+        # 02 扎染：捆扎→浸染→解开
+        page.locator("#paintPad").scroll_into_view_if_needed()
+        page.locator(".bind-opt").nth(1).click()
+        page.locator(".dye-opt").nth(0).click()
+        page.locator("#dyeSoak").click()
+        page.locator("#dyeUntie").click()
+        assert "展开了" in page.locator("#paintPad .paint-copy").inner_text(), "扎染文案未含‘展开了’"
+        # 04 信件淡入小窗
+        page.locator("#letterOpen").scroll_into_view_if_needed()
+        page.locator("#letterOpen").click()
+        assert page.locator("#letterModal").evaluate("(el) => el.classList.contains('open')"), "信件小窗未打开"
+        page.locator("#letterClose").click()
+        assert not page.locator("#letterModal").evaluate("(el) => el.classList.contains('open')"), "信件小窗未关闭"
         page.locator("#rocketButton").click()
         page.locator("#factButton").click()
         assert page.locator("#factModal").evaluate("(el) => el.classList.contains('open')"), "弹窗未打开"
