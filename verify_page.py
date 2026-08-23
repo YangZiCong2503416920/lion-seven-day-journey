@@ -1,0 +1,75 @@
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+
+
+ROOT = Path(__file__).resolve().parent
+URL = f"file:///{ROOT.as_posix()}/index.html"
+
+
+def run():
+    errors = []
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+
+        # ---- 移动端 full-page（先滚动到底再回顶，确保图片/入场动画触发） ----
+        page = browser.new_page(viewport={"width": 390, "height": 844}, device_scale_factor=1)
+        page.on("console", lambda msg: errors.append(f"console:{msg.type}:{msg.text}") if msg.type == "error" else None)
+        page.on("pageerror", lambda exc: errors.append(f"pageerror:{exc}"))
+        page.goto(URL)
+        page.wait_for_load_state("networkidle")
+
+        # P0 命门校验：任何 .reveal 不得是 opacity:0（整页截图不空白）
+        hidden = page.evaluate("()=>[...document.querySelectorAll('.reveal')].filter(el=>getComputedStyle(el).opacity==='0').length")
+        assert hidden == 0, f"仍有 {hidden} 个 .reveal 为 opacity:0，会导致截图空白"
+
+        # 全页截图（滚动到底再回顶，内容应全部可见）
+        page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+        page.wait_for_timeout(400)
+        page.evaluate("window.scrollTo(0, 0)")
+        page.wait_for_timeout(350)
+        page.screenshot(path=str(ROOT / "preview-mobile.png"), full_page=True)
+
+        # ---- 既有交互断言 ----
+        page.locator("#startJourney").click()
+        page.locator("#lionButton").click()
+        assert page.locator("#lionStatus").inner_text() == "已经醒来", "醒狮状态未变‘已经醒来’"
+        page.locator("#paintPad").click()
+        assert "展开了" in page.locator("#paintPad .paint-copy").inner_text(), "漆扇文案未含‘展开了’"
+        page.locator("#rocketButton").click()
+        page.locator("#factButton").click()
+        assert page.locator("#factModal").evaluate("(el) => el.classList.contains('open')"), "弹窗未打开"
+        page.locator("#modalClose").click()
+        assert not page.locator("#factModal").evaluate("(el) => el.classList.contains('open')"), "弹窗未关闭"
+
+        # ---- 新增：纸飞机 UGC / 队徽 / AI 标注 ----
+        page.locator("#wish").scroll_into_view_if_needed()
+        page.locator("#wishInput").fill("愿你飞得又高又远。")
+        page.locator("#makePlane").click()
+        assert page.locator("#cardStage").evaluate("(el) => el.classList.contains('show')"), "纸飞机卡片未生成"
+        assert page.locator("#cardActions").is_visible(), "卡片操作按钮不可见"
+        # 队徽出现于 topbar + final
+        assert page.locator("#brandLogo").count() == 1, "topbar 队徽缺失"
+        assert page.locator("img[src*='team_logo']").count() >= 2, "队徽未在结尾出现"
+        # AI 标注行
+        ai = page.locator(".ai-note").inner_text()
+        assert "AI 辅助生成" in ai, "AI 生成标注缺失"
+        page.locator("#shareButton").click()
+
+        # ---- 桌面端 full-page ----
+        page.set_viewport_size({"width": 1440, "height": 900})
+        page.reload()
+        page.wait_for_load_state("networkidle")
+        page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+        page.wait_for_timeout(400)
+        page.evaluate("window.scrollTo(0, 0)")
+        page.wait_for_timeout(350)
+        page.screenshot(path=str(ROOT / "preview-desktop.png"), full_page=True)
+
+        browser.close()
+
+    if errors:
+        raise RuntimeError("\n".join(errors))
+
+
+if __name__ == "__main__":
+    run()
