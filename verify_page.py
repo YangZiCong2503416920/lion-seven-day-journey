@@ -29,6 +29,9 @@ def run():
         assert "东陂的根" in page.locator("#journey .stage h3").nth(0).inner_text(), "航段01未落到‘东陂的根’"
         assert "记住冯达飞" in page.locator(".final h2").inner_text(), "结尾未点题‘记住冯达飞 / 记住红色南粤’"
         assert "东陂的天空" in page.locator(".manifesto-old").inner_text(), "序言旧标题副线未标注‘东陂的天空’"
+        assert "驾驶缴获的飞机" in page.locator("#journey .stage").nth(2).inner_text(), "航段03未落到‘驾驶缴获的飞机首飞中央苏区’"
+        assert "空军英烈墙" in page.locator("#timeline").inner_text(), "生平时间线未含1942新疆牺牲/空军英烈墙"
+        assert "基于公开史实的艺术化演绎" in page.locator(".dhu-note").text_content(), "数字人note未保留‘基于公开史实的艺术化演绎’"
 
         # 全页截图（滚动到底再回顶，内容应全部可见）
         page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
@@ -54,6 +57,9 @@ def run():
         assert page.locator("#letterModal").evaluate("(el) => el.classList.contains('open')"), "信件小窗未打开"
         assert "黄埔军校第一期" in page.locator("#letterModal .letter-body").inner_text(), "信件未含黄埔军校史实"
         assert "南昌起义" in page.locator("#letterModal .letter-body").inner_text(), "信件未含南昌起义史实"
+        assert "飞行教官" in page.locator("#letterModal .letter-body").inner_text(), "信件未含红军/人民军队飞行教官史实"
+        assert "空军英烈墙" in page.locator("#letterModal .letter-body").inner_text(), "信件未含1942新疆牺牲/空军英烈墙"
+        assert "驾驶缴获的飞机" in page.locator("#letterModal .letter-body").inner_text(), "信件未含‘驾驶缴获飞机首飞中央苏区’"
         page.locator("#letterClose").click()
         assert not page.locator("#letterModal").evaluate("(el) => el.classList.contains('open')"), "信件小窗未关闭"
         page.locator("#rocketButton").click()
