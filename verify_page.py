@@ -145,6 +145,39 @@ def run():
         # AI 标注行（非真实影像/录音、不虚构原话）
         ai = page.locator(".ai-note").inner_text()
         assert "非真实历史影像" in ai and "不虚构原话" in ai, "AI 艺术化演绎标注缺失"
+
+        # ---- 三大亮点 · 真·可交互自测 ----
+        # ① 时空对话：6 节点选择器 +“冯达飞说”回显 + 视频切换 + 免责标注
+        assert page.locator(".dialog-node").count() == 6, "时空对话节点应为 6 个"
+        assert "基于公开史实的艺术化演绎" in page.locator(".dialog-note").inner_text(), "时空对话缺艺术化演绎标注"
+        node1932 = page.locator('.dialog-node[data-key="1932"]')
+        node1932.scroll_into_view_if_needed()
+        node1932.click()
+        assert "一张地图" in page.locator("#dhuCaption").inner_text(), "1932 节点字幕未回显对应句"
+        assert "dhu_1932.mp4" in page.locator("#dhuVideo").get_attribute("src"), "1932 节点视频未切到 dhu_1932.mp4"
+        assert page.locator("#dhuModal").evaluate("(el) => el.classList.contains('open')"), "时空对话弹窗未打开"
+        page.locator("#dhuClose").click()
+
+        # ② 红色足迹互动地图：点站 → 点亮 + 弹“那年那地那事”
+        zz = page.locator('#redRoute .rt[data-name="漳州"]')
+        zz.scroll_into_view_if_needed()
+        zz.click()
+        assert zz.evaluate("(el) => el.classList.contains('lit')"), "漳州站点未点亮"
+        assert "漳州 · 1932" in page.locator("#mapPopTitle").inner_text(), "互动地图弹窗标题不对"
+        assert "首飞中央苏区" in page.locator("#mapPopText").inner_text(), "互动地图弹窗文案不对"
+
+        # ③ 环境音：点击 #soundToggle → AudioContext running 且非静音
+        page.locator("#soundToggle").click()
+        page.wait_for_timeout(600)
+        amb = page.evaluate("() => window.__ambient()")
+        assert amb["state"] == "running", f"环境音未开始(AudioContext 非 running): {amb}"
+        assert amb["gain"] > 0, f"环境音处于静音(gain=0): {amb}"
+
+        # ③ navigator.vibrate：关键节点触发（已点亮可再点）
+        page.evaluate("() => { window.__vibrateCalls = []; }")
+        zz.click()
+        assert page.evaluate("() => window.__vibrateCalls.length") > 0, "navigator.vibrate 未触发"
+
         page.locator("#shareButton").click()
 
         # ---- 桌面端 full-page ----

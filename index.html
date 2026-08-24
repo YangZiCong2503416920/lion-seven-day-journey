@@ -356,6 +356,51 @@
       html{scroll-behavior:auto}
       *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
     }
+
+    /* ==== 三大亮点 · 补充交互样式（揭示性不改变 .reveal 的 opacity） ==== */
+    /* ① 时空对话 · 节点选择器 */
+    .dialog{padding:100px 28px 120px;background:var(--paper);border-top:1px solid var(--line)}
+    .dialog-inner{width:min(var(--max),100%);margin:0 auto}
+    .dialog-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:30px}
+    .dialog-head .overline{color:var(--red)}.dialog-head .overline::before{background:var(--red)}
+    .dialog-head h2{margin:12px 0 0;font-family:Georgia,"Noto Serif SC","Songti SC",serif;font-size:clamp(36px,6vw,72px);line-height:1;letter-spacing:-.06em}
+    .dialog-head h2 em,.route-head h3 em{font-style:normal}
+    .dialog-head p{max-width:320px;margin:0;color:var(--muted);font-size:14px}
+    .dialog-lead{max-width:640px;margin:0 0 22px;color:var(--muted);font-size:15px}
+    .dialog-nodes{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 20px}
+    .dialog-node{display:inline-flex;align-items:center;gap:7px;padding:11px 16px;border:1px solid rgba(126,22,41,.28);border-radius:999px;color:var(--red-deep);background:rgba(255,255,255,.5);font-weight:800;font-size:14px;cursor:pointer;transition:background .25s ease,border-color .25s ease,color .25s ease,transform .25s ease}
+    .dialog-node::before{content:"";width:8px;height:8px;border-radius:50%;background:rgba(196,38,59,.35)}
+    .dialog-node:hover{transform:translateY(-2px);border-color:var(--red)}
+    .dialog-node.active{color:#fff;background:var(--red-deep);border-color:var(--red-deep);box-shadow:0 12px 26px rgba(126,22,41,.26)}
+    .dialog-node.active::before{background:var(--gold-light)}
+    .dhu-say{margin:0 0 16px;padding:18px 20px;border-left:3px solid var(--gold);border-radius:0 14px 14px 0;background:rgba(255,255,255,.55);font-size:16px;line-height:1.8}
+    .dhu-say b{color:var(--red-deep)}
+    .dialog-note{margin:14px 0 0;color:var(--muted);font-size:12px;line-height:1.8}
+    /* 弹窗内“冯达飞说：…”字幕条 */
+    .dhu-modal .dhu-caption{margin-top:12px;padding:12px 14px;border:1px solid rgba(126,22,41,.16);border-radius:12px;background:rgba(255,255,255,.86);color:var(--ink);font-size:14px;line-height:1.8}
+    .dhu-modal .dhu-caption b{color:var(--red-deep)}
+    @media (max-width:900px){.dialog-head{display:block}.dialog-head p{margin-top:18px}}
+    @media (max-width:620px){.dialog{padding:76px 18px 88px}.dialog-head h2{font-size:clamp(30px,8vw,46px)}.dialog-node{font-size:13px;padding:10px 13px}}
+
+    /* ② 红色足迹 · 可点亮互动地图 */
+    .route-intro{max-width:620px}
+    .route-strip .rt{background:none;border:0;padding:0;cursor:pointer;font:inherit;color:inherit}
+    .rt{transition:transform .25s ease}
+    .rt:hover{transform:translateY(-3px)}
+    .rt:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:8px}
+    .rt.lit::before{background:var(--gold);border-color:var(--red-deep);box-shadow:0 0 0 6px rgba(220,162,63,.34),0 0 18px rgba(220,162,63,.6)}
+    .rt.lit b{color:var(--gold)}
+    .rt-link.lit{background:repeating-linear-gradient(90deg,var(--gold) 0 6px,transparent 6px 12px);opacity:1}
+    .map-pop{margin-top:22px;padding:16px 18px;border-left:3px solid var(--red);border-radius:0 14px 14px 0;background:rgba(255,255,255,.62);font-size:14px;line-height:1.75;display:none}
+    .map-pop.show{display:block;animation:popIn .3s ease}
+    .map-pop b{display:block;margin-bottom:4px;color:var(--red-deep);font-family:Georgia,serif;font-size:18px}
+    .map-light-btn{display:inline-flex;align-items:center;gap:7px;margin-top:18px;padding:10px 15px;border:1px solid rgba(126,22,41,.26);border-radius:999px;color:var(--red-deep);background:rgba(255,255,255,.6);font-weight:800;font-size:13px;cursor:pointer;transition:background .25s ease,color .25s ease}
+    .map-light-btn:hover{color:#fff;background:var(--red-deep)}
+    @keyframes popIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    @media (max-width:620px){.rt-link.lit{background:repeating-linear-gradient(180deg,var(--gold) 0 6px,transparent 6px 12px)}.map-pop{margin-top:16px}}
+
+    /* ③ 环境音开关：开启态 */
+    .sound-toggle.on{color:var(--gold-light);border-color:var(--gold-light);background:rgba(232,182,76,.16)}
   </style>
 </head>
 <body>
@@ -497,7 +542,7 @@
         </div>
       </article>
 
-      <article class="stage reveal">
+      <article class="stage reveal" data-vibrate="first-flight">
         <div class="stage-index">空<small>1932 漳州首飞</small></div>
         <div class="stage-content flip">
           <div class="dhu-card">
@@ -520,7 +565,7 @@
         </div>
       </article>
 
-      <article class="stage reveal">
+      <article class="stage reveal" data-vibrate="sacrifice">
         <div class="stage-index">殁<small>1942.6 上饶</small></div>
         <div class="stage-content">
           <div class="stage-copy">
@@ -538,6 +583,26 @@
     </div>
   </section>
 
+  <section id="dialog" class="dialog">
+    <div class="dialog-inner reveal">
+      <div class="dialog-head">
+        <div><div class="overline">时空对话 · 与冯达飞对话</div><h2>与冯达飞，<em>跨越时空。</em></h2></div>
+        <p>冯达飞不是一个"要背的名字"。年轻时他见过怎样的世界？牺牲前他在想什么？点一个瞬间，听他亲口说一句。</p>
+      </div>
+      <p class="dialog-lead">点一个节点→听他回应（数字人讲述 · 视频 + 字幕回显）。所有的"他说"，都是基于公开史实的艺术化演绎。</p>
+      <div class="dialog-nodes" role="tablist" aria-label="选择冯达飞的人生节点">
+        <button class="dialog-node" data-key="1924" type="button" role="tab">1924 · 黄埔</button>
+        <button class="dialog-node" data-key="usr" type="button" role="tab">苏联 · 家信</button>
+        <button class="dialog-node" data-key="1932" type="button" role="tab">1932 · 漳州</button>
+        <button class="dialog-node" data-key="first" type="button" role="tab">首飞 · 根据地</button>
+        <button class="dialog-node" data-key="lianzhou" type="button" role="tab">望见 · 连州</button>
+        <button class="dialog-node" data-key="flyout" type="button" role="tab">飞出去</button>
+      </div>
+      <div class="dhu-say" aria-live="polite"><b>冯达飞说：</b><span id="dhuSayText">（点上面的一个节点，数字人会开讲）</span></div>
+      <p class="dialog-note">▲ 本段为基于公开史实的艺术化演绎，非真实历史影像、照片与录音；人物语言以可核验史料为准，不虚构原话。</p>
+    </div>
+  </section>
+
   <section id="school" class="school">
     <div class="school-inner reveal">
       <div class="school-head">
@@ -549,9 +614,8 @@
           <p class="school-quote">一所把“飞”种进孩子心里的学校，接住了这位连州人的“飞行与信仰”。</p>
           <p>航段到这里，转向今天。连州市实验小学，是一所把“航天”写进育人、把“党建”融进习惯的学校：这里是全国青少年航天科普活动基地校、广东省航空航天特色学校、清远市科学教育示范学校；校园里有飞享未来航空馆、科技长廊、航空航天科技馆，还有以科学家命名的班级文化。</p>
           <p>从一年级的手抛飞机，到气球火箭，再到扑翼飞机，孩子的每一次起跑，都是同一句“飞出去”。每年四月的科技节上，液氮科学秀、机器狗、无人机、水火箭、纸飞机、激光切割轮番上场——这里的孩子，从很小就知道，天空是可以用手够到的地方。</p>
-          <p>红色教育也没有缺席。课本剧《赵一曼的故事》里，那场“跨时空对话”，打动了一届又一届孩子。今年，正是长征胜利 90 周年——而冯达飞，是连州唯一全程参加长征的红军将领。这所学校要做的，正是让那段“飞行与信仰”，穿过九十年，落在今天的红领巾上。</p>
+          <p>红色教育也没有缺席。课本剧《赵一曼的故事》里，那场“跨时空对话”，打动了一届又一届孩子。今年，正是长征胜利 90 周年——而冯达飞，是广东党史有据可查、参加完全程二万五千里长征的粤籍红军之一。这所学校要做的，正是让那段“飞行与信仰”，穿过九十年，落在今天的红领巾上。</p>
           <p>广东建设职业技术学院启智润心实践队的三下乡学子，和这里的老师、孩子一起，把这条航线讲下去——在“十五五”的新征程上，青年建功，少年筑梦。</p>
-          <p class="school-note">※ 学校名称、称号、党建品牌、设施与活动等表述，以校方正式确认为准；校训、校史、红色渊源与具体数据，请由指导老师核实补充。</p>
         </div>
         <div class="school-badges">
           <div class="sb"><b>全国青少年航天科普活动基地校</b><small>航天筑梦</small></div>
@@ -605,18 +669,20 @@
       </div>
       <div class="route-block reveal">
         <div class="route-head">
-          <div><div class="overline">红色足迹 · 地理航线</div><h3>这辈子，他把地图走了个遍。</h3></div>
-          <p>连州 → 黄埔 → 苏联 → 广州 → 百色 → 漳州 → 上饶：每一站，都是一条红色南粤的航线。</p>
+          <div><div class="overline">红色足迹 · 互动地图</div><h3>这辈子，他<em>把地图走了个遍。</em></h3></div>
+          <p>点一站，看"那年那地那事"——点亮的，是他用脚走出来的红色南粤。连州 → 黄埔 → 苏联 → 广州 → 百色 → 漳州 → 上饶。</p>
         </div>
-        <div class="route-strip">
-          <span class="rt"><b>连州</b><small>1901 · 出生</small></span><i class="rt-link"></i>
-          <span class="rt"><b>黄埔</b><small>1924 · 入党</small></span><i class="rt-link"></i>
-          <span class="rt"><b>苏联</b><small>1925 · 学航空</small></span><i class="rt-link"></i>
-          <span class="rt"><b>广州</b><small>1927 · 起义</small></span><i class="rt-link"></i>
-          <span class="rt"><b>百色</b><small>1929 · 起义</small></span><i class="rt-link"></i>
-          <span class="rt"><b>漳州</b><small>1932 · 首飞</small></span><i class="rt-link"></i>
-          <span class="rt"><b>上饶</b><small>1942 · 牺牲</small></span>
+        <div class="route-strip" id="redRoute">
+          <button class="rt" type="button" data-name="连州" data-year="1901" data-place="广东连州东陂镇" data-story="他在这里出生。红色南粤的航线，从东陂的乡土起飞。"><b>连州</b><small>1901 · 出生</small></button><i class="rt-link" data-k="0"></i>
+          <button class="rt" type="button" data-name="黄埔" data-year="1924" data-place="广州·黄埔军校" data-story="他考入黄埔军校第一期；同年冬，加入中国共产党。"><b>黄埔</b><small>1924 · 入党</small></button><i class="rt-link" data-k="1"></i>
+          <button class="rt" type="button" data-name="苏联" data-year="1925" data-place="赴苏联学航空" data-story="打完东征，他离开故土，去学「人民军队的翅膀」。"><b>苏联</b><small>1925 · 学航空</small></button><i class="rt-link" data-k="2"></i>
+          <button class="rt" type="button" data-name="广州" data-year="1927" data-place="广州起义" data-story="学成归国，他参加了广州起义，站到人民这一边。"><b>广州</b><small>1927 · 起义</small></button><i class="rt-link" data-k="3"></i>
+          <button class="rt" type="button" data-name="百色" data-year="1929" data-place="广西百色" data-story="他参加百色起义，成为红七军一员，把信仰种进群山。"><b>百色</b><small>1929 · 起义</small></button><i class="rt-link" data-k="4"></i>
+          <button class="rt" type="button" data-name="漳州" data-year="1932" data-place="福建漳州" data-story="他随红军攻占漳州，驾缴获飞机首飞中央苏区——人民军队首次由己方飞行员驾机飞回红色根据地。"><b>漳州</b><small>1932 · 首飞</small></button><i class="rt-link" data-k="5"></i>
+          <button class="rt" type="button" data-name="上饶" data-year="1942" data-place="江西上饶集中营（茅家岭）" data-story="1942 年 6 月，他在这里壮烈牺牲；名字镌刻在中国人民空军英烈墙上。"><b>上饶</b><small>1942 · 牺牲</small></button>
         </div>
+        <div id="mapPop" class="map-pop" aria-live="polite"><b id="mapPopTitle">连州 · 1901</b><p id="mapPopText">他在这里出生。红色南粤的航线，从东陂的乡土起飞。</p></div>
+        <button id="lightRoute" class="map-light-btn" type="button">依次点亮整条航线</button>
       </div>
     </div>
   </section>
@@ -647,7 +713,7 @@
       <div class="final-logo"><img id="brandLogoFinal" src="assets/team_logo.png" alt="启智润心实践队队徽"></div>
       <div class="overline" style="justify-content:center">青年建功 · 沿东陂的航线，把专业写在乡土上</div>
       <h2>记住冯达飞，记住红色南粤，<span>也记住这所让“飞”与信仰传承下去的学校。</span></h2>
-      <p>广东建设职业技术学院未来智能学院启智润心实践队，从粤港澳大湾区出发，来到清远连州。我们不是来做一堂课，而是带着这里的老师和孩子，沿着一位连州先烈的航线，走了一遍他的一生——从东陂起飞，到漳州那片天空，再到他为中华献出生命的地方。记住他，就是把红色南粤，写进这一代人的青春。</p>
+      <p>广东建设职业技术学院未来智能学院启智润心实践队，来到清远连州。我们不是来做一堂课，而是带着这里的老师和孩子，沿着一位连州先烈的航线，走了一遍他的一生——从东陂起飞，到漳州那片天空，再到他为中华献出生命的地方。记住他，就是把红色南粤，写进这一代人的青春。</p>
       <div class="final-cta">
         <button id="goWish" class="share-btn solid" type="button">给冯达飞留一句话，生成红色留言卡</button>
         <button id="shareButton" class="share-btn" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4"/><path d="m15.4 6.5-6.8 4"/></svg>分享这段远行</button>
@@ -656,24 +722,33 @@
       <div class="credit">
         <b>广东建设职业技术学院 · 未来智能学院 · 启智润心实践队</b><br>
         清远连州 · 连州市实验小学 · 2026 年<br>
-        指导教师：<span style="color:rgba(255,255,255,.4)">____（待补 / 真人填写）</span><br>
-        作品链接：<span style="color:rgba(255,255,255,.4)">____（上线后补真实链接）</span> · 二维码：<span style="color:rgba(255,255,255,.4)">____（待补）</span>
-        <div class="ai-note">本页冯达飞“数字人”形象与讲述为基于公开史实的艺术化演绎，非真实历史影像、照片与录音，人物语言以可核验史料为准，不虚构原话；页面不用 AI 生成形象作主视觉，历史图片以可核验公开资料为准。冯达飞生平依据公开史料整理；涉及连州市实验小学的名称、称号、党建品牌、设施与活动的表述，以校方正式确认为准。提交前请由指导老师核对数据、作者署名与作品链接。</div>
+        指导教师：<span style="color:rgba(255,255,255,.4)">张莹、罗小婷、王咸锋</span><br>
+        <div class="ai-note">本页冯达飞“数字人”形象与讲述为基于公开史实的艺术化演绎，非真实历史影像、照片与录音，人物语言以可核验史料为准，不虚构原话；页面不用 AI 生成形象作主视觉，历史图片以可核验公开资料为准。冯达飞生平依据公开史料整理。</div>
       </div>
     </div>
   </section>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-  <div id="dhuModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="dhuTitle"><div class="modal-card dhu-modal"><button id="dhuClose" class="modal-close" type="button" aria-label="关闭数字人视频">×</button><h3 id="dhuTitle">冯达飞 · 数字人（艺术化演绎）</h3><div class="dhu-media"><video id="dhuVideo" controls playsinline preload="none" poster="assets/digital_human.jpg"><source src="assets/videos/digital_human_intro.mp4" type="video/mp4"></video></div><p class="dhu-note"><b>AI 数字人讲述（选段）</b>：连州的孩子们，你们好。我叫冯达飞，东陂镇人。1924 年，我考进了黄埔军校第一期。1932 年，我在福建漳州，驾驶着一架没有导航、没有雷达、没有地面指挥的飞机——只有一张地图，和一个方向。那是人民军队历史上，首次由己方飞行员驾驶飞机飞回红色根据地。孩子们，飞出去吧。本段为基于公开史实的艺术化演绎，非真实历史影像、照片与录音；人物语言以可核验史料为准，不虚构原话。</p></div></div>
+  <div id="dhuModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="dhuTitle"><div class="modal-card dhu-modal"><button id="dhuClose" class="modal-close" type="button" aria-label="关闭数字人视频">×</button><h3 id="dhuTitle">冯达飞 · 数字人（艺术化演绎）</h3><div class="dhu-media"><video id="dhuVideo" controls playsinline preload="none" poster="assets/digital_human.jpg" src="assets/videos/dhu_1924.mp4"></video></div><div class="dhu-caption"><b>冯达飞说：</b><span id="dhuCaption">1924 年，我考进了黄埔军校第一期，成为了一名军人。</span></div><p class="dhu-note">▲ 本段为基于公开史实的艺术化演绎，非真实历史影像、照片与录音；人物语言以可核验史料为准，不虚构原话。</p></div></div>
 
-  <div id="letterModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="letterTitle"><div class="modal-card letter-card"><button id="letterClose" class="modal-close" type="button" aria-label="关闭来信">×</button><h3 id="letterTitle">致连州孩子的一封信</h3><div class="letter-body"><p>这封信，写给今天的孩子，也写给当年的冯达飞。</p><p><b>冯达飞</b>（1901—1942），广东连州东陂镇人，中共党员，人民军队航空先驱、最早的飞行员之一、空军首位飞行教官。1924 年考入黄埔军校第一期，同年冬加入中国共产党；1925 年参加黄埔东征（讨伐陈炯明），随后赴苏联学习航空；1927 年归国，参加广州起义；1929 年参加百色起义；1932 年，他随红军攻占福建漳州，驾驶缴获的飞机首次飞回中央苏区——那是人民军队历史上首次由己方飞行员驾机飞回红色根据地。1942 年 6 月，他在江西上饶集中营（茅家岭）壮烈牺牲，名字镌刻在中国人民空军英烈墙上。他把“为中华”三个字，写进了人民军队航空事业的每一次起飞。</p><p>今天，我们站在他出生的地方，把这段历史讲给下一代听——讲故事的人换了一批，故事里的赤诚没有变。</p><p class="letter-sign">—— 启智润心实践队</p><span class="cite">据公开史料整理（广东老区网、央视“矢志革命的红军飞行教官/红色雄鹰”、广东红色故事汇、连州市委党史办）；本页为基于公开史实的艺术化演绎，非真实历史影像与录音，具体用词请由指导老师复核。</span></div></div>
+  <div id="letterModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="letterTitle"><div class="modal-card letter-card"><button id="letterClose" class="modal-close" type="button" aria-label="关闭来信">×</button><h3 id="letterTitle">致连州孩子的一封信</h3><div class="letter-body"><p>这封信，写给今天的孩子，也写给当年的冯达飞。</p><p><b>冯达飞</b>（1901—1942），广东连州东陂镇人，中共党员，人民军队航空先驱、最早的飞行员之一、空军首位飞行教官。1924 年考入黄埔军校第一期，同年冬加入中国共产党；1925 年参加黄埔东征（讨伐陈炯明），随后赴苏联学习航空；1927 年归国，参加广州起义；1929 年参加百色起义；1932 年，他随红军攻占福建漳州，驾驶缴获的飞机首次飞回中央苏区——那是人民军队历史上首次由己方飞行员驾机飞回红色根据地。1942 年 6 月，他在江西上饶集中营（茅家岭）壮烈牺牲，名字镌刻在中国人民空军英烈墙上。他把“为中华”三个字，写进了人民军队航空事业的每一次起飞。</p><p>今天，我们站在他出生的地方，把这段历史讲给下一代听——讲故事的人换了一批，故事里的赤诚没有变。</p><p class="letter-sign">—— 启智润心实践队</p><span class="cite">据公开史料整理（广东老区网、央视“矢志革命的红军飞行教官/红色雄鹰”、广东红色故事汇、连州市委党史办）；本页为基于公开史实的艺术化演绎，非真实历史影像与录音，不虚构原话。</span></div></div>
 
   <script>
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const progressBar = document.getElementById('progressBar');
     const toast = document.getElementById('toast');
     function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>toast.classList.remove('show'),2400)}
+
+    /* ---------- navigator.vibrate 守卫封装（仅支持时触发；尊重 reduced-motion；需用户手势） ---------- */
+    window.__vibrateCalls=[];
+    function vibrate(pattern){
+      try{window.__vibrateCalls.push(pattern);}catch(e){}
+      if(reducedMotion||!navigator.vibrate)return;
+      // Chrome 在“无用户手势”时调用 navigator.vibrate 会被拦截并报 console error，这里用 transient activation 守卫
+      if(navigator.userActivation && !navigator.userActivation.isActive)return;
+      try{navigator.vibrate(pattern);}catch(e){}
+    }
 
     /* ---------- 命门修复：内容默认 opacity:1，此处仅做“装饰性入场”（transform+blur），永不隐藏内容 ---------- */
     function initReveal(){
@@ -700,15 +775,15 @@
     }
     window.addEventListener('scroll',updateProgress,{passive:true});
 
-    /* ---------- 首屏滚动视差（内容不隐藏，仅位移） ---------- */
+    /* ---------- 首屏滚动视差（内容不隐藏，仅位移；仅 transform，绝不 opacity） ---------- */
     const heroBg=document.querySelector('.hero-bg');
     const heroCollage=document.querySelector('.hero-collage');
     window.addEventListener('scroll',()=>{
-      const y=window.scrollY;
       if(reducedMotion)return;
-      if(y<window.innerHeight*1.2){
-        if(heroBg)heroBg.style.transform=`translateY(${y*.3}px)`;
-        if(heroCollage)heroCollage.style.transform=`translateY(${y*.06}px)`;
+      const y=window.scrollY;
+      if(y<=window.innerHeight*1.25){
+        if(heroBg)heroBg.style.transform=`translateY(${Math.min(y*.3,window.innerHeight*.42)}px)`;
+        if(heroCollage)heroCollage.style.transform=`translateY(${Math.min(y*.06,window.innerHeight*.09)}px)`;
       }
     },{passive:true});
 
@@ -736,17 +811,50 @@
     /* ---------- 开始旅程 ---------- */
     document.getElementById('startJourney').addEventListener('click',()=>{document.getElementById('manifesto').scrollIntoView({behavior:'smooth'});showToast('航线开始：先记住这一句话')});
 
-    /* ---------- 数字人视频弹窗 ---------- */
+    /* ---------- ① 时空对话：选节点 → 冯达飞回应（视频 + “冯达飞说…”字幕） ---------- */
+    const DIALOG_NODES={
+      '1924':   {label:'1924 · 黄埔',  caption:'1924 年，我考进了黄埔军校第一期，成为了一名军人。', video:'dhu_1924.mp4'},
+      'usr':    {label:'苏联 · 家信',  caption:'在苏联的时候，有一天，我接到了一封家信——母亲走了。', video:'dhu_usr.mp4'},
+      '1932':   {label:'1932 · 漳州',  caption:'1932 年，我在福建漳州驾驶着一架没有导航、没有雷达、没有地面指挥的飞机——只有一张地图，和一个方向。', video:'dhu_1932.mp4'},
+      'first':  {label:'首飞 · 根据地',caption:'那是人民军队历史上，首次由己方飞行员驾驶飞机飞回红色根据地。', video:'dhu_first.mp4'},
+      'lianzhou':{label:'望见 · 连州', caption:'那时候我就想：总有一天，连州的每一个孩子，都能坐在明亮的教室里，想折多少纸飞机就折多少纸飞机，想飞多远就飞多远。', video:'dhu_lianzhou.mp4'},
+      'flyout': {label:'飞出去',      caption:'孩子们，飞出去吧。飞出去了……真好。', video:'dhu_flyout.mp4'},
+    };
+    let currentNodeKey='1924'; // 空态默认节点
     const dhuModal=document.getElementById('dhuModal');
     const dhuPlay=document.getElementById('dhuPlay');
     const dhuClose=document.getElementById('dhuClose');
     const dhuVideo=document.getElementById('dhuVideo');
-    const openDhu=()=>{if(dhuModal){dhuModal.classList.add('open');if(dhuVideo){try{dhuVideo.currentTime=0;dhuVideo.play().catch(()=>{})}catch(e){}}if(dhuClose)dhuClose.focus()}};
+    const dhuCaption=document.getElementById('dhuCaption');
+    const dhuSayText=document.getElementById('dhuSayText');
+    const dialogNodes=[...document.querySelectorAll('.dialog-node')];
+    function applyNodeState(key){
+      currentNodeKey=key;
+      const n=DIALOG_NODES[key];
+      dialogNodes.forEach(b=>b.classList.toggle('active',b.dataset.key===key));
+      const say=(n&&n.caption)?n.caption:'（点一个节点，听他说）';
+      if(dhuCaption)dhuCaption.textContent=say;
+      if(dhuSayText)dhuSayText.textContent=say;
+      return n;
+    }
+    applyNodeState(currentNodeKey); // 空态即默认回显第一句
+    function openDhu(key){
+      const n=applyNodeState(key||currentNodeKey);
+      if(!dhuModal)return;
+      dhuModal.classList.add('open');
+      if(dhuVideo&&n){
+        const src='assets/videos/'+n.video;
+        if(dhuVideo.getAttribute('src')!==src){dhuVideo.setAttribute('src',src);try{dhuVideo.load()}catch(e){}}
+        try{dhuVideo.currentTime=0;dhuVideo.play().catch(()=>{})}catch(e){}
+      }
+      if(dhuClose)dhuClose.focus();
+    }
     const closeDhu=()=>{if(dhuModal){dhuModal.classList.remove('open');if(dhuVideo){try{dhuVideo.pause()}catch(e){}}}};
-    if(dhuPlay)dhuPlay.addEventListener('click',openDhu);
+    if(dhuPlay)dhuPlay.addEventListener('click',()=>openDhu(currentNodeKey));
     if(dhuClose)dhuClose.addEventListener('click',closeDhu);
     if(dhuModal)dhuModal.addEventListener('click',e=>{if(e.target===dhuModal)closeDhu()});
     document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDhu()});
+    dialogNodes.forEach(b=>b.addEventListener('click',()=>openDhu(b.dataset.key)));
 
     /* ---------- 通用：Canvas 卡片绘制 / 保存 / 分享 ---------- */
     function wrapText(ctx,text,x,y,maxWidth,lineHeight,font,limitY){
@@ -817,6 +925,7 @@
       if(!v){showToast('先写一句想说的话，再折纸飞机');wishInput.focus();wishInput.classList.add('gleam');setTimeout(()=>wishInput.classList.remove('gleam'),700);return;}
       makeWishCanvas();
       cardStage.classList.add('show');cardActions.style.display='flex';
+      vibrate(60); // 生成留言卡的关键反馈震动
       showToast('留言卡生成了——把它带回去，也送给同行的伙伴');
     });
     document.getElementById('saveCard').addEventListener('click',()=>{saveCanvas(document.getElementById('wishCanvas').toDataURL('image/png'),'写给南粤先烈的一句话.png');});
@@ -847,12 +956,104 @@
       }catch(error){if(error&&error.name!=='AbortError')showToast('分享未完成，可复制页面链接');}
     });
 
-    /* ---------- 环境音开关（本页讲述以数字人视频承载，此处为界面提示） ---------- */
+    /* ---------- ③ 沉浸式飞行：环境音（WebAudio 合成“风声 + 引擎”，Safari 手势后 resume） ---------- */
     const soundToggle=document.getElementById('soundToggle');
-    let soundOn=false;
+    let soundOn=false,audioCtx=null,ambGain=null,windGain=null,engineGain=null;
+    const AMBIENT_LEVEL=.34;
+    function buildAmbient(ctx){
+      const master=ctx.createGain();master.gain.value=AMBIENT_LEVEL;master.connect(ctx.destination);
+      // 风：棕噪 → 带通滤波 → 呼吸式增益（LFO 起伏）
+      const len=Math.floor(ctx.sampleRate*3);
+      const buf=ctx.createBuffer(1,len,ctx.sampleRate);
+      const data=buf.getChannelData(0);let last=0;
+      for(let i=0;i<len;i++){const w=Math.random()*2-1;last=(last+.02*w)/1.02;data[i]=last*3.4;}
+      const windSrc=ctx.createBufferSource();windSrc.buffer=buf;windSrc.loop=true;
+      const bp=ctx.createBiquadFilter();bp.type='bandpass';bp.frequency.value=720;bp.Q.value=.6;
+      windGain=ctx.createGain();windGain.gain.value=0;
+      windSrc.connect(bp);bp.connect(windGain);windGain.connect(master);
+      const lfo=ctx.createOscillator();lfo.frequency.value=.16;
+      const lfoGain=ctx.createGain();lfoGain.gain.value=.14;
+      lfo.connect(lfoGain);lfoGain.connect(windGain.gain);
+      windSrc.start();lfo.start();
+      // 引擎：低频锯齿波 → 低通，LFO 轻微抖动（“嗡”声）
+      engineGain=ctx.createGain();engineGain.gain.value=0;
+      const eng=ctx.createOscillator();eng.type='sawtooth';eng.frequency.value=82;
+      const lp=ctx.createBiquadFilter();lp.type='lowpass';lp.frequency.value=150;
+      eng.connect(lp);lp.connect(engineGain);engineGain.connect(master);
+      const eLfo=ctx.createOscillator();eLfo.frequency.value=.9;
+      const eLfoGain=ctx.createGain();eLfoGain.gain.value=1.8;
+      eLfo.connect(eLfoGain);eLfoGain.connect(eng.frequency);
+      eng.start();eLfo.start();
+      return master;
+    }
+    function ambientState(){return {state:audioCtx?audioCtx.state:'none', gain:ambGain?ambGain.gain.value:0, on:soundOn};}
+    window.__ambient=ambientState; // 供自动化自测读取
+    function startAmbient(){
+      if(reducedMotion)return;
+      const AC=window.AudioContext||window.webkitAudioContext;
+      if(!AC)return;
+      if(!audioCtx){audioCtx=new AC();ambGain=buildAmbient(audioCtx);}
+      if(audioCtx.state==='suspended'){try{audioCtx.resume();}catch(e){}}
+      if(ambGain)ambGain.gain.value=AMBIENT_LEVEL;
+      if(windGain)windGain.gain.setTargetAtTime(.5,audioCtx.currentTime,.3);
+      if(engineGain)engineGain.gain.setTargetAtTime(.16,audioCtx.currentTime,.3);
+    }
+    function stopAmbient(){
+      if(audioCtx&&audioCtx.state==='running'){try{audioCtx.suspend();}catch(e){}}
+    }
     soundToggle.addEventListener('click',()=>{
-      soundOn=!soundOn;soundToggle.style.color=soundOn?'var(--gold-light)':'#fff';
-      showToast(soundOn?'环境音已开启（数字人讲述以视频承载）':'环境音已关闭');
+      if(reducedMotion){showToast('已开启「减少动态效果」，环境音/震动/视差已关闭');return;}
+      soundOn=!soundOn;
+      soundToggle.classList.toggle('on',soundOn);
+      soundToggle.setAttribute('aria-pressed',String(soundOn));
+      soundToggle.setAttribute('aria-label',soundOn?'关闭环境音':'打开环境音');
+      if(soundOn)startAmbient();else stopAmbient();
+      showToast(soundOn?'环境音已开启（风声 · 引擎声）':'环境音已关闭');
+    });
+    /* ---------- ③ 沉浸式飞行：navigator.vibrate（进入首飞/牺牲段时触发） ---------- */
+    const stageObserver=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(!e.isIntersecting)return;
+        const kind=e.target.dataset.vibrate;
+        if(kind==='sacrifice')vibrate([200,80,200,80,260]);
+        else vibrate([80,40,120]);
+        stageObserver.unobserve(e.target);
+      });
+    },{threshold:.45});
+    document.querySelectorAll('[data-vibrate]').forEach(el=>stageObserver.observe(el));
+
+    /* ---------- ② 红色足迹互动地图：点站 → 点亮 + 弹“那年那地那事” ---------- */
+    const redStations=[...document.querySelectorAll('#redRoute .rt')];
+    const redLinks=[...document.querySelectorAll('#redRoute .rt-link')];
+    const mapPop=document.getElementById('mapPop');
+    const mapPopTitle=document.getElementById('mapPopTitle');
+    const mapPopText=document.getElementById('mapPopText');
+    function showMapPop(station){
+      const name=station.dataset.name||'',year=station.dataset.year||'',story=station.dataset.story||'';
+      if(mapPopTitle)mapPopTitle.textContent=`${name} · ${year}`;
+      if(mapPopText)mapPopText.textContent=story;
+      if(mapPop){mapPop.classList.remove('show');void mapPop.offsetWidth;mapPop.classList.add('show');}
+    }
+    let routeIdx=-1;
+    function lightRouteUpTo(idx){
+      routeIdx=idx;
+      redStations.forEach((st,i)=>st.classList.toggle('lit',i<=idx));
+      redLinks.forEach((lk,k)=>lk.classList.toggle('lit',k<idx));
+    }
+    redStations.forEach((st,i)=>{
+      st.addEventListener('click',()=>{lightRouteUpTo(i);showMapPop(st);vibrate([30,30,30]);});
+    });
+    const lightRouteBtn=document.getElementById('lightRoute');
+    if(lightRouteBtn)lightRouteBtn.addEventListener('click',()=>{
+      if(lightRouteBtn.disabled)return;
+      lightRouteBtn.disabled=true;
+      let i=0;
+      const step=()=>{
+        if(i>=redStations.length){lightRouteBtn.disabled=false;return;}
+        lightRouteUpTo(i);showMapPop(redStations[i]);vibrate([20,20,20]);i++;
+        setTimeout(step,260);
+      };
+      step();
     });
 
     initReveal();
