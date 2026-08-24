@@ -47,10 +47,12 @@ def run():
         page.locator("#letterClose").click()
         assert not page.locator("#letterModal").evaluate("(el) => el.classList.contains('open')"), "信件小窗未关闭"
         page.locator("#rocketButton").click()
-        page.locator("#factButton").click()
-        assert page.locator("#factModal").evaluate("(el) => el.classList.contains('open')"), "弹窗未打开"
-        page.locator("#modalClose").click()
-        assert not page.locator("#factModal").evaluate("(el) => el.classList.contains('open')"), "弹窗未关闭"
+        # 04 数字人视频弹窗
+        page.locator("#dhuPlay").scroll_into_view_if_needed()
+        page.locator("#dhuPlay").click()
+        assert page.locator("#dhuModal").evaluate("(el) => el.classList.contains('open')"), "数字人弹窗未打开"
+        page.locator("#dhuClose").click()
+        assert not page.locator("#dhuModal").evaluate("(el) => el.classList.contains('open')"), "数字人弹窗未关闭"
 
         # ---- 新增：纸飞机 UGC / 队徽 / AI 标注 ----
         page.locator("#wish").scroll_into_view_if_needed()

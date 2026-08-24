@@ -226,6 +226,22 @@
     .red-card-content{position:relative;z-index:1;max-width:430px;padding:32px}
     .red-card-content h4{margin:0 0 14px;font-family:Georgia,serif;font-size:34px;line-height:1.08;letter-spacing:-.04em}
     .red-card-content p{margin:0 0 22px;color:rgba(255,255,255,.73);font-size:14px}
+
+    /* 04 红色 · 数字人 */
+    .dhu-card{position:relative;min-height:340px;border-radius:22px;color:#fff;background:linear-gradient(160deg,#2a1320,#170b11);box-shadow:var(--shadow);padding:20px}
+    .dhu-photo{position:relative;border-radius:16px;overflow:hidden;background:#f2e8d8}
+    .dhu-photo img{display:block;width:100%;height:auto;object-fit:cover;filter:contrast(1.02) saturate(.96)}
+    .dhu-badge{position:absolute;left:12px;bottom:12px;padding:5px 10px;border-radius:999px;color:#fff;background:rgba(126,22,41,.84);font-size:11px;letter-spacing:.06em;backdrop-filter:blur(6px)}
+    .dhu-content{padding:18px 4px 6px}
+    .dhu-content h4{margin:0 0 12px;font-family:Georgia,"Noto Serif SC","Songti SC",serif;font-size:32px;line-height:1.08;letter-spacing:-.04em}
+    .dhu-content p{margin:0 0 20px;color:rgba(255,255,255,.75);font-size:14px}
+    .dhu-actions{display:flex;flex-wrap:wrap;gap:10px}
+    .dhu-card .letter-open{margin-top:0}
+    .dhu-modal{width:min(560px,100%);padding:20px}
+    .dhu-modal h3{margin:0 0 14px}
+    .dhu-media{border-radius:14px;overflow:hidden;background:#000}
+    .dhu-media video{display:block;width:100%;height:auto;max-height:70vh;background:#000}
+    .dhu-note{margin-top:12px;color:var(--muted);font-size:12px;line-height:1.7}
     .fact-btn{padding:10px 13px;border:1px solid rgba(255,255,255,.3);border-radius:999px;color:#fff;background:rgba(255,255,255,.09);font-size:12px}
 
     .artifact-strip{padding:92px 28px 104px;background:var(--wine);color:#fff}
@@ -573,11 +589,21 @@
       <article class="stage reveal">
         <div class="stage-index">04<small>红色 · 讲述</small></div>
         <div class="stage-content flip">
-          <div class="red-card"><img src="assets/red_spirit_1024x768.jpg" alt="红色主题课堂与舞台剧" loading="lazy" decoding="async"><div class="red-card-content"><h4>在连州，重新认识冯达飞。</h4><p>红色精神不是远方的故事，而是家乡真实存在过的名字，也是今天的孩子可以继续讲下去的故事。</p><button id="letterOpen" class="letter-open" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>翻开这封红色来信</button><button id="factCardButton" class="fact-btn" type="button">打开史实表达提示</button></div></div>
+          <div class="dhu-card">
+            <div class="dhu-photo"><img src="assets/digital_human.jpg" alt="冯达飞 AI 数字人" loading="lazy" decoding="async"><span class="dhu-badge">AI 数字人 · 基于史实艺术化演绎</span></div>
+            <div class="dhu-content">
+              <h4>在连州，遇见冯达飞。</h4>
+              <p>我们把这位连州籍的天之骄子，做成一位会说话的“数字人”。请他回到家乡，给今天的孩子，讲一段当年的天空。</p>
+              <div class="dhu-actions">
+                <button id="dhuPlay" class="letter-open" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>听数字人讲一段</button>
+                <button id="letterOpen" class="letter-open" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>翻开这封红色来信</button>
+              </div>
+            </div>
+          </div>
           <div class="stage-copy">
-            <h3>从“老师讲”到“学生演 + 学生讲”</h3>
-            <p>我们用舞台剧、长征体验和数字创作，把“听故事”变成“演故事、讲故事”。技术只做放大器，真正被留下的，是孩子们对家乡和国家的情感。</p>
-            <button id="factButton" class="stage-action" type="button">查看资料说明 <span>↗</span></button>
+            <h3>让冯达飞“亲自”回到家乡</h3>
+            <p>我们用 AI 数字人复刻一位历史人物，把“听故事”变成“演故事、讲故事”。技术只做放大器，真正被留下的，是孩子们对家乡和国家的感情。</p>
+            <button id="dhuHint" class="stage-action" type="button">听数字人讲一段历史 <span>↗</span></button>
           </div>
         </div>
       </article>
@@ -633,7 +659,7 @@
         清远连州 · 2026年7月<br>
         指导教师：<span style="color:rgba(255,255,255,.4)">____（待补 / 真人填写）</span><br>
         作品链接：<span style="color:rgba(255,255,255,.4)">____（上线后补真实链接）</span> · 二维码：<span style="color:rgba(255,255,255,.4)">____（待补）</span>
-        <div class="ai-note">本页部分插图为 AI 辅助生成，用于艺术化演绎；历史与人物内容以可核验资料为准。冯达飞相关表达采用学生真实舞台演绎与公开史料，不虚构人物原话。提交前请由指导老师核对数据、作者署名与作品链接。</div>
+        <div class="ai-note">本页部分插图为 AI 辅助生成，用于艺术化演绎；冯达飞"数字人"形象与讲述为基于公开史实的艺术化演绎，非真实历史影像、照片与录音，人物语言以可核验史料为准，不虚构原话。历史与人物内容以可核验资料为准，提交前请由指导老师核对数据、作者署名与作品链接。</div>
       </div>
     </div>
   </section>
@@ -642,7 +668,7 @@
 
   <div id="lionStamp" class="stamp" aria-live="polite"><div class="stamp-inner">已醒<small>THE LION WAKES</small></div></div>
 
-  <div id="factModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="factTitle"><div class="modal-card"><button id="modalClose" class="modal-close" type="button" aria-label="关闭资料卡片">×</button><h3 id="factTitle">史实与合规表达提示</h3><p>冯达飞是连州本土红色人物。正式参赛版建议使用<b>可核验的历史资料、公开照片和学生真实舞台表达</b>；如果使用 AI 生成形象，应标注“基于史实的艺术化演绎”，避免虚构历史人物原话。这样既保留数字创意，也能让作品的立场、真实性和教育意义更稳。</p><p>提交前请由指导老师核对：数据（7 天 / 26 课时 / 25+ 名孩子）、全部作者与学校署名、真实素材与视频、作品网络链接与二维码。</p></div></div>
+  <div id="dhuModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="dhuTitle"><div class="modal-card dhu-modal"><button id="dhuClose" class="modal-close" type="button" aria-label="关闭数字人视频">×</button><h3 id="dhuTitle">冯达飞 · 数字人</h3><div class="dhu-media"><video id="dhuVideo" controls playsinline preload="none" poster="assets/digital_human.jpg"><source src="assets/videos/digital_human_intro.mp4" type="video/mp4"></video></div><p class="dhu-note">AI 数字人讲述：连州的孩子们，你们好。我叫冯达飞，东陂镇人。本段为基于公开史实的艺术化演绎，非真实历史影像与录音。</p></div></div>
 
   <div id="letterModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="letterTitle"><div class="modal-card letter-card"><button id="letterClose" class="modal-close" type="button" aria-label="关闭来信">×</button><h3 id="letterTitle">致连州孩子的一封信</h3><div class="letter-body"><p>这封信，写给今天的孩子，也写给当年的冯达飞。</p><p><b>冯达飞</b>，广东连州人，中共党员，黄埔军校首期学员，参加过南昌起义，是中国空军最早的飞行员之一。他把“为中华”三个字，写在了一次次起飞里。</p><p>今天我们站在他的家乡，把这段历史讲给下一代听——讲故事的人换了一批，故事里的赤诚没有变。</p><p class="letter-sign">—— 启智润心实践队</p></div><span class="cite">据公开史料整理；本页为艺术化演绎，表达经可核验资料与指导老师把关。</span></div></div>
 
@@ -783,15 +809,18 @@
     document.getElementById('rocketButton').addEventListener('click',pumpRocket);
     document.getElementById('launchHint').addEventListener('click',()=>{rocketZone.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(launchRocket,500)});
 
-    /* ---------- 史实弹窗 ---------- */
-    const modal=document.getElementById('factModal');
-    const openModal=()=>{modal.classList.add('open');document.getElementById('modalClose').focus()};
-    const closeModal=()=>modal.classList.remove('open');
-    document.getElementById('factButton').addEventListener('click',openModal);
-    document.getElementById('factCardButton').addEventListener('click',openModal);
-    document.getElementById('modalClose').addEventListener('click',closeModal);
-    modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
-    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+    /* ---------- 数字人视频弹窗 ---------- */
+    const dhuModal=document.getElementById('dhuModal');
+    const dhuPlay=document.getElementById('dhuPlay');
+    const dhuClose=document.getElementById('dhuClose');
+    const dhuVideo=document.getElementById('dhuVideo');
+    const openDhu=()=>{if(dhuModal){dhuModal.classList.add('open');if(dhuVideo){try{dhuVideo.currentTime=0;dhuVideo.play().catch(()=>{})}catch(e){}}if(dhuClose)dhuClose.focus()}};
+    const closeDhu=()=>{if(dhuModal){dhuModal.classList.remove('open');if(dhuVideo){try{dhuVideo.pause()}catch(e){}}}};
+    document.getElementById('dhuHint').addEventListener('click',openDhu);
+    if(dhuPlay)dhuPlay.addEventListener('click',openDhu);
+    if(dhuClose)dhuClose.addEventListener('click',closeDhu);
+    if(dhuModal)dhuModal.addEventListener('click',e=>{if(e.target===dhuModal)closeDhu()});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDhu()});
 
     /* ---------- 通用：Canvas 卡片绘制 / 保存 / 分享 ---------- */
     function wrapText(ctx,text,x,y,maxWidth,lineHeight,font,limitY){
