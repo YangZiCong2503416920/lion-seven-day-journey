@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#170b11">
-  <meta name="description" content="一头醒狮的七日远行——连州孩子的非遗、科创与红色成长课">
-  <meta name="keywords" content="粤港澳大湾区,岭南非遗,醒狮,漆扇,扎染,乡村科创,红色南粤,冯达飞,青年建功,三下乡,连州,广东建院">
+  <meta name="description" content="东陂的天空——红色南粤 · 冯达飞：从连州东陂镇飞出去的红军首位飞行员。带孩子沿着他的航线走一段路，把根留住，把愿望送上他飞过的天空。">
+  <meta name="keywords" content="粤易创新,红色南粤,冯达飞,东陂,连州,红军首位飞行员,黄埔军校,岭南非遗,醒狮,扎染,纸飞机,水火箭,数字人,青年建功,三下乡,广东建院">
   <!-- 分享/传播 meta（转发卡片第一眼） -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="一头醒狮的七日远行｜连州孩子的非遗、科创与红色成长课">
-  <meta property="og:description" content="从岭南非遗出发，穿过纸飞机和水火箭的风，走进连州孩子的红色课堂，最终抵达他们亲手创造的未来。">
+  <meta property="og:title" content="东陂的天空——红色南粤 · 冯达飞">
+  <meta property="og:description" content="一个连州人飞出去了，就要让更多连州孩子，飞得更远。">
   <meta property="og:image" content="assets/cover_bg_1920x1080.jpg">
   <meta property="og:locale" content="zh_CN">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="一头醒狮的七日远行">
-  <meta name="twitter:description" content="连州孩子的非遗、科创与红色成长课——非遗为桥，科创为翼。">
+  <meta name="twitter:title" content="东陂的天空——红色南粤 · 冯达飞">
+  <meta name="twitter:description" content="从1901年东陂镇起飞，到1932年无导航飞回红色根据地。带连州孩子把根留住，把愿望送上他飞过的天空。">
   <meta name="twitter:image" content="assets/cover_bg_1920x1080.jpg">
-  <title>一头醒狮的七日远行｜数字展览</title>
+  <title>东陂的天空——红色南粤 · 冯达飞</title>
   <style>
     :root{
       --ink:#1b0d13;
@@ -157,6 +157,7 @@
     .manifesto blockquote{margin:0;font-family:Georgia,"Noto Serif SC","Songti SC",serif;font-size:clamp(34px,5vw,68px);line-height:1.17;letter-spacing:-.055em}
     .manifesto blockquote span{color:var(--red)}
     .manifesto-note{max-width:610px;margin:25px 0 0;color:var(--muted);font-size:16px}
+    .manifesto-old{display:block;margin-top:16px;color:var(--muted);font-size:12px;letter-spacing:.04em}
     .rule{width:100%;height:1px;margin:66px 0 0;background:var(--line)}
 
     .journey{position:relative;padding:100px 28px 120px;background:var(--paper-2);overflow:hidden}
@@ -184,6 +185,25 @@
     .stage-photo figcaption b{display:block;margin-bottom:2px;color:var(--gold-light);font-family:Georgia,serif;font-size:18px}
     .stage-action{display:inline-flex;align-items:center;gap:7px;margin-top:6px;border:0;padding:0;color:var(--red-deep);font-weight:800;background:transparent}
     .stage-note{margin:0 0 10px;color:var(--red-deep);font-size:14px;font-weight:800}
+    .story-note{margin:0 0 14px;color:var(--muted);font-size:12px;font-style:italic}
+
+    /* --- 冯达飞生平 · 时间线 --- */
+    .timeline{padding:100px 28px 108px;background:var(--paper);border-top:1px solid var(--line)}
+    .timeline-inner{width:min(var(--max),100%);margin:0 auto}
+    .timeline-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:40px}
+    .timeline-head .overline{color:var(--red)}
+    .timeline-head .overline::before{background:var(--red)}
+    .timeline-head h2{margin:10px 0 0;font-family:Georgia,"Noto Serif SC","Songti SC",serif;font-size:clamp(38px,6vw,72px);line-height:1;letter-spacing:-.06em}
+    .timeline-head p{max-width:300px;margin:0;color:var(--muted);font-size:14px}
+    .timeline-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .tl-item{position:relative;overflow:hidden;padding:22px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.5);min-height:214px;display:flex;flex-direction:column;gap:10px;transition:transform .3s ease,border-color .3s ease}
+    .tl-item:hover{transform:translateY(-6px);border-color:var(--gold)}
+    .tl-year{font-family:Georgia,serif;font-size:46px;line-height:1;letter-spacing:-.05em;color:var(--red)}
+    .tl-card h3{margin:0 0 8px;font-family:Georgia,"Noto Serif SC",serif;font-size:23px;line-height:1.12;letter-spacing:-.03em}
+    .tl-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.75}
+    .tl-card p small{display:block;margin-top:8px;color:var(--muted);font-size:11px;opacity:.8}
+    @media (max-width:900px){.timeline-strip{grid-template-columns:repeat(2,1fr)}.timeline-head{display:block}.timeline-head p{margin-top:18px}}
+    @media (max-width:620px){.timeline{padding:70px 18px 82px}.timeline-strip{grid-template-columns:1fr}.tl-item{min-height:0}}
 
     .interactive-tray{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
     .tray-chip{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink);background:rgba(255,255,255,.48);font-size:12px}
@@ -209,7 +229,7 @@
     .rocket-btn{position:absolute;z-index:5;right:16px;bottom:15px;padding:10px 13px;border:1px solid rgba(40,56,50,.22);border-radius:999px;color:#284c4b;background:rgba(255,255,255,.78);font-size:12px;font-weight:800}
     .rocket-label{position:absolute;z-index:5;left:17px;bottom:17px;color:#284c4b;font-size:12px;font-weight:800}
 
-    /* 漆扇（可保存成卡） */
+    /* 扎染（可保存成卡） */
     .paint-pad{position:relative;min-height:340px;overflow:hidden;border-radius:22px;background:linear-gradient(135deg,#f6efe2,#d6e9e3);box-shadow:var(--shadow);padding:24px}
     .paint-pad::before{content:"扎染";position:absolute;right:-12px;top:-18px;color:rgba(126,22,41,.08);font-family:Georgia,serif;font-size:132px;font-weight:700;line-height:1;pointer-events:none}
     .paint-pad::after{content:"";position:absolute;inset:auto -44px -70px;height:180px;background:radial-gradient(ellipse,#c4263b 0 16%,transparent 17%),radial-gradient(ellipse,#4d9ba0 0 16%,transparent 17%),radial-gradient(ellipse,#dca23f 0 16%,transparent 17%);background-size:108px 75px,130px 94px,92px 86px;background-position:8% 78%,53% 58%,88% 86%;opacity:.74;transform:rotate(-8deg);transition:transform .6s ease;pointer-events:none}
@@ -450,7 +470,8 @@
     <div class="top-chapters" aria-label="章节导航">
       <a class="chapter-dot active" href="#top" aria-label="首页"></a>
       <a class="chapter-dot" href="#manifesto" aria-label="序言"></a>
-      <a class="chapter-dot" href="#journey" aria-label="七日旅程"></a>
+      <a class="chapter-dot" href="#journey" aria-label="四段航程"></a>
+      <a class="chapter-dot" href="#timeline" aria-label="冯达飞生平"></a>
       <a class="chapter-dot" href="#artifacts" aria-label="作品档案"></a>
       <a class="chapter-dot" href="#wish" aria-label="纸飞机"></a>
       <a class="chapter-dot" href="#final" aria-label="结尾"></a>
@@ -465,21 +486,22 @@
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-inner">
       <div class="hero-copy reveal">
-        <h1 id="heroTitle">一头醒狮的<em>七日远行</em></h1>
-        <p class="hero-lead">从岭南非遗出发，穿过纸飞机和水火箭的风，走进连州孩子的红色课堂，最后抵达他们亲手创造的未来。</p>
-        <div class="hero-pills"><span>岭南非遗</span><span>乡村科创</span><span>红色南粤</span><span>青年建功</span></div>
+        <div class="overline">红色南粤 · 冯达飞</div>
+        <h1 id="heroTitle">东陂的<em>天空</em></h1>
+        <p class="hero-lead">1901 年，冯达飞从连州东陂镇出发，飞去为祖国开天辟地；今天，孩子在同一片乡土上把根留住、把愿望送上天空——而他自己，以数字人的身份，飞回了东陂。</p>
+        <div class="hero-pills"><span>冯达飞 · 连州</span><span>红色南粤</span><span>岭南非遗</span><span>青年建功</span></div>
         <div class="hero-actions">
-          <button id="startJourney" class="primary-btn" type="button">开始这段远行 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+          <button id="startJourney" class="primary-btn" type="button">开始这段航程 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
           <a class="ghost-btn" href="#manifesto">先看一句话</a>
         </div>
         <div class="hero-meta"><div><b>7</b><small>天实践</small></div><div><b>26</b><small>课时</small></div><div><b>25+</b><small>名孩子</small></div></div>
       </div>
       <div class="hero-collage reveal">
         <div class="main-shot"><img src="assets/cover_bg_1920x1080.jpg" alt="连州支教课堂主题画面" fetchpriority="high"></div>
-        <div class="hero-caption"><strong>文化寻根 · 科技逐梦</strong><span>清远连州 · 2026.07</span></div>
+        <div class="hero-caption"><strong>从东陂出发 · 飞向天空</strong><span>清远连州 · 2026.07</span></div>
         <div class="polaroid one"><img src="assets/heritage_liondance_1024x768.jpg" alt="醒狮课堂" loading="lazy" decoding="async"><small>THE LION WAKES</small></div>
         <div class="polaroid two"><img src="assets/aigc_tech_1024x768.jpg" alt="科创课堂" loading="lazy" decoding="async"><small>MAKE THE FUTURE</small></div>
-        <div class="seal-orbit">一场课堂<br>一束微光</div>
+        <div class="seal-orbit">一段航程<br>一束微光</div>
         <div class="lion-wrap">
           <button id="lionButton" class="lion-hotspot" type="button" aria-label="点醒醒狮">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1.8 2.1 4.6 2.6 6.7 1.9.1 2.2-1.2 3.8-3 4.8 2.4.5 4.3 2.3 4.3 4.8 0 3.6-3.4 6.2-8 6.2s-8-2.6-8-6.2c0-2.5 1.9-4.3 4.3-4.8-1.8-1-3.1-2.6-3-4.8C7.4 5.6 10.2 5.1 12 3Z"/><circle cx="9" cy="13" r="1"/><circle cx="15" cy="13" r="1"/><path d="M9 16c1.8 1.1 4.2 1.1 6 0"/></svg>
@@ -494,10 +516,11 @@
 
   <section id="manifesto" class="manifesto">
     <div class="manifesto-inner reveal">
-      <div class="manifesto-label">序言 / 01</div>
+      <div class="manifesto-label">序言</div>
       <div>
-        <blockquote>我们没有把非遗讲给孩子听，<br>而是让孩子<span>亲手把它做出来。</span></blockquote>
-        <p class="manifesto-note">在连州市实验小学，醒狮、漆扇、扎染、纸飞机、水火箭和数字创作被放进同一间课堂。文化不再只是被保存，也开始被下一代重新表达。</p>
+        <blockquote>我们不讲一个飘在空中的“红色故事”，<br>而是让孩子，<span>从冯达飞脚下的这片乡土出发，</span>亲手把一百年前的那段航程，叠进今天的纸飞机里。</blockquote>
+        <p class="manifesto-note">在连州市实验小学，醒狮、扎染、纸飞机、水火箭和 AI 数字创作被放进同一间课堂。它们不是四门课，而是一条航线上的四个航标——这条航线的第一人称，是 1901 年从东陂镇飞出去的那位连州人，冯达飞。</p>
+        <small class="manifesto-old">原题《一头醒狮的七日远行》 · 现改订为《东陂的天空》</small>
         <div class="rule"></div>
       </div>
     </div>
@@ -506,34 +529,34 @@
   <section id="journey" class="journey">
     <div class="journey-inner">
       <div class="journey-head reveal">
-        <div><div class="overline">The seven-day journey</div><h2>七天，<br>一条成长线。</h2></div>
-        <p>每一章只讲一件事：孩子怎样从“看见”走到“创造”，我们怎样把专业所学写在乡土上。</p>
+        <div><div class="overline">红色南粤 · 冯达飞</div><h2>四段航程，<br>一条航线。</h2></div>
+        <p>从 1901 年东陂出发，到 1932 年无导航飞回红色根据地——冯达飞的人生是四段航程；今天的非遗与科创，都在这条航线上继续飞。</p>
       </div>
 
       <article class="stage reveal">
-        <div class="stage-index">01<small>醒狮 · 传承</small></div>
+        <div class="stage-index">01<small>醒狮 · 根</small></div>
         <div class="stage-content">
           <div class="stage-copy">
-            <h3>把狮头交给孩子</h3>
-            <p class="stage-quote">当孩子第一次举起狮头，传统才真正开始传承。</p>
-            <p>从“老师讲、孩子看”，到“孩子举、孩子学、孩子演”。非遗从展柜里走出来，变成一双可以握住的手。</p>
-            <p class="stage-note">连打三声鼓，把右边这头醒狮唤醒。</p>
+            <h3>把狮头举起，把东陂的根留住</h3>
+            <p class="stage-quote">一百年前，冯达飞从这片乡土走出去；今天的孩子，用它把根留住。</p>
+            <p>1901 年，冯达飞出生在清远连州东陂镇。他脚下，正是今天孩子们举起醒狮、敲响鼓点的同一片乡土。非遗不是展柜里的“展品”，而是这位连州人出发前，脚踩的土地。今天的连州孩子，第一次把狮头举过头顶——传统没有停在博物馆，而是落回了东陂，落回了他出生的地方。</p>
+            <p class="stage-note">连打三声鼓，把这条航段的第一盏灯点亮。</p>
             <button id="lionHint" class="stage-action" type="button">点醒这头醒狮 <span>↗</span></button>
           </div>
           <figure class="stage-photo"><img src="assets/heritage_liondance_1024x768.jpg" alt="醒狮教学现场" loading="lazy" decoding="async">
             <div class="lion-race"><b>鼓点</b><span class="lion-beats"><i></i><i></i><i></i></span></div>
             <div class="roar-word">醒</div>
             <button id="stageLion" class="lion-tap" type="button" aria-label="点醒这头醒狮"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1.8 2.1 4.6 2.6 6.7 1.9.1 2.2-1.2 3.8-3 4.8 2.4.5 4.3 2.3 4.3 4.8 0 3.6-3.4 6.2-8 6.2s-8-2.6-8-6.2c0-2.5 1.9-4.3 4.3-4.8-1.8-1-3.1-2.6-3-4.8C7.4 5.6 10.2 5.1 12 3Z"/><circle cx="9" cy="13" r="1"/><circle cx="15" cy="13" r="1"/><path d="M9 16c1.8 1.1 4.2 1.1 6 0"/></svg></button>
-            <figcaption><b>醒狮工作坊</b>可动手 · 可表演 · 可带走</figcaption>
+            <figcaption><b>东陂的根 · 醒狮工作坊</b>可动手 · 可表演 · 可带走</figcaption>
           </figure>
         </div>
       </article>
 
       <article class="stage reveal">
-        <div class="stage-index">02<small>扎染 · 颜色</small></div>
+        <div class="stage-index">02<small>扎染 · 脉</small></div>
         <div class="stage-content flip">
           <div id="paintPad" class="paint-pad clickable" role="button" tabindex="0" aria-label="扎染体验">
-            <div class="paint-copy">选一种捆扎法，再浸上颜色，解开看看这匹“只属于今天”的扎染。</div>
+            <div class="paint-copy">捆扎、浸染、解开——这匹布，也属于一百年前把信仰染进青春的那个人。</div>
             <div class="dye-surface" aria-hidden="true">
               <div class="dye-cloth"></div>
               <div class="dye-pattern stripes"></div>
@@ -561,38 +584,41 @@
             <button id="paintSave" class="paint-save" type="button">存下这匹扎染</button>
           </div>
           <div class="stage-copy">
-            <h3>把岭南颜色染进布里</h3>
-            <p>捆扎、浸染、拧开，孩子们在扎染里认识岭南色彩，也第一次感受到：传统技艺可以在自己的手上重新长出来。</p>
+            <h3>把岭南的颜色，染进青春的信仰</h3>
+            <p class="stage-quote">1924 年，他从东陂考入黄埔军校——把自己，交给了一种颜色。</p>
+            <p>1924 年，冯达飞考入黄埔军校第一期，从此把青春交给一种信仰。扎染课堂上的“捆扎、浸染、解开”，与这段人生何其相似：少年被捆住的是乡土与牵绊，浸染的是一腔赤诚，解开的，是一条报国的路。孩子们在布里染出岭南的靛蓝与朱红，也第一次懂得：<strong>有些颜色，一旦染上，就一辈子抹不掉。</strong></p>
+            <p class="story-note">※ 画面寓意：扎染与黄埔军校的对应是艺术化类比，并非史实原话。</p>
             <button id="paintHint" class="stage-action" type="button">展开这匹扎染 <span>↗</span></button>
           </div>
         </div>
       </article>
 
       <article class="stage reveal">
-        <div class="stage-index">03<small>科创 · 起飞</small></div>
+        <div class="stage-index">03<small>无人机 · 翼</small></div>
         <div class="stage-content">
           <div class="stage-copy">
-            <h3>让纸飞机和水火箭寻找答案</h3>
-            <p>从纸飞机的升力，到水火箭的反作用力，孩子们在“玩中学、学中做、做中创”里完成了一次小小的工程师训练。</p>
+            <h3>一张地图，一个方向，也要飞回去</h3>
+            <p class="stage-quote">1932 年，福建漳州——没有导航，没有雷达，没有地面指挥。只有一张地图，和一个方向。</p>
+            <p>1932 年，冯达飞随红军攻占福建漳州，驾驶缴获的飞机首飞中央苏区——那是人民军队历史上，<strong>首次由己方飞行员驾驶飞机飞回红色根据地</strong>。后人回望那一次次无导航的起飞，只记得一张地图、一个方向。今天，孩子手里的纸飞机和水火箭，飞的正是当年那一条“只有方向”的航线：升力、反作用力，孩子们在玩里学的不是公式，是“铁了心往哪飞”的勇气。</p>
             <button id="launchHint" class="stage-action" type="button">发射一枚水火箭 <span>↗</span></button>
           </div>
           <div id="rocketZone" class="rocket-zone">
             <span class="cloud" aria-hidden="true"></span><span class="cloud two" aria-hidden="true"></span><div class="rocket" aria-hidden="true"></div>
             <div class="rocket-gauge"><small>气压</small><span class="bar"><i id="pressureFill"></i></span></div>
-            <div id="rocketWish" class="rocket-wish" role="status">“我要造一艘能飞到星星去的船！”</div>
+            <div id="rocketWish" class="rocket-wish" role="status">“我要像冯达飞爷爷一样，飞回我的家乡！”</div>
             <span class="rocket-label">打气 · 发射</span><button id="rocketButton" class="rocket-btn" type="button">打气发射水火箭</button>
           </div>
         </div>
       </article>
 
       <article class="stage reveal">
-        <div class="stage-index">04<small>红色 · 讲述</small></div>
+        <div class="stage-index">04<small>红色 · 归</small></div>
         <div class="stage-content flip">
           <div class="dhu-card">
             <div class="dhu-photo"><img src="assets/digital_human.jpg" alt="冯达飞 AI 数字人" loading="lazy" decoding="async"><span class="dhu-badge">AI 数字人 · 基于史实艺术化演绎</span></div>
             <div class="dhu-content">
-              <h4>在连州，遇见冯达飞。</h4>
-              <p>我们把这位连州籍的天之骄子，做成一位会说话的“数字人”。请他回到家乡，给今天的孩子，讲一段当年的天空。</p>
+              <h4>先生，欢迎回家。</h4>
+              <p>我们把这位连州籍的红军首位飞行员，做成一位会说话的“数字人”。请他从天上回到东陂，给今天的孩子，亲口讲一段当年没有导航的航程，和他那个“想折多少纸飞机就折多少”的愿望。</p>
               <div class="dhu-actions">
                 <button id="dhuPlay" class="letter-open" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>听数字人讲一段</button>
                 <button id="letterOpen" class="letter-open" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>翻开这封红色来信</button>
@@ -600,8 +626,8 @@
             </div>
           </div>
           <div class="stage-copy">
-            <h3>让冯达飞“亲自”回到家乡</h3>
-            <p>我们用 AI 数字人复刻一位历史人物，把“听故事”变成“演故事、讲故事”。技术只做放大器，真正被留下的，是孩子们对家乡和国家的感情。</p>
+            <h3>他飞出去了，又飞回东陂的天空</h3>
+            <p>从前，我们把“听故事”讲成“看展板”；这一次，我们让冯达飞“亲自”飞回东陂，站到孩子们面前，用他自己的话说出那段航程。技术只是放大器，真正被留下的，是孩子心里那句：“原来我家乡，飞出去过这样一个人。”</p>
             <button id="dhuHint" class="stage-action" type="button">听数字人讲一段历史 <span>↗</span></button>
           </div>
         </div>
@@ -609,14 +635,41 @@
     </div>
   </section>
 
+  <section id="timeline" class="timeline">
+    <div class="timeline-inner reveal">
+      <div class="timeline-head">
+        <div><div class="overline">冯达飞生平 · 具体到年与地</div><h2>一个人的航线，<br>也是红色南粤的路。</h2></div>
+        <p>把“红色”落到每一座城、每一年——从东陂镇起飞，到黄埔，到漳州上空，再到他为中华献出生命。</p>
+      </div>
+      <div class="timeline-strip">
+        <article class="tl-item reveal">
+          <div class="tl-year">1901</div>
+          <div class="tl-card"><h3>从东陂醒来</h3><p>生于广东连州东陂镇。这条航线，从乡土起飞。</p></div>
+        </article>
+        <article class="tl-item reveal">
+          <div class="tl-year">1924</div>
+          <div class="tl-card"><h3>把青春交给黄埔</h3><p>考入黄埔军校第一期，把青春交给一种信仰。</p></div>
+        </article>
+        <article class="tl-item reveal">
+          <div class="tl-year">1932</div>
+          <div class="tl-card"><h3>一张地图，一个方向</h3><p>福建漳州，无导航、无雷达、无地面指挥——人民军队首次由己方飞行员驾机飞回红色根据地。</p></div>
+        </article>
+        <article class="tl-item reveal">
+          <div class="tl-year">1942</div>
+          <div class="tl-card"><h3>飞出去，又留下</h3><p>为人民空军与抗日献出生命，把“为中华”写进最后一次起飞。<small>（牺牲年份/地点待真人核史）</small></p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="artifacts" class="artifact-strip">
     <div class="artifact-inner">
-      <div class="artifact-head reveal"><div><div class="overline">The archive</div><h2>他们带走的，<br>不只是作品。</h2></div><p>这些作品共同组成了孩子们的“第一次创作档案”：从被教，到会表达；从完成任务，到讲述家乡。</p></div>
+      <div class="artifact-head reveal"><div><div class="overline">红色南粤 · 冯达飞</div><h2>沿他的航线，<br>他们留下的，不只是作品。</h2></div><p>这些作品与互动，共同组成孩子们“沿着冯达飞的航线继续飞”的创作档案：从被教，到会表达；从完成任务，到讲述家乡。</p></div>
       <div class="artifacts">
-        <article class="artifact reveal"><img src="assets/real_lion.jpg" alt="醒狮教学现场" loading="lazy" decoding="async"><div class="artifact-info"><small>HERITAGE</small><strong>醒狮</strong></div></article>
-        <article class="artifact reveal"><img src="assets/real_ai_works.jpg" alt="学生AI数字创作作品" loading="lazy" decoding="async"><div class="artifact-info"><small>CREATE</small><strong>AI绘本</strong></div></article>
-        <article class="artifact reveal"><img src="assets/real_rocket.jpg" alt="水火箭发射现场" loading="lazy" decoding="async"><div class="artifact-info"><small>SCI-TECH</small><strong>水火箭</strong></div></article>
-        <article class="artifact reveal"><img src="assets/real_exhibit.jpg" alt="启智润心实践队结营仪式成果展" loading="lazy" decoding="async"><div class="artifact-info"><small>TOGETHER</small><strong>成果展</strong></div></article>
+        <article class="artifact reveal"><img src="assets/real_lion.jpg" alt="醒狮教学现场" loading="lazy" decoding="async"><div class="artifact-info"><small>根脉</small><strong>醒狮 · 东陂的根</strong></div></article>
+        <article class="artifact reveal"><img src="assets/real_ai_works.jpg" alt="学生AI数字创作作品" loading="lazy" decoding="async"><div class="artifact-info"><small>愿望</small><strong>AI数字创作</strong></div></article>
+        <article class="artifact reveal"><img src="assets/real_rocket.jpg" alt="水火箭发射现场" loading="lazy" decoding="async"><div class="artifact-info"><small>航程</small><strong>水火箭 · 一张地图</strong></div></article>
+        <article class="artifact reveal"><img src="assets/real_exhibit.jpg" alt="启智润心实践队结营仪式成果展" loading="lazy" decoding="async"><div class="artifact-info"><small>归来</small><strong>成果展 · 飞回东陂</strong></div></article>
       </div>
     </div>
   </section>
@@ -624,10 +677,10 @@
   <section id="wish" class="wish">
     <div class="wish-inner reveal">
       <div class="overline" style="justify-content:center;color:var(--brand-gold)">给孩子折一架纸飞机</div>
-      <h2>为连州孩子，<em>留下一句话。</em></h2>
-      <p class="wish-lead">纸飞机的意思，是“孩子，飞出去吧”。写下你对孩子的一句祝福，我们把它折成一架纸飞机，做成属于你的分享卡片。</p>
+      <h2>为连州孩子，<em>留下一句“飞出去”的祝福。</em></h2>
+      <p class="wish-lead">很多年前，冯达飞在天上往下看，想的是：“总有一天，连州的每一个孩子，都能坐在明亮的教室里，想折多少纸飞机就折多少，想飞多远就飞多远。”今天，这句愿望，就落在你手里——写下一句祝福，折成一架纸飞机，让它替他继续飞。</p>
       <div class="wish-form">
-        <input id="wishInput" class="wish-input" type="text" maxlength="40" placeholder="例如：愿你像纸飞机一样，飞得又高又远。" aria-label="写下你对孩子的祝福">
+        <input id="wishInput" class="wish-input" type="text" maxlength="40" placeholder="例如：愿你也像冯达飞一样，飞得更远。" aria-label="写下你对孩子的祝福">
         <button id="makePlane" class="wish-btn" type="button">折一架纸飞机 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg></button>
       </div>
       <p class="wish-hint">一句话，就能成为孩子记忆里的一段远方。</p>
@@ -645,9 +698,9 @@
   <section id="final" class="final">
     <div class="final-inner reveal">
       <div class="final-logo"><img id="brandLogoFinal" src="assets/team_logo.png" alt="启智润心实践队队徽"></div>
-      <div class="overline" style="justify-content:center">青年建功 · 把专业写在乡土上</div>
-      <h2>非遗为桥，<span>科创为翼。</span></h2>
-      <p>广东建设职业技术学院未来智能学院启智润心实践队，从粤港澳大湾区出发，把专业所学带进乡村课堂，让岭南文化的根与科创的翼，落在湾区青年的肩上，也落在连州孩子的心上。</p>
+      <div class="overline" style="justify-content:center">青年建功 · 沿东陂的航线，把专业写在乡土上</div>
+      <h2>记住冯达飞，<span>记住红色南粤。</span></h2>
+      <p>广东建设职业技术学院未来智能学院启智润心实践队，从粤港澳大湾区出发，来到清远连州。我们不是来做一堂“非遗课”，而是带着孩子，沿着一位连州先烈的航线走了一段路——把根留住，把愿望送上他飞过的天空，也把“飞出去”的种子，种进每个孩子心里。</p>
       <div class="final-cta">
         <button id="goWish" class="share-btn solid" type="button">写一句祝福，带走专属卡</button>
         <button id="shareButton" class="share-btn" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4"/><path d="m15.4 6.5-6.8 4"/></svg>分享这段远行</button>
@@ -667,9 +720,9 @@
 
   <div id="lionStamp" class="stamp" aria-live="polite"><div class="stamp-inner">已醒<small>THE LION WAKES</small></div></div>
 
-  <div id="dhuModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="dhuTitle"><div class="modal-card dhu-modal"><button id="dhuClose" class="modal-close" type="button" aria-label="关闭数字人视频">×</button><h3 id="dhuTitle">冯达飞 · 数字人</h3><div class="dhu-media"><video id="dhuVideo" controls playsinline preload="none" poster="assets/digital_human.jpg"><source src="assets/videos/digital_human_intro.mp4" type="video/mp4"></video></div><p class="dhu-note">AI 数字人讲述：连州的孩子们，你们好。我叫冯达飞，东陂镇人。本段为基于公开史实的艺术化演绎，非真实历史影像与录音。</p></div></div>
+  <div id="dhuModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="dhuTitle"><div class="modal-card dhu-modal"><button id="dhuClose" class="modal-close" type="button" aria-label="关闭数字人视频">×</button><h3 id="dhuTitle">冯达飞 · 数字人</h3><div class="dhu-media"><video id="dhuVideo" controls playsinline preload="none" poster="assets/digital_human.jpg"><source src="assets/videos/digital_human_intro.mp4" type="video/mp4"></video></div><p class="dhu-note"><b>AI 数字人讲述（选段）</b>：连州的孩子们，你们好。我叫冯达飞，东陂镇人。1924 年，我考进了黄埔军校第一期。1932 年，我在福建漳州，驾驶着一架没有导航、没有雷达、没有地面指挥的飞机——只有一张地图，和一个方向。那是人民军队历史上，首次由己方飞行员驾驶飞机飞回红色根据地。在天上往下看时，我见过很多风景；那时候我就想，总有一天，连州的每一个孩子，都能坐在明亮的教室里，想折多少纸飞机就折多少。孩子们，飞出去吧。本段为基于公开史实的艺术化演绎，非真实历史影像、照片与录音；人物语言以可核验史料为准，不虚构原话。</p></div></div>
 
-  <div id="letterModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="letterTitle"><div class="modal-card letter-card"><button id="letterClose" class="modal-close" type="button" aria-label="关闭来信">×</button><h3 id="letterTitle">致连州孩子的一封信</h3><div class="letter-body"><p>这封信，写给今天的孩子，也写给当年的冯达飞。</p><p><b>冯达飞</b>，广东连州人，中共党员，黄埔军校首期学员，参加过南昌起义，是中国空军最早的飞行员之一。他把“为中华”三个字，写在了一次次起飞里。</p><p>今天我们站在他的家乡，把这段历史讲给下一代听——讲故事的人换了一批，故事里的赤诚没有变。</p><p class="letter-sign">—— 启智润心实践队</p></div><span class="cite">据公开史料整理；本页为艺术化演绎，表达经可核验资料与指导老师把关。</span></div></div>
+  <div id="letterModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="letterTitle"><div class="modal-card letter-card"><button id="letterClose" class="modal-close" type="button" aria-label="关闭来信">×</button><h3 id="letterTitle">致连州孩子的一封信</h3><div class="letter-body"><p>这封信，写给今天的孩子，也写给当年的冯达飞。</p><p><b>冯达飞</b>（1901—1942），广东连州东陂镇人，中共党员，黄埔军校第一期学员，参加过南昌起义，是人民军队历史上最早的飞行员之一。他把“为中华”三个字，写在了一次次没有导航的起飞里。</p><p>今天，我们站在他出生的地方，把这段历史讲给下一代听——讲故事的人换了一批，故事里的赤诚没有变。</p><p class="letter-sign">—— 启智润心实践队</p></div><span class="cite">据公开史料整理（广东老区网、央视“红色雄鹰”、广东红色故事汇、连州市委党史办）；本页为基于公开史实的艺术化演绎，非真实历史影像与录音，具体用词请由指导老师复核。</span></div></div>
 
   <script>
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -694,7 +747,7 @@
       const max=document.documentElement.scrollHeight-window.innerHeight;
       const value=max>0?Math.min(100,Math.max(0,window.scrollY/max*100)):0;
       progressBar.style.width=value.toFixed(1)+'%';
-      const sections=['top','manifesto','journey','artifacts','wish','final'].map(id=>document.getElementById(id));
+      const sections=['top','manifesto','journey','timeline','artifacts','wish','final'].map(id=>document.getElementById(id));
       const dots=[...document.querySelectorAll('.chapter-dot')];
       let active=0;
       sections.forEach((section,index)=>{ if(section && window.scrollY+window.innerHeight*.36>=section.offsetTop) active=index });
@@ -736,7 +789,7 @@
     }
 
     /* ---------- 开始旅程 ---------- */
-    document.getElementById('startJourney').addEventListener('click',()=>{document.getElementById('manifesto').scrollIntoView({behavior:'smooth'});showToast('旅程开始：先记住这一句话')});
+    document.getElementById('startJourney').addEventListener('click',()=>{document.getElementById('manifesto').scrollIntoView({behavior:'smooth'});showToast('航线开始：先记住这一句话')});
 
     /* ---------- 醒狮：粒子 + 鼓点 + 盖章 ---------- */
     const lionStage=document.getElementById('lionStage'),lionStatus=document.getElementById('lionStatus'),lionTip=document.getElementById('lionTip');
@@ -781,11 +834,11 @@
     document.getElementById('lionButton').addEventListener('click',wakeLion);
     document.getElementById('lionHint').addEventListener('click',()=>{document.getElementById('stageLion').scrollIntoView({behavior:'smooth',block:'center'});setTimeout(beatLion,500)});
 
-    /* ---------- 漆扇 ---------- */
+    /* ---------- 扎染 ---------- */
     const paintPad=document.getElementById('paintPad');
     function revealPaint(){
       paintPad.classList.add('done');
-      paintPad.querySelector('.paint-copy').textContent='扎染纹样展开了：这匹布，只属于完成它的那个孩子。';
+      paintPad.querySelector('.paint-copy').textContent='扎染纹样展开了：这匹布，属于完成它的孩子——也属于一百年前，把信仰染进青春的那个人。';
       showToast('扎染纹样已展开');
     }
     paintPad.addEventListener('click',revealPaint);
@@ -796,12 +849,12 @@
     /* ---------- 水火箭 ---------- */
     const rocketZone=document.getElementById('rocketZone');
     const rocketWish=document.getElementById('rocketWish');
-    const wishes=['“我要造一艘能飞到星星去的船！”','“长大要当火箭工程师！”','“想让所有人都爱我的家乡。”','“我要把纸飞机飞到天上去。”','“下一个发明家，是我！”'];
+    const wishes=['“我要像冯达飞爷爷一样，飞回我的家乡！”','“没有导航我也能飞到天上！”','“我想造一艘能飞到星星去的船！”','“我要把东陂的天空，画下来。”','“下一个飞出去的人，是我！”'];
     function launchRocket(){
       rocketZone.classList.remove('launch');void rocketZone.offsetWidth;rocketZone.classList.add('launch');
       rocketWish.textContent=wishes[Math.floor(Math.random()*wishes.length)];
       rocketWish.classList.remove('show');void rocketWish.offsetWidth;rocketWish.classList.add('show');
-      showToast('水火箭发射！把问题送上天空');
+      showToast('水火箭发射——把“飞出去”的愿望送上天空');
       setTimeout(()=>rocketZone.classList.remove('launch'),1500);
       setTimeout(()=>rocketWish.classList.remove('show'),4200);
     }
@@ -878,10 +931,10 @@
       ctx.strokeStyle='rgba(232,182,76,.14)';ctx.lineWidth=1;
       for(let i=0;i<7;i++){ctx.beginPath();ctx.moveTo(W/2,200);ctx.lineTo(W/2+Math.cos(i/7*Math.PI*2)*260,200+Math.sin(i/7*Math.PI*2)*260);ctx.stroke();}
       ctx.fillStyle='#f4d38a';ctx.textAlign='center';ctx.font='700 40px "Noto Serif SC",Georgia,serif';
-      ctx.fillText('给连州孩子的一句话',W/2,110);
+      ctx.fillText('沿东陂的航线，继续飞',W/2,110);
       drawPlane(ctx,W/2,270,1.4);
       ctx.fillStyle='#fff';ctx.textAlign='center';
-      wrapText(ctx,(wishInput.value.trim()||'愿你像纸飞机一样，飞得又高又远。'),W/2,420,W-120,46,'400 34px "PingFang SC","Microsoft YaHei",sans-serif',600);
+      wrapText(ctx,(wishInput.value.trim()||'愿你也像冯达飞一样，飞得更远。'),W/2,420,W-120,46,'400 34px "PingFang SC","Microsoft YaHei",sans-serif',600);
       ctx.fillStyle='rgba(255,255,255,.8)';ctx.textAlign='right';ctx.font='400 26px "PingFang SC","Microsoft YaHei",sans-serif';
       ctx.fillText('—— 一位同行的远方朋友',W-52,646);
       ctx.fillStyle='rgba(244,211,138,.9)';ctx.textAlign='center';ctx.font='700 24px "PingFang SC","Microsoft YaHei",sans-serif';
@@ -897,13 +950,13 @@
       cardStage.classList.add('show');cardActions.style.display='flex';
       showToast('纸飞机折好了，带上一句话飞出去吧');
     });
-    document.getElementById('saveCard').addEventListener('click',()=>{saveCanvas(document.getElementById('wishCanvas').toDataURL('image/png'),'给连州孩子的一句话.png');});
+    document.getElementById('saveCard').addEventListener('click',()=>{saveCanvas(document.getElementById('wishCanvas').toDataURL('image/png'),'沿东陂的航线，继续飞.png');});
     document.getElementById('shareCard').addEventListener('click',()=>{
-      shareCanvas(document.getElementById('wishCanvas'),'一头醒狮的七日远行',`给连州孩子的一句话：${wishInput.value.trim()||'愿你飞得又高又远。'} #粤易创新 #一头醒狮的七日远行`);
+      shareCanvas(document.getElementById('wishCanvas'),'东陂的天空',`给连州孩子的一句话：${wishInput.value.trim()||'愿你飞得更远。'} #东陂的天空 #红色南粤 #粤易创新`);
     });
     document.getElementById('againCard').addEventListener('click',()=>{cardStage.classList.remove('show');cardActions.style.display='none';wishInput.value='';wishInput.focus();showToast('再写一句，再折一架');});
 
-    /* ---------- 漆扇保存为卡（纯矢量，防污染） ---------- */
+    /* ---------- 扎染保存为卡（纯矢量，防污染） ---------- */
     function paintCardCanvas(){
       const c=document.createElement('canvas');c.width=600;c.height=820;const ctx=c.getContext('2d');
       const g=ctx.createLinearGradient(0,0,600,820);g.addColorStop(0,'#f6efe2');g.addColorStop(1,'#d6e9e3');
@@ -928,9 +981,9 @@
     /* ---------- 结尾：引导生成传播卡 / 通用分享 ---------- */
     document.getElementById('goWish').addEventListener('click',()=>{document.getElementById('wish').scrollIntoView({behavior:'smooth'});setTimeout(()=>wishInput.focus(),600);});
     document.getElementById('shareButton').addEventListener('click',async()=>{
-      const data={title:'一头醒狮的七日远行',text:'连州孩子的非遗、科创与红色成长课 #粤易创新'};
+      const data={title:'东陂的天空——红色南粤 · 冯达飞',text:'一个连州人飞出去了，就要让更多连州孩子飞得更远。 #粤易创新'};
       try{
-        if(navigator.share){await navigator.share(data);showToast('感谢分享这段远行');}
+        if(navigator.share){await navigator.share(data);showToast('感谢分享这段航程');}
         else if(navigator.clipboard){await navigator.clipboard.writeText(location.href);showToast('链接已复制，可以发给队友了');}
         else showToast('请复制当前页面链接分享');
       }catch(error){if(error&&error.name!=='AbortError')showToast('分享未完成，可复制页面链接');}

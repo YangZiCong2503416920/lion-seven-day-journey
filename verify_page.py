@@ -22,6 +22,14 @@ def run():
         hidden = page.evaluate("()=>[...document.querySelectorAll('.reveal')].filter(el=>getComputedStyle(el).opacity==='0').length")
         assert hidden == 0, f"仍有 {hidden} 个 .reveal 为 opacity:0，会导致截图空白"
 
+        # ---- 叙事改版断言：东陂的天空 / 红色南粤 · 冯达飞 / 生平时间线 ----
+        assert "东陂的天空" in page.title(), "<title> 未改为《东陂的天空》"
+        assert page.locator("#timeline").count() == 1, "冯达飞生平时间线缺失"
+        assert page.locator("#timeline .tl-item").count() >= 4, "时间线条目不足 4 项（应为 1901/1924/1932/1942）"
+        assert "东陂的根" in page.locator("#journey .stage h3").nth(0).inner_text(), "航段01未落到‘东陂的根’"
+        assert "记住冯达飞" in page.locator(".final h2").inner_text(), "结尾未点题‘记住冯达飞 / 记住红色南粤’"
+        assert "东陂的天空" in page.locator(".manifesto-old").inner_text(), "序言旧标题副线未标注‘东陂的天空’"
+
         # 全页截图（滚动到底再回顶，内容应全部可见）
         page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
         page.wait_for_timeout(400)
@@ -44,6 +52,8 @@ def run():
         page.locator("#letterOpen").scroll_into_view_if_needed()
         page.locator("#letterOpen").click()
         assert page.locator("#letterModal").evaluate("(el) => el.classList.contains('open')"), "信件小窗未打开"
+        assert "黄埔军校第一期" in page.locator("#letterModal .letter-body").inner_text(), "信件未含黄埔军校史实"
+        assert "南昌起义" in page.locator("#letterModal .letter-body").inner_text(), "信件未含南昌起义史实"
         page.locator("#letterClose").click()
         assert not page.locator("#letterModal").evaluate("(el) => el.classList.contains('open')"), "信件小窗未关闭"
         page.locator("#rocketButton").click()
