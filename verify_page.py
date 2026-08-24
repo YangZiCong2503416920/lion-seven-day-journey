@@ -56,9 +56,10 @@ def run():
         page.locator("#letterOpen").click()
         assert page.locator("#letterModal").evaluate("(el) => el.classList.contains('open')"), "信件小窗未打开"
         assert "黄埔军校第一期" in page.locator("#letterModal .letter-body").inner_text(), "信件未含黄埔军校史实"
-        assert "南昌起义" in page.locator("#letterModal .letter-body").inner_text(), "信件未含南昌起义史实"
+        assert "百色起义" in page.locator("#letterModal .letter-body").inner_text(), "信件未含广州/百色起义史实"
         assert "飞行教官" in page.locator("#letterModal .letter-body").inner_text(), "信件未含红军/人民军队飞行教官史实"
-        assert "空军英烈墙" in page.locator("#letterModal .letter-body").inner_text(), "信件未含1942新疆牺牲/空军英烈墙"
+        assert "上饶集中营" in page.locator("#letterModal .letter-body").inner_text(), "信件未含1942上饶集中营牺牲史实"
+        assert "空军英烈墙" in page.locator("#letterModal .letter-body").inner_text(), "信件未含空军英烈墙"
         assert "驾驶缴获的飞机" in page.locator("#letterModal .letter-body").inner_text(), "信件未含‘驾驶缴获飞机首飞中央苏区’"
         page.locator("#letterClose").click()
         assert not page.locator("#letterModal").evaluate("(el) => el.classList.contains('open')"), "信件小窗未关闭"
