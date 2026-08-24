@@ -61,6 +61,10 @@ def run():
         assert "上饶集中营" in page.locator("#letterModal .letter-body").inner_text(), "信件未含1942上饶集中营牺牲史实"
         assert "空军英烈墙" in page.locator("#letterModal .letter-body").inner_text(), "信件未含空军英烈墙"
         assert "驾驶缴获的飞机" in page.locator("#letterModal .letter-body").inner_text(), "信件未含‘驾驶缴获飞机首飞中央苏区’"
+        assert "东征" in page.locator("#letterModal .letter-body").inner_text(), "信件未含1925参加东征史实（勿写北伐）"
+        assert "同年冬加入中国共产党" in page.locator("#letterModal .letter-body").inner_text(), "信件未含1924冬入党史实"
+        assert "随后赴苏联学习航空；1927" in page.locator("#letterModal .letter-body").inner_text(), "信件时序有误：赴苏应在1927回国/起义之前"
+        assert "参加北伐" not in page.locator("#letterModal .letter-body").inner_text(), "信件仍写‘参加北伐’（应为东征）"
         page.locator("#letterClose").click()
         assert not page.locator("#letterModal").evaluate("(el) => el.classList.contains('open')"), "信件小窗未关闭"
         page.locator("#rocketButton").click()
