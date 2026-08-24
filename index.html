@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#170b11">
-  <meta name="description" content="东陂的天空——红色南粤 · 冯达飞：从连州东陂镇飞出去的人民军队航空先驱。带孩子沿着他的航线走一段路，把根留住，把愿望送上他飞过的天空。">
-  <meta name="keywords" content="粤易创新,红色南粤,冯达飞,东陂,连州,人民军队航空先驱,黄埔军校,岭南非遗,醒狮,扎染,纸飞机,水火箭,数字人,青年建功,三下乡,广东建院">
+  <meta name="description" content="飞出去——红色南粤 · 冯达飞 × 连州市实验小学：从连州东陂镇飞出去的人民军队航空先驱。带孩子沿着他的航线走一遍，把根留住，把愿望送上他飞过的天空。">
+  <meta name="keywords" content="粤易创新,红色南粤,冯达飞,连州,东陂,连州市实验小学,人民军队航空先驱,黄埔军校,航天筑梦,党建筑魂,青年建功,三下乡,广东建院">
   <!-- 分享/传播 meta（转发卡片第一眼） -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="东陂的天空——红色南粤 · 冯达飞">
+  <meta property="og:title" content="飞出去——红色南粤 · 冯达飞 × 连州市实验小学">
   <meta property="og:description" content="一个连州人飞出去了，就要让更多连州孩子，飞得更远。">
-  <meta property="og:image" content="assets/cover_bg_1920x1080.jpg">
+  <meta property="og:image" content="assets/team_logo.png">
   <meta property="og:locale" content="zh_CN">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="东陂的天空——红色南粤 · 冯达飞">
-  <meta name="twitter:description" content="从1901年东陂镇起飞，到1932年无导航飞回红色根据地。带连州孩子把根留住，把愿望送上他飞过的天空。">
-  <meta name="twitter:image" content="assets/cover_bg_1920x1080.jpg">
-  <title>东陂的天空——红色南粤 · 冯达飞</title>
+  <meta name="twitter:title" content="飞出去——红色南粤 · 冯达飞 × 连州市实验小学">
+  <meta name="twitter:description" content="一个连州人飞出去了，就要让更多连州孩子，飞得更远。">
+  <meta name="twitter:image" content="assets/team_logo.png">
+  <title>飞出去——红色南粤 · 冯达飞 × 连州市实验小学</title>
   <style>
     :root{
       --ink:#1b0d13;
@@ -76,7 +76,7 @@
     }
     .sound-toggle svg{width:15px;height:15px}
 
-    /* ---- 首屏 hero（冲击力强化） ---- */
+    /* ---- 首屏 hero ---- */
     .hero{
       min-height:100svh;position:relative;overflow:hidden;color:#fff;background:var(--wine);
       padding:130px 28px 82px;display:flex;align-items:center;
@@ -85,7 +85,7 @@
     .hero-bg::before{
       content:"";position:absolute;inset:0;background:
         radial-gradient(circle at 78% 18%,rgba(220,162,63,.28),transparent 26%),
-        radial-gradient(circle at 12% 92%,rgba(77,155,160,.22),transparent 26%),
+        radial-gradient(circle at 12% 92%,rgba(196,38,59,.28),transparent 26%),
         linear-gradient(130deg,#1a0b13 0%,#351320 54%,#180a11 100%);
     }
     .hero::after{
@@ -96,7 +96,7 @@
     .hero-copy{position:relative}
     .overline{display:flex;align-items:center;gap:12px;color:var(--gold-light);font-size:12px;font-weight:800;letter-spacing:.22em;text-transform:uppercase}
     .overline::before{content:"";width:34px;height:2px;background:var(--gold)}
-    .hero h1{margin:20px 0 20px;font-family:Georgia,"Noto Serif SC","Songti SC",serif;font-size:clamp(56px,8vw,100px);font-weight:700;line-height:.98;letter-spacing:-.06em}
+    .hero h1{margin:20px 0 20px;font-family:Georgia,"Noto Serif SC","Songti SC",serif;font-size:clamp(64px,9vw,120px);font-weight:700;line-height:.94;letter-spacing:-.06em}
     .hero h1 em{display:block;color:var(--gold-light);font-style:normal;text-shadow:0 0 34px rgba(244,211,138,.42),0 0 3px rgba(244,211,138,.35)}
     .hero h1 .ch{display:inline-block}
     @media (prefers-reduced-motion:no-preference){
@@ -122,30 +122,15 @@
 
     .hero-collage{position:relative;min-height:470px}
     .hero-collage .main-shot{position:absolute;inset:64px 10px 42px 26px;overflow:hidden;border:8px solid rgba(255,255,255,.09);border-radius:22px;box-shadow:var(--shadow);transform:rotate(2deg)}
-    .main-shot img{width:100%;height:100%;object-fit:cover;filter:saturate(.86) contrast(1.06) brightness(1.04)}
+    .main-shot.flight-vis{background:linear-gradient(150deg,#2a1320,#4a1426 62%,#170b11)}
+    .flight-route{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
     .main-shot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,rgba(24,7,15,.7))}
+    .flight-label{position:absolute;z-index:2;left:16px;bottom:12px;color:var(--gold-light);font-size:12px;letter-spacing:.2em;font-weight:800}
     .hero-caption{position:absolute;left:106px;right:44px;bottom:74px;z-index:2;display:flex;justify-content:space-between;align-items:end;color:#fff}
     .hero-caption strong{font-family:Georgia,serif;font-size:22px}
     .hero-caption span{font-size:12px;color:rgba(255,255,255,.7)}
-    .polaroid{position:absolute;z-index:3;width:170px;padding:10px 10px 18px;background:#f8efe1;box-shadow:0 22px 42px rgba(0,0,0,.22);color:var(--ink)}
-    .polaroid img{width:100%;aspect-ratio:1/1;object-fit:cover}
-    .polaroid small{display:block;margin-top:9px;font-size:11px;letter-spacing:.08em}
-    .polaroid.one{left:0;top:70px;transform:rotate(-10deg)}
-    .polaroid.two{right:-4px;bottom:45px;transform:rotate(9deg)}
     .seal-orbit{position:absolute;z-index:4;right:38px;top:5px;width:108px;height:108px;display:grid;place-items:center;border:1px solid rgba(244,211,138,.62);border-radius:50%;color:var(--gold-light);font-size:12px;letter-spacing:.12em;transform:rotate(12deg)}
     .seal-orbit::after{content:"广东建院 · 未来智能";position:absolute;inset:-11px;border:1px dashed rgba(244,211,138,.32);border-radius:50%;font-size:8px;display:grid;place-items:end center;padding-bottom:2px}
-    .lion-wrap{position:absolute;z-index:5;left:46%;top:42%;width:78px;height:78px}
-    .lion-hotspot{
-      width:100%;height:100%;border:0;border-radius:50%;
-      color:var(--gold-light);background:rgba(25,8,15,.68);border:1px solid rgba(244,211,138,.65);backdrop-filter:blur(8px);
-      display:grid;place-items:center;box-shadow:0 0 0 10px rgba(244,211,138,.08);transition:transform .25s ease,background .25s ease
-    }
-    .lion-hotspot:hover{transform:scale(1.08);background:rgba(196,38,59,.85)}
-    .lion-hotspot svg{width:27px;height:27px}
-    .lion-burst{position:absolute;inset:0;pointer-events:none}
-    .lion-burst i{position:absolute;left:50%;top:50%;width:8px;height:8px;border-radius:50%;opacity:0;transform:translate(-50%,-50%)}
-    .lion-burst.pop i{animation:lipPop .8s ease-out forwards}
-    @keyframes lipPop{0%{opacity:0;transform:translate(-50%,-50%) scale(.5)}15%{opacity:1;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1)}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(.25)}}
     .scroll-cue{position:absolute;z-index:2;left:28px;bottom:38px;display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.5);font-size:11px;letter-spacing:.16em}
     .scroll-cue i{display:block;width:22px;height:34px;border:1px solid rgba(255,255,255,.45);border-radius:999px;position:relative}
     .scroll-cue i::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;border-radius:4px;background:var(--gold-light);transform:translateX(-50%);animation:scroll-dot 1.5s ease-in-out infinite}
@@ -170,7 +155,7 @@
     .journey-head .overline::before{background:var(--red)}
     .stage{display:grid;grid-template-columns:170px minmax(0,1fr);gap:38px;align-items:start;padding:60px 0;border-top:1px solid var(--line)}
     .stage:first-of-type{border-top:0}
-    .stage-index{position:sticky;top:92px;color:var(--red);font-family:Georgia,serif;font-size:72px;line-height:.9;letter-spacing:-.08em}
+    .stage-index{position:sticky;top:92px;color:var(--red);font-family:Georgia,serif;font-size:88px;line-height:.9;letter-spacing:-.08em}
     .stage-index small{display:block;margin-top:12px;color:var(--muted);font-family:inherit;font-size:11px;letter-spacing:.12em}
     .stage-content{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(240px,.76fr);gap:40px;align-items:center}
     .stage-content.flip{grid-template-columns:minmax(240px,.76fr) minmax(0,1.04fr)}
@@ -178,12 +163,14 @@
     .stage-copy p{margin:0 0 18px;color:var(--muted);font-size:15px}
     .stage-quote{padding:14px 16px;border-left:3px solid var(--gold);background:rgba(255,255,255,.36);font-weight:800}
     .stage-photo{position:relative;overflow:hidden;min-height:350px;border-radius:22px;background:var(--wine);box-shadow:var(--shadow)}
-    .stage-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.88);transition:transform .8s cubic-bezier(.2,.75,.25,1)}
     .stage-photo:hover img{transform:scale(1.05)}
+    .stage-photo .vis-fallback{position:absolute;inset:0;background:radial-gradient(circle at 76% 18%,rgba(220,162,63,.3),transparent 30%),linear-gradient(150deg,#2a1320,#4a1426 60%,#170b11)}
+    .stage-photo .vis-fallback::before{content:"";position:absolute;left:8%;right:8%;top:12%;bottom:16%;border-top:2px dashed rgba(244,211,138,.42);border-radius:50% 50% 46% 46%/62% 62% 38% 38%;transform:rotate(-7deg)}
+    .stage-photo .vis-fallback::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:11px;border-radius:50%;background:var(--gold-light);box-shadow:0 0 0 5px rgba(244,211,138,.22),0 0 24px rgba(244,211,138,.6)}
     .stage-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(20,7,13,.68))}
+    .stage-photo .vis-year{position:absolute;z-index:1;right:22px;top:20px;color:var(--gold-light);font-family:Georgia,serif;font-size:54px;line-height:1;text-shadow:0 4px 22px rgba(0,0,0,.4)}
     .stage-photo figcaption{position:absolute;z-index:1;left:18px;right:18px;bottom:16px;color:#fff;font-size:12px}
     .stage-photo figcaption b{display:block;margin-bottom:2px;color:var(--gold-light);font-family:Georgia,serif;font-size:18px}
-    .stage-action{display:inline-flex;align-items:center;gap:7px;margin-top:6px;border:0;padding:0;color:var(--red-deep);font-weight:800;background:transparent}
     .stage-note{margin:0 0 10px;color:var(--red-deep);font-size:14px;font-weight:800}
     .story-note{margin:0 0 14px;color:var(--muted);font-size:12px;font-style:italic}
 
@@ -201,53 +188,42 @@
     .tl-year{font-family:Georgia,serif;font-size:46px;line-height:1;letter-spacing:-.05em;color:var(--red)}
     .tl-card h3{margin:0 0 8px;font-family:Georgia,"Noto Serif SC",serif;font-size:23px;line-height:1.12;letter-spacing:-.03em}
     .tl-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.75}
-    .tl-card p small{display:block;margin-top:8px;color:var(--muted);font-size:11px;opacity:.8}
     @media (max-width:900px){.timeline-strip{grid-template-columns:repeat(2,1fr)}.timeline-head{display:block}.timeline-head p{margin-top:18px}}
     @media (max-width:620px){.timeline{padding:70px 18px 82px}.timeline-strip{grid-template-columns:1fr}.tl-item{min-height:0}}
 
-    .interactive-tray{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
-    .tray-chip{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink);background:rgba(255,255,255,.48);font-size:12px}
-    .tray-chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
-    .tray-chip:hover{border-color:var(--gold);background:#fff}
+    /* --- 红色足迹 · 地理航线 --- */
+    .route-block{padding-top:78px;margin-top:70px;border-top:1px solid var(--line)}
+    .route-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin:0 0 46px}
+    .route-head .overline{color:var(--red)}.route-head .overline::before{background:var(--red)}
+    .route-head h3{margin:12px 0 0;font-family:Georgia,"Noto Serif SC","Songti SC",serif;font-size:clamp(26px,4vw,44px);line-height:1.02;letter-spacing:-.05em}
+    .route-head p{max-width:280px;margin:0;color:var(--muted);font-size:13px}
+    .route-strip{display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap}
+    .rt{display:flex;flex-direction:column;align-items:center;gap:10px;width:96px;flex:none;text-align:center}
+    .rt::before{content:"";width:15px;height:15px;border-radius:50%;background:var(--red);border:3px solid var(--gold-light);box-shadow:0 0 0 5px rgba(220,162,63,.18)}
+    .rt b{color:var(--red-deep);font-family:Georgia,serif;font-size:21px;line-height:1.2}
+    .rt small{color:var(--muted);font-size:11px;line-height:1.5}
+    .rt-link{flex:1;height:2px;min-width:26px;margin-top:8px;background:repeating-linear-gradient(90deg,var(--red) 0 6px,transparent 6px 12px);opacity:.5}
+    @media (max-width:900px){.route-head{display:block}.route-head p{margin-top:16px}}
+    @media (max-width:620px){.route-strip{flex-direction:column;align-items:flex-start;gap:0}.rt{flex-direction:row;gap:14px;width:auto;text-align:left}.rt::before{flex:none;margin-top:3px}.rt b{min-width:56px}.rt-link{width:2px;height:28px;min-height:28px;margin:0 0 0 6px;background:repeating-linear-gradient(180deg,var(--red) 0 6px,transparent 6px 12px)}}
 
-    /* 水火箭（火焰+微震） */
-    .rocket-zone{position:relative;min-height:340px;overflow:hidden;border-radius:22px;background:linear-gradient(180deg,#9fd5dd 0%,#e4f2ee 59%,#d4b27b 60%,#987041 100%);box-shadow:var(--shadow)}
-    .rocket-zone::after{content:"";position:absolute;left:0;right:0;bottom:0;height:42%;background:repeating-linear-gradient(166deg,rgba(69,46,24,.1) 0 2px,transparent 2px 13px);opacity:.55}
-    .cloud{position:absolute;left:11%;top:22%;width:108px;height:19px;border-radius:999px;background:rgba(255,255,255,.72)}
-    .cloud::after{content:"";position:absolute;left:47px;top:-13px;width:40px;height:29px;border-radius:50%;background:rgba(255,255,255,.72)}
-    .cloud.two{left:auto;right:11%;top:37%;transform:scale(.72)}
-    .rocket{position:absolute;z-index:2;left:50%;bottom:45px;width:46px;height:94px;border-radius:24px 24px 12px 12px;background:linear-gradient(90deg,#e8f0ed,#fff 41%,#d44458 42% 72%,#ae2336 73%);transform:translateX(-50%);box-shadow:0 12px 20px rgba(39,24,27,.2);transition:bottom .95s cubic-bezier(.17,.84,.24,1),transform .95s cubic-bezier(.17,.84,.24,1)}
-    .rocket::before{content:"";position:absolute;left:50%;top:-25px;transform:translateX(-50%);border-left:23px solid transparent;border-right:23px solid transparent;border-bottom:29px solid #d03a50}
-    .rocket::after{content:"";position:absolute;left:50%;bottom:-50px;transform:translateX(-50%);width:22px;height:57px;border-radius:50%;background:linear-gradient(#f8c15a,#ea5a3f 45%,transparent);filter:blur(2px)}
-    .rocket-zone.launch .rocket{bottom:310px;transform:translateX(-50%) rotate(5deg)}
-    @media (prefers-reduced-motion:no-preference){
-      .rocket-zone.launch .rocket{animation:rocketShake .4s ease .35s 1}
-      @keyframes rocketShake{0%,100%{transform:translateX(-50%) rotate(5deg)}25%{transform:translateX(calc(-50% - 3px)) rotate(5deg)}75%{transform:translateX(calc(-50% + 3px)) rotate(5deg)}}
-    }
-    .rocket-wish{position:absolute;z-index:4;left:50%;bottom:24px;transform:translate(-50%,16px);opacity:0;max-width:78%;padding:10px 14px;border-radius:14px;color:#284c4b;background:rgba(255,255,255,.86);font-size:13px;font-weight:700;text-align:center;box-shadow:0 10px 24px rgba(39,24,27,.18);transition:opacity .4s ease,transform .4s ease}
-    .rocket-wish.show{opacity:1;transform:translate(-50%,0)}
-    .rocket-btn{position:absolute;z-index:5;right:16px;bottom:15px;padding:10px 13px;border:1px solid rgba(40,56,50,.22);border-radius:999px;color:#284c4b;background:rgba(255,255,255,.78);font-size:12px;font-weight:800}
-    .rocket-label{position:absolute;z-index:5;left:17px;bottom:17px;color:#284c4b;font-size:12px;font-weight:800}
+    /* --- 承 · 学校 --- */
+    .school{position:relative;padding:104px 28px 116px;background:var(--paper-2);border-top:1px solid var(--line)}
+    .school-inner{width:min(var(--max),100%);margin:0 auto}
+    .school-head .overline{color:var(--red)}.school-head .overline::before{background:var(--red)}
+    .school-head h2{margin:12px 0 34px;font-family:Georgia,"Noto Serif SC","Songti SC",serif;font-size:clamp(36px,5.5vw,72px);line-height:1.02;letter-spacing:-.05em}
+    .school-head h2 span{color:var(--red)}
+    .school-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(260px,.88fr);gap:40px;align-items:start}
+    .school-quote{padding:14px 18px;border-left:3px solid var(--gold);background:rgba(255,255,255,.4);font-weight:800;margin:0 0 18px}
+    .school-copy p{margin:0 0 16px;color:var(--muted);font-size:15px}
+    .school-note{margin:18px 0 0;color:var(--muted);font-size:12px;font-style:italic}
+    .school-badges{display:grid;gap:12px}
+    .sb{position:relative;overflow:hidden;padding:16px 18px;border:1px solid rgba(126,22,41,.16);border-radius:16px;background:#fff;box-shadow:0 14px 30px rgba(30,10,19,.06)}
+    .sb b{display:block;color:var(--red-deep);font-size:16px;line-height:1.4}
+    .sb small{display:block;margin-top:5px;color:var(--muted);font-size:12px;letter-spacing:.08em}
+    @media (max-width:900px){.school-grid{grid-template-columns:1fr}}
+    @media (max-width:620px){.school{padding:76px 18px 86px}}
 
-    /* 扎染（可保存成卡） */
-    .paint-pad{position:relative;min-height:340px;overflow:hidden;border-radius:22px;background:linear-gradient(135deg,#f6efe2,#d6e9e3);box-shadow:var(--shadow);padding:24px}
-    .paint-pad::before{content:"扎染";position:absolute;right:-12px;top:-18px;color:rgba(126,22,41,.08);font-family:Georgia,serif;font-size:132px;font-weight:700;line-height:1;pointer-events:none}
-    .paint-pad::after{content:"";position:absolute;inset:auto -44px -70px;height:180px;background:radial-gradient(ellipse,#c4263b 0 16%,transparent 17%),radial-gradient(ellipse,#4d9ba0 0 16%,transparent 17%),radial-gradient(ellipse,#dca23f 0 16%,transparent 17%);background-size:108px 75px,130px 94px,92px 86px;background-position:8% 78%,53% 58%,88% 86%;opacity:.74;transform:rotate(-8deg);transition:transform .6s ease;pointer-events:none}
-    .paint-pad.done::after{transform:rotate(5deg) scale(1.18)}
-    .paint-copy{position:relative;z-index:2;max-width:230px;color:var(--muted);font-size:14px}
-    .paint-surface{position:absolute;z-index:1;left:50%;top:48%;width:72%;height:112px;border-radius:50%;transform:translate(-50%,-50%) rotate(-12deg);background:linear-gradient(120deg,#c4263b,#dca23f 40%,#4d9ba0 75%,#6c254e);filter:saturate(.65);opacity:.2;transition:opacity .45s ease,filter .45s ease,transform .45s ease}
-    .paint-pad.done .paint-surface{opacity:.94;filter:saturate(1.3);transform:translate(-50%,-50%) rotate(-5deg) scale(1.08)}
-    .paint-save{margin-top:14px;padding:8px 12px;border:1px solid rgba(126,22,41,.28);border-radius:999px;color:var(--red-deep);background:rgba(255,255,255,.7);font-size:12px;font-weight:800;opacity:0;transform:translateY(6px);pointer-events:none;transition:opacity .35s ease,transform .35s ease}
-    .paint-pad.done .paint-save{opacity:1;transform:none;pointer-events:auto}
-
-    .red-card{position:relative;min-height:340px;overflow:hidden;border-radius:22px;color:#fff;background:#29121c;box-shadow:var(--shadow)}
-    .red-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;filter:saturate(.7)}
-    .red-card::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(35,9,20,.94),rgba(35,9,20,.18))}
-    .red-card-content{position:relative;z-index:1;max-width:430px;padding:32px}
-    .red-card-content h4{margin:0 0 14px;font-family:Georgia,serif;font-size:34px;line-height:1.08;letter-spacing:-.04em}
-    .red-card-content p{margin:0 0 22px;color:rgba(255,255,255,.73);font-size:14px}
-
-    /* 04 红色 · 数字人 */
+    /* --- 409 红色 · 数字人 --- */
     .dhu-card{position:relative;min-height:340px;border-radius:22px;color:#fff;background:linear-gradient(160deg,#2a1320,#170b11);box-shadow:var(--shadow);padding:20px}
     .dhu-photo{position:relative;border-radius:16px;overflow:hidden;background:#f2e8d8}
     .dhu-photo img{display:block;width:100%;height:auto;object-fit:cover;filter:contrast(1.02) saturate(.96)}
@@ -262,26 +238,10 @@
     .dhu-media{border-radius:14px;overflow:hidden;background:#000}
     .dhu-media video{display:block;width:100%;height:auto;max-height:70vh;background:#000}
     .dhu-note{margin-top:12px;color:var(--muted);font-size:12px;line-height:1.7}
-    .fact-btn{padding:10px 13px;border:1px solid rgba(255,255,255,.3);border-radius:999px;color:#fff;background:rgba(255,255,255,.09);font-size:12px}
 
-    .artifact-strip{padding:92px 28px 104px;background:var(--wine);color:#fff}
-    .artifact-inner{width:min(var(--max),100%);margin:0 auto}
-    .artifact-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:36px}
-    .artifact-head h2{margin:11px 0 0;font-family:Georgia,serif;font-size:clamp(38px,5vw,66px);line-height:1;letter-spacing:-.06em}
-    .artifact-head p{max-width:300px;margin:0;color:rgba(255,255,255,.55);font-size:13px}
-    .artifacts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .artifact{position:relative;min-height:260px;padding:18px;border:1px solid var(--white-line);border-radius:18px;overflow:hidden;background:#25101a;transition:transform .3s ease,border-color .3s ease}
-    .artifact:hover{transform:translateY(-8px);border-color:var(--gold)}
-    .artifact img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.56;transition:transform .6s ease,opacity .3s ease}
-    .artifact:hover img{transform:scale(1.08);opacity:.72}
-    .artifact::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 26%,rgba(18,5,12,.95))}
-    .artifact-info{position:absolute;z-index:2;left:18px;right:18px;bottom:17px}
-    .artifact-info small{display:block;margin-bottom:5px;color:var(--gold-light);letter-spacing:.12em;font-size:10px}
-    .artifact-info strong{font-family:Georgia,serif;font-size:24px}
-
-    /* ---- 传播引擎：给孩子折一架纸飞机 ---- */
+    /* ---- 传播引擎：折一架纸飞机，把话送上他飞过的天空 ---- */
     .wish{position:relative;padding:104px 28px 120px;color:#fff;background:linear-gradient(165deg,#24101c 0%,#3a1626 62%,#1b0d13 100%);overflow:hidden}
-    .wish::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 14%,rgba(232,182,76,.26),transparent 34%),radial-gradient(circle at 12% 88%,rgba(47,111,189,.2),transparent 32%);pointer-events:none}
+    .wish::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 14%,rgba(232,182,76,.26),transparent 34%),radial-gradient(circle at 12% 88%,rgba(196,38,59,.26),transparent 32%);pointer-events:none}
     .wish-inner{position:relative;z-index:1;width:min(860px,100%);margin:0 auto;text-align:center}
     .wish h2{margin:14px 0 16px;font-family:Georgia,"Noto Serif SC","Songti SC",serif;font-size:clamp(36px,6vw,72px);line-height:1;letter-spacing:-.06em}
     .wish h2 em{color:var(--brand-gold);font-style:normal;text-shadow:0 0 28px rgba(232,182,76,.4)}
@@ -292,7 +252,7 @@
     .wish-input:focus{outline:none;border-color:var(--brand-gold);background:rgba(255,255,255,.12)}
     .wish-input.gleam{border-color:var(--red);animation:gleam .6s ease}
     @keyframes gleam{0%,100%{box-shadow:0 0 0 0 rgba(196,38,59,0)}50%{box-shadow:0 0 0 6px rgba(196,38,59,.28)}}
-    .wish-btn{display:inline-flex;align-items:center;gap:6px;padding:14px 20px;border:0;border-radius:999px;color:var(--ink);background:var(--brand-gold);font-weight:800;box-shadow:0 16px 38px rgba(232,182,76,.28);transition:transform .25s ease,box-shadow .25s ease}
+    .wish-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 20px;border:0;border-radius:999px;color:var(--ink);background:var(--brand-gold);font-weight:800;box-shadow:0 16px 38px rgba(232,182,76,.28);transition:transform .25s ease,box-shadow .25s ease}
     .wish-btn:hover{transform:translateY(-3px);box-shadow:0 22px 46px rgba(232,182,76,.4)}
     .wish-hint{margin-top:16px;color:rgba(255,255,255,.55);font-size:13px}
     .card-stage{margin-top:34px;display:none;justify-content:center}
@@ -305,11 +265,11 @@
     .card-btn.solid{color:var(--ink);background:var(--brand-gold);border-color:var(--brand-gold)}
 
     .final{position:relative;overflow:hidden;padding:130px 28px 72px;color:#fff;background:#170b11}
-    .final::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 10%,rgba(220,162,63,.25),transparent 30%),radial-gradient(circle at 85% 75%,rgba(77,155,160,.28),transparent 32%),radial-gradient(circle at 55% 50%,rgba(30,78,140,.18),transparent 42%)}
+    .final::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 10%,rgba(220,162,63,.25),transparent 30%),radial-gradient(circle at 85% 75%,rgba(196,38,59,.3),transparent 32%),radial-gradient(circle at 55% 50%,rgba(30,78,140,.18),transparent 42%)}
     .final-inner{position:relative;z-index:1;width:min(900px,100%);margin:0 auto;text-align:center}
     .final-logo{width:96px;height:96px;margin:0 auto 10px;border-radius:50%;background:#fff;padding:5px;box-shadow:0 0 0 1px rgba(232,182,76,.5),0 18px 40px rgba(0,0,0,.3)}
     .final-logo img{width:100%;height:100%;object-fit:contain;border-radius:50%}
-    .final h2{margin:15px 0 18px;font-family:Georgia,"Noto Serif SC","Songti SC",serif;font-size:clamp(42px,7vw,92px);line-height:.98;letter-spacing:-.07em}
+    .final h2{margin:15px 0 18px;font-family:Georgia,"Noto Serif SC","Songti SC",serif;font-size:clamp(38px,6vw,82px);line-height:1.04;letter-spacing:-.06em}
     .final h2 span{color:var(--gold-light)}
     .final p{max-width:620px;margin:0 auto 30px;color:rgba(255,255,255,.7);font-size:16px}
     .final-cta{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-bottom:26px}
@@ -318,7 +278,7 @@
     .share-btn.solid{color:var(--ink);background:var(--brand-gold);border-color:var(--brand-gold);font-weight:800}
     .credit{margin-top:34px;color:rgba(255,255,255,.5);font-size:12px;line-height:2}
     .credit b{color:rgba(255,255,255,.78)}
-    .credit .ai-note{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.46);font-size:11px;line-height:1.8;max-width:620px;margin-left:auto;margin-right:auto}
+    .credit .ai-note{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.46);font-size:11px;line-height:1.85;max-width:640px;margin-left:auto;margin-right:auto}
 
     .modal{position:fixed;z-index:70;inset:0;display:none;place-items:center;padding:20px;background:rgba(16,5,10,.76);backdrop-filter:blur(14px)}
     .modal.open{display:grid}
@@ -329,12 +289,19 @@
     .modal-close{float:right;width:32px;height:32px;border:0;border-radius:50%;color:var(--ink);background:var(--paper-2);cursor:pointer}
     .toast{position:fixed;z-index:80;left:50%;bottom:26px;transform:translate(-50%,20px);opacity:0;padding:10px 15px;border-radius:999px;color:#fff;background:rgba(26,7,15,.9);backdrop-filter:blur(12px);pointer-events:none;font-size:13px;transition:opacity .25s ease,transform .25s ease}
     .toast.show{opacity:1;transform:translate(-50%,0)}
-    /* 醒狮盖章 */
-    .stamp{position:fixed;z-index:90;left:50%;top:50%;pointer-events:none;opacity:0;transform:translate(-50%,-50%) scale(2.2) rotate(-20deg)}
-    .stamp.show{animation:stampIn .6s cubic-bezier(.2,.8,.3,1) forwards}
-    @keyframes stampIn{0%{opacity:0;transform:translate(-50%,-50%) scale(2.2) rotate(-20deg)}55%{opacity:.95;transform:translate(-50%,-50%) scale(.94) rotate(-12deg)}100%{opacity:.9;transform:translate(-50%,-50%) scale(1) rotate(-12deg)}}
-    .stamp-inner{width:120px;height:120px;display:grid;place-items:center;border:4px solid var(--red);border-radius:18px;color:var(--red);background:rgba(255,255,255,.92);font-family:Georgia,"Noto Serif SC",serif;font-size:34px;font-weight:800;letter-spacing:.1em;box-shadow:0 10px 26px rgba(0,0,0,.28)}
-    .stamp-inner small{display:block;font-size:11px;letter-spacing:.18em;margin-top:2px}
+
+    .letter-open{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:12px 15px;border:1px solid rgba(255,255,255,.34);border-radius:999px;color:#fff;background:rgba(255,255,255,.12);font-size:13px;font-weight:800;cursor:pointer;transition:background .25s ease,border-color .25s ease}
+    .letter-open:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.6)}
+    .letter-card{width:min(480px,100%);border:1px solid rgba(126,22,41,.18);background:linear-gradient(180deg,#fbf5ea,#f3e7d4);position:relative}
+    .letter-card::before{content:"";position:absolute;inset:0;border-radius:24px;box-shadow:inset 0 0 0 6px rgba(126,22,41,.06),inset 0 0 0 7px rgba(220,162,63,.16);pointer-events:none}
+    .letter-card .letter-body{padding:4px 8px 8px;border:1px solid rgba(126,22,41,.18);border-radius:10px;background:rgba(255,255,255,.45);font-family:Georgia,"Noto Serif SC","Songti SC",serif}
+    .letter-card .letter-body p{margin:0 0 12px;font-size:15px;line-height:1.95;color:#251820}
+    .letter-card .letter-sign{text-align:right;color:var(--red-deep);font-weight:800;font-style:italic}
+    .letter-card .cite{display:block;margin-top:12px;color:var(--muted);font-size:11px}
+    .modal.open{animation:modalIn .35s ease}
+    .modal.open .modal-card{animation:cardIn .4s cubic-bezier(.2,.75,.25,1)}
+    @keyframes modalIn{from{opacity:0}to{opacity:1}}
+    @keyframes cardIn{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
 
     /* 命门修复：内容默认完全可见，绝不因滚动/视口而 opacity:0 —— 整页截图永不空白 */
     .reveal{opacity:1;transform:none}
@@ -354,7 +321,6 @@
       .hero-meta{margin-top:26px}
       .stage-content,.stage-content.flip{grid-template-columns:1fr;gap:28px}
       .stage-content.flip .stage-copy{order:1}.stage-content.flip .stage-photo{order:2}
-      .artifacts{grid-template-columns:repeat(2,1fr)}
     }
     @media (max-width:620px){
       .topbar{height:56px;padding:0 14px;gap:12px}
@@ -364,96 +330,27 @@
       .top-progress{width:auto;flex:1}
       .hero{padding:104px 18px 78px}
       .hero-inner{gap:22px}
-      .hero h1{font-size:clamp(56px,16vw,88px)}
+      .hero h1{font-size:clamp(56px,18vw,96px)}
       .hero-lead{font-size:16px}
       .hero-collage{min-height:300px}
       .hero-collage .main-shot{inset:34px 8px 20px 22px;border-width:6px;border-radius:16px}
-      .polaroid{width:124px;padding:7px 7px 12px}.polaroid small{font-size:9px;margin-top:5px}.polaroid.one{top:30px}.polaroid.two{right:-3px;bottom:24px}
       .seal-orbit{right:8px;top:-2px;width:74px;height:74px;font-size:9px}.seal-orbit::after{inset:-8px;font-size:6px}
-      .lion-wrap{left:45%;top:39%;width:60px;height:60px}
       .hero-caption{left:68px;right:23px;bottom:44px}.hero-caption strong{font-size:16px}.hero-caption span{font-size:10px}
       .hero-meta{gap:16px;font-size:10px}.hero-meta b{font-size:26px}
       .scroll-cue{left:18px;bottom:29px}
-      .manifesto,.journey,.artifact-strip,.wish,.final{padding-left:18px;padding-right:18px}
+      .manifesto,.journey,.timeline,.school,.wish,.final{padding-left:18px;padding-right:18px}
       .manifesto{padding-top:82px;padding-bottom:72px}
       .manifesto-inner{grid-template-columns:1fr;gap:15px}.manifesto-label{padding-top:0}
       .journey{padding-top:72px;padding-bottom:84px}
-      .journey-head,.artifact-head{display:block}.journey-head p,.artifact-head p{margin-top:20px}
+      .journey-head{display:block}.journey-head p{margin-top:20px}
       .stage{grid-template-columns:60px minmax(0,1fr);gap:18px;padding:40px 0}
-      .stage-index{position:static;font-size:48px}.stage-index small{font-size:9px}
+      .stage-index{position:static;font-size:56px}.stage-index small{font-size:9px}
       .stage-copy h3{font-size:34px}.stage-copy p{font-size:14px}
-      .stage-photo,.paint-pad,.rocket-zone,.red-card{min-height:280px}
-      .red-card-content{padding:25px}.red-card-content h4{font-size:29px}
-      .artifacts{gap:9px}.artifact{min-height:200px;padding:14px}.artifact-info{left:14px;right:14px;bottom:13px}.artifact-info strong{font-size:20px}
+      .stage-photo,.dhu-card{min-height:280px}
       .wish{padding-top:78px;padding-bottom:88px}.wish-form{flex-direction:column}
       .final{padding-top:95px;padding-bottom:55px}
+      .final h2{font-size:clamp(30px,8vw,46px)}
     }
-    /* --- 01 醒狮：三声鼓唤醒 --- */
-    .stage-photo .lion-tap{
-      position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);
-      width:92px;height:92px;border-radius:50%;border:1px solid rgba(244,211,138,.65);
-      color:var(--gold-light);background:rgba(15,6,12,.55);backdrop-filter:blur(8px);
-      display:grid;place-items:center;box-shadow:0 0 0 0 rgba(244,211,138,0);cursor:pointer;
-      transition:transform .2s ease,background .2s ease;
-    }
-    .stage-photo .lion-tap:hover{transform:translate(-50%,-50%) scale(1.07);background:rgba(196,38,59,.82)}
-    .stage-photo .lion-tap svg{width:38px;height:38px;pointer-events:none}
-    .stage-photo .lion-tap.ring{animation:ring .5s ease}
-    @keyframes ring{0%{box-shadow:0 0 0 0 rgba(244,211,138,.55)}100%{box-shadow:0 0 0 38px rgba(244,211,138,0)}}
-    .stage-photo .lion-tap.awake{background:rgba(196,38,59,.9)}
-    .lion-race{position:absolute;z-index:3;left:16px;top:16px;right:16px;display:flex;align-items:center;gap:9px;color:#fff;font-size:12px}
-    .lion-race b{color:var(--gold-light);letter-spacing:.14em}
-    .lion-beats{margin-left:auto;display:flex;gap:6px}
-    .lion-beats i{width:11px;height:11px;border-radius:50%;border:1px solid rgba(255,255,255,.75);background:transparent;transition:background .2s ease,border-color .2s ease}
-    .lion-beats i.on{background:var(--gold-light);border-color:var(--gold-light)}
-    .roar-word{position:absolute;z-index:4;left:50%;top:30%;transform:translate(-50%,-50%) scale(.5);opacity:0;color:var(--gold-light);font-family:Georgia,"Noto Serif SC",serif;font-size:70px;font-weight:700;letter-spacing:.04em;pointer-events:none;text-shadow:0 6px 26px rgba(0,0,0,.4);transition:opacity .3s ease,transform .3s ease}
-    .roar-word.show{opacity:1;transform:translate(-50%,-50%) scale(1)}
-
-    /* --- 02 扎染：捆扎 → 浸染 → 解开 --- */
-    .dye-surface{position:relative;z-index:1;margin-top:12px;width:100%;height:190px;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#efe6d8,#e4d7c2);box-shadow:inset 0 0 0 1px rgba(126,22,41,.08)}
-    .dye-cloth{position:absolute;inset:14px;border-radius:12px;background:#f6efe2;transition:background .5s ease}
-    .dye-cloth.fold{background-image:repeating-linear-gradient(90deg,transparent 0 20px,rgba(126,22,41,.16) 20px 24px)}
-    .dye-cloth.tie{background-image:repeating-linear-gradient(0deg,transparent 0 18px,rgba(126,22,41,.15) 18px 24px),repeating-linear-gradient(90deg,transparent 0 18px,rgba(126,22,41,.15) 18px 24px)}
-    .dye-cloth.pinch{background-image:radial-gradient(circle at 38% 46%,transparent 0 10px,rgba(126,22,41,.2) 10px 13px,transparent 13px 28px)}
-    .dye-cloth.soaked{background-color:var(--dye,#3b5b8c);background-image:none;filter:saturate(.9)}
-    .dye-pattern{position:absolute;inset:14px;border-radius:12px;opacity:0;transition:opacity .5s ease}
-    .paint-pad.done .dye-pattern{opacity:1}
-    .dye-pattern.stripes{background:repeating-linear-gradient(45deg,transparent 0 22px,var(--dye,#3b5b8c) 22px 34px,transparent 34px 56px)}
-    .dye-pattern.ring{background:repeating-radial-gradient(circle at 50% 50%,var(--dye,#3b5b8c) 0 9px,transparent 9px 26px)}
-    .dye-pattern.circle{background:radial-gradient(circle at 34% 42%,transparent 0 12px,var(--dye,#3b5b8c) 12px 17px,transparent 17px 32px,var(--dye,#3b5b8c) 32px 37px,transparent 37px 52px)}
-    .paint-counter{position:absolute;z-index:4;right:18px;top:16px;color:var(--red-deep);font-size:11px;letter-spacing:.1em;background:rgba(255,255,255,.72);padding:4px 9px;border-radius:999px}
-    .paint-pad.done .paint-counter{color:#fff;background:rgba(126,22,41,.4)}
-    .dye-controls{margin-top:12px;display:flex;flex-direction:column;gap:9px}
-    .dye-row{display:flex;align-items:center;gap:8px}
-    .dye-labels{font-size:11px;letter-spacing:.12em;color:var(--red-deep);font-weight:800;width:36px;flex:none}
-    .dye-row .opt{min-width:46px;padding:8px 11px;border:1px solid rgba(126,22,41,.22);border-radius:999px;color:var(--ink);background:rgba(255,255,255,.82);font-size:12px;font-weight:700;cursor:pointer;transition:transform .2s ease,border-color .2s ease}
-    .dye-row .opt:hover{transform:translateY(-2px);border-color:var(--red)}
-    .dye-row .opt.sel{background:var(--red);border-color:var(--red);color:#fff}
-    .dye-row .dye-opt{width:30px;height:30px;min-width:30px;padding:0;border-radius:50%;border:2px solid rgba(255,255,255,.9)}
-    .dye-soak,.dye-untie{margin-left:auto;padding:8px 13px;border:0;border-radius:999px;color:#fff;background:var(--red);font-size:12px;font-weight:800;cursor:pointer}
-    .dye-untie{background:#7e1629}
-
-    /* --- 03 水火箭：打气 → 发射 --- */
-    .rocket-gauge{position:absolute;z-index:4;left:16px;bottom:54px;width:132px;color:#284c4b}
-    .rocket-gauge small{display:block;font-size:10px;letter-spacing:.12em;margin-bottom:6px;font-weight:800}
-    .rocket-gauge .bar{height:13px;border-radius:999px;background:rgba(40,76,75,.18);overflow:hidden}
-    .rocket-gauge .bar i{display:block;width:0;height:100%;border-radius:999px;background:linear-gradient(90deg,#8fd0d8,#4d9ba0);transition:width .25s ease}
-    .rocket-zone.shake{animation:shake .4s ease}
-    @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
-
-    /* --- 04 红色：翻开来信 → 淡入小窗 --- */
-    .letter-open{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:12px 15px;border:1px solid rgba(255,255,255,.34);border-radius:999px;color:#fff;background:rgba(255,255,255,.12);font-size:13px;font-weight:800;cursor:pointer;transition:background .25s ease,border-color .25s ease}
-    .letter-open:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.6)}
-    .letter-card{width:min(480px,100%);border:1px solid rgba(126,22,41,.18);background:linear-gradient(180deg,#fbf5ea,#f3e7d4);position:relative}
-    .letter-card::before{content:"";position:absolute;inset:0;border-radius:24px;box-shadow:inset 0 0 0 6px rgba(126,22,41,.06),inset 0 0 0 7px rgba(220,162,63,.16);pointer-events:none}
-    .letter-card .letter-body{padding:4px 8px 8px;border:1px solid rgba(126,22,41,.18);border-radius:10px;background:rgba(255,255,255,.45);font-family:Georgia,"Noto Serif SC","Songti SC",serif}
-    .letter-card .letter-body p{margin:0 0 12px;font-size:15px;line-height:1.95;color:#251820}
-    .letter-card .letter-sign{text-align:right;color:var(--red-deep);font-weight:800;font-style:italic}
-    .letter-card .cite{display:block;margin-top:12px;color:var(--muted);font-size:11px}
-    .modal.open{animation:modalIn .35s ease}
-    .modal.open .modal-card{animation:cardIn .4s cubic-bezier(.2,.75,.25,1)}
-    @keyframes modalIn{from{opacity:0}to{opacity:1}}
-    @keyframes cardIn{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
 
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
@@ -470,10 +367,10 @@
     <div class="top-chapters" aria-label="章节导航">
       <a class="chapter-dot active" href="#top" aria-label="首页"></a>
       <a class="chapter-dot" href="#manifesto" aria-label="序言"></a>
-      <a class="chapter-dot" href="#journey" aria-label="四段航程"></a>
+      <a class="chapter-dot" href="#journey" aria-label="航程"></a>
+      <a class="chapter-dot" href="#school" aria-label="学校"></a>
       <a class="chapter-dot" href="#timeline" aria-label="冯达飞生平"></a>
-      <a class="chapter-dot" href="#artifacts" aria-label="作品档案"></a>
-      <a class="chapter-dot" href="#wish" aria-label="纸飞机"></a>
+      <a class="chapter-dot" href="#wish" aria-label="给先烈留一句话"></a>
       <a class="chapter-dot" href="#final" aria-label="结尾"></a>
     </div>
     <div class="top-progress" aria-hidden="true"><i id="progressBar"></i></div>
@@ -486,10 +383,10 @@
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-inner">
       <div class="hero-copy reveal">
-        <div class="overline">红色南粤 · 冯达飞</div>
-        <h1 id="heroTitle">东陂的<em>天空</em></h1>
-        <p class="hero-lead">1901 年，冯达飞从连州东陂镇出发，飞去为祖国开天辟地；今天，孩子在同一片乡土上把根留住、把愿望送上天空——而他自己，以数字人的身份，飞回了东陂。</p>
-        <div class="hero-pills"><span>冯达飞 · 连州</span><span>红色南粤</span><span>岭南非遗</span><span>青年建功</span></div>
+        <div class="overline">红色南粤 · 冯达飞 × 连州市实验小学</div>
+        <h1 id="heroTitle">飞<em>出去</em></h1>
+        <p class="hero-lead">1901 年，冯达飞从连州东陂镇出发，飞去为祖国开天辟地；1942 年，他为这个国家献出生命。今天，连州市实验小学的孩子，在同一片乡土上，把“飞”与信仰，一代代续下去。</p>
+        <div class="hero-pills"><span>冯达飞 · 连州</span><span>红色南粤</span><span>人民军队航空先驱</span><span>航天筑梦 党建筑魂</span></div>
         <div class="hero-actions">
           <button id="startJourney" class="primary-btn" type="button">开始这段航程 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
           <a class="ghost-btn" href="#manifesto">先看一句话</a>
@@ -497,18 +394,21 @@
         <div class="hero-meta"><div><b>7</b><small>天实践</small></div><div><b>26</b><small>课时</small></div><div><b>25+</b><small>名孩子</small></div></div>
       </div>
       <div class="hero-collage reveal">
-        <div class="main-shot"><img src="assets/cover_bg_1920x1080.jpg" alt="连州支教课堂主题画面" fetchpriority="high"></div>
-        <div class="hero-caption"><strong>从东陂出发 · 飞向天空</strong><span>清远连州 · 2026.07</span></div>
-        <div class="polaroid one"><img src="assets/heritage_liondance_1024x768.jpg" alt="醒狮课堂" loading="lazy" decoding="async"><small>THE LION WAKES</small></div>
-        <div class="polaroid two"><img src="assets/aigc_tech_1024x768.jpg" alt="科创课堂" loading="lazy" decoding="async"><small>MAKE THE FUTURE</small></div>
-        <div class="seal-orbit">一段航程<br>一束微光</div>
-        <div class="lion-wrap">
-          <button id="lionButton" class="lion-hotspot" type="button" aria-label="点醒醒狮">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1.8 2.1 4.6 2.6 6.7 1.9.1 2.2-1.2 3.8-3 4.8 2.4.5 4.3 2.3 4.3 4.8 0 3.6-3.4 6.2-8 6.2s-8-2.6-8-6.2c0-2.5 1.9-4.3 4.3-4.8-1.8-1-3.1-2.6-3-4.8C7.4 5.6 10.2 5.1 12 3Z"/><circle cx="9" cy="13" r="1"/><circle cx="15" cy="13" r="1"/><path d="M9 16c1.8 1.1 4.2 1.1 6 0"/></svg>
-          </button>
-          <span id="lionBurst" class="lion-burst" aria-hidden="true"></span>
+        <div class="main-shot flight-vis">
+          <svg class="flight-route" viewBox="0 0 420 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="rgHero" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a1320"/><stop offset="1" stop-color="#7e1629"/></linearGradient></defs>
+            <rect width="420" height="320" fill="url(#rgHero)"/>
+            <path d="M20 300 C 110 250, 150 190, 235 150 S 360 80, 400 46" fill="none" stroke="#c4263b" stroke-width="8" opacity=".28"/>
+            <path d="M20 300 C 110 250, 150 190, 235 150 S 360 80, 400 46" fill="none" stroke="#f4d38a" stroke-width="2.5" stroke-dasharray="8 9" opacity=".9"/>
+            <circle cx="20" cy="300" r="6" fill="#f4d38a"/>
+            <circle cx="235" cy="150" r="6" fill="#f4d38a"/>
+            <circle cx="400" cy="46" r="6" fill="#f4d38a"/>
+            <path d="M0 0 L-11 6 L-4 0 L-11 -6 Z" fill="#f4d38a" stroke="#fff" stroke-width="1" transform="translate(400 46) rotate(-38)"/>
+          </svg>
+          <span class="flight-label">红色南粤 · 航线 1901→1942</span>
         </div>
-        <div id="lionStage" class="visually-hidden"><span id="lionStatus">等待点亮</span><span id="lionTip">等待点亮</span></div>
+        <div class="hero-caption"><strong>从东陂出发 · 飞向天空</strong><span>清远连州 · 连州市实验小学</span></div>
+        <div class="seal-orbit">一段航程<br>一束微光</div>
       </div>
     </div>
     <div class="scroll-cue"><i></i>向下滑，故事会继续</div>
@@ -518,9 +418,9 @@
     <div class="manifesto-inner reveal">
       <div class="manifesto-label">序言</div>
       <div>
-        <blockquote>我们不讲一个飘在空中的“红色故事”，<br>而是让孩子，<span>从冯达飞脚下的这片乡土出发，</span>亲手把一百年前的那段航程，叠进今天的纸飞机里。</blockquote>
-        <p class="manifesto-note">在连州市实验小学，醒狮、扎染、纸飞机、水火箭和 AI 数字创作被放进同一间课堂。它们不是四门课，而是一条航线上的四个航标——这条航线的第一人称，是 1901 年从东陂镇飞出去的那位连州人，冯达飞。</p>
-        <small class="manifesto-old">原题《一头醒狮的七日远行》 · 现改订为《东陂的天空》</small>
+        <blockquote>一百多年前，从连州东陂镇，<span>飞出去一个连州人。</span><br>他叫冯达飞——他的一生，就是红色南粤最早的一条航线。</blockquote>
+        <p class="manifesto-note">红色南粤，不只在地图上，更在这位连州人真实走过的每一步里。1901 年，他生于东陂镇；1942 年，他为这个国家献出生命。今天，连州市实验小学以“航天筑梦，党建筑魂”，把这条航线，继续写进一代代孩子的心里。</p>
+        <small class="manifesto-old">本页为「红色南粤 · 冯达飞 × 连州市实验小学」专题 · 只讲一条关于“飞”与信仰的航线</small>
         <div class="rule"></div>
       </div>
     </div>
@@ -529,96 +429,82 @@
   <section id="journey" class="journey">
     <div class="journey-inner">
       <div class="journey-head reveal">
-        <div><div class="overline">红色南粤 · 冯达飞</div><h2>四段航程，<br>一条航线。</h2></div>
-        <p>从 1901 年东陂出发，到 1932 年无导航飞回红色根据地——冯达飞的人生是四段航程；今天的非遗与科创，都在这条航线上继续飞。</p>
+        <div><div class="overline">红色南粤 · 冯达飞</div><h2>一条航线，<br>六段航程。</h2></div>
+        <p>从 1901 年东陂出发，到 1942 年他把生命留在上饶——冯达飞的一生，是六段航程；今天的学校与孩子，沿着这条航线继续飞。</p>
       </div>
 
       <article class="stage reveal">
-        <div class="stage-index">01<small>醒狮 · 根</small></div>
+        <div class="stage-index">志<small>1924 黄埔</small></div>
         <div class="stage-content">
           <div class="stage-copy">
-            <h3>把狮头举起，把东陂的根留住</h3>
-            <p class="stage-quote">一百年前，冯达飞从这片乡土走出去；今天的孩子，用它把根留住。</p>
-            <p>1901 年，冯达飞出生在清远连州东陂镇。他脚下，正是今天孩子们举起醒狮、敲响鼓点的同一片乡土。非遗不是展柜里的“展品”，而是这位连州人出发前，脚踩的土地。今天的连州孩子，第一次把狮头举过头顶——传统没有停在博物馆，而是落回了东陂，落回了他出生的地方。</p>
-            <p class="stage-note">连打三声鼓，把这条航段的第一盏灯点亮。</p>
-            <button id="lionHint" class="stage-action" type="button">点醒这头醒狮 <span>↗</span></button>
+            <h3>把青春，交给黄埔</h3>
+            <p class="stage-quote">1924 年，他考入黄埔军校第一期；同年冬天，他加入中国共产党。</p>
+            <p>1901 年，冯达飞出生在广东连州东陂镇。1924 年，他考入黄埔军校第一期，成为那个年代最有理想的年轻人之一。也正是在这一年冬天，他作出了一生的选择——加入中国共产党。从此，他不再只是东陂镇走出去的聪慧少年，而是一个把“为中华”三个字，刻进骨头里的军人。</p>
           </div>
-          <figure class="stage-photo"><img src="assets/heritage_liondance_1024x768.jpg" alt="醒狮教学现场" loading="lazy" decoding="async">
-            <div class="lion-race"><b>鼓点</b><span class="lion-beats"><i></i><i></i><i></i></span></div>
-            <div class="roar-word">醒</div>
-            <button id="stageLion" class="lion-tap" type="button" aria-label="点醒这头醒狮"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1.8 2.1 4.6 2.6 6.7 1.9.1 2.2-1.2 3.8-3 4.8 2.4.5 4.3 2.3 4.3 4.8 0 3.6-3.4 6.2-8 6.2s-8-2.6-8-6.2c0-2.5 1.9-4.3 4.3-4.8-1.8-1-3.1-2.6-3-4.8C7.4 5.6 10.2 5.1 12 3Z"/><circle cx="9" cy="13" r="1"/><circle cx="15" cy="13" r="1"/><path d="M9 16c1.8 1.1 4.2 1.1 6 0"/></svg></button>
-            <figcaption><b>东陂的根 · 醒狮工作坊</b>可动手 · 可表演 · 可带走</figcaption>
+          <figure class="stage-photo">
+            <div class="vis-fallback" aria-hidden="true"></div>
+            <span class="vis-year" aria-hidden="true">1924</span>
+            <figcaption><b>黄埔军校 · 立志</b>真实影像以可核验公开资料为准</figcaption>
           </figure>
         </div>
       </article>
 
       <article class="stage reveal">
-        <div class="stage-index">02<small>扎染 · 脉</small></div>
+        <div class="stage-index">淬<small>1925 东征·赴苏</small></div>
         <div class="stage-content flip">
-          <div id="paintPad" class="paint-pad clickable" role="button" tabindex="0" aria-label="扎染体验">
-            <div class="paint-copy">捆扎、浸染、解开——这匹布，也属于一百年前把信仰染进青春的那个人。</div>
-            <div class="dye-surface" aria-hidden="true">
-              <div class="dye-cloth"></div>
-              <div class="dye-pattern stripes"></div>
-            </div>
-            <span class="paint-counter">第 1 步 · 捆扎</span>
-            <div class="dye-controls">
-              <div class="dye-row" data-step="bind">
-                <span class="dye-labels">捆扎</span>
-                <button class="opt bind-opt" type="button" data-bind="fold">对折</button>
-                <button class="opt bind-opt" type="button" data-bind="tie">捆扎</button>
-                <button class="opt bind-opt" type="button" data-bind="pinch">夹扎</button>
-              </div>
-              <div class="dye-row" data-step="dye" hidden>
-                <span class="dye-labels">染</span>
-                <button class="opt dye-opt" type="button" data-c="#3b5b8c" style="background:#3b5b8c" aria-label="靛蓝"></button>
-                <button class="opt dye-opt" type="button" data-c="#c4263b" style="background:#c4263b" aria-label="朱红"></button>
-                <button class="opt dye-opt" type="button" data-c="#4d9ba0" style="background:#4d9ba0" aria-label="青"></button>
-                <button id="dyeSoak" class="dye-soak" type="button">浸 染</button>
-              </div>
-              <div class="dye-row" data-step="untie" hidden>
-                <span class="dye-labels">解开</span>
-                <button id="dyeUntie" class="dye-untie" type="button">解开看纹</button>
-              </div>
-            </div>
-            <button id="paintSave" class="paint-save" type="button">存下这匹扎染</button>
-          </div>
+          <figure class="stage-photo">
+            <div class="vis-fallback" aria-hidden="true"></div>
+            <span class="vis-year" aria-hidden="true">1925</span>
+            <figcaption><b>赴苏联学习航空</b>真实影像以可核验公开资料为准</figcaption>
+          </figure>
           <div class="stage-copy">
-            <h3>把岭南的颜色，染进青春的信仰</h3>
-            <p class="stage-quote">1924 年，他从东陂考入黄埔军校——把自己，交给了一种颜色。</p>
-            <p>1924 年，冯达飞考入黄埔军校第一期，同年冬加入中国共产党；1925 年参加东征（讨伐陈炯明），随后赴苏联学习航空；1927 年回国，参加广州起义，1929 年又参加百色起义。他把自己的一生，交给了一种信仰。扎染课堂上的“捆扎、浸染、解开”，与这段人生何其相似：少年被捆住的是乡土与牵绊，浸染的是一腔赤诚，解开的，是一条报国的路。孩子们在布里染出岭南的靛蓝与朱红，也第一次懂得：<strong>有些颜色，一旦染上，就一辈子抹不掉。</strong></p>
-            <p class="story-note">※ 画面寓意：扎染与黄埔军校的对应是艺术化类比，并非史实原话。</p>
-            <button id="paintHint" class="stage-action" type="button">展开这匹扎染 <span>↗</span></button>
+            <h3>打完一场仗，他去学飞行</h3>
+            <p class="stage-quote">1925 年，他随黄埔参加东征（讨伐陈炯明）；随后，他去了苏联，学航空。</p>
+            <p>1925 年，冯达飞随黄埔军校参加东征，讨伐陈炯明，在战火里第一次真正认识“要为谁而战”。也就是这一年，他离开故土，远赴苏联学习航空。那时的中国，还没有自己的空军；他是最早把那片天空，认作“人民军队翅膀”的人之一。</p>
           </div>
         </div>
       </article>
 
       <article class="stage reveal">
-        <div class="stage-index">03<small>无人机 · 翼</small></div>
+        <div class="stage-index">择<small>1927 归国·广州</small></div>
         <div class="stage-content">
           <div class="stage-copy">
-            <h3>一张地图，一个方向，也要飞回去</h3>
-            <p class="stage-quote">1932 年，随红军攻占漳州——他驾驶缴获的飞机，没有导航，没有雷达，没有地面指挥。只有一张地图，和一个方向。</p>
-            <p>1932 年，冯达飞随红军攻占福建漳州，驾驶缴获的飞机首飞中央苏区——那是人民军队历史上，<strong>首次由己方飞行员驾驶飞机飞回红色根据地</strong>。今天，孩子手里的纸飞机和水火箭，飞的正是当年那一条“只有方向”的航线：升力、反作用力，孩子们在玩里学的不是公式，是“铁了心往哪飞”的勇气。</p>
-            <button id="launchHint" class="stage-action" type="button">发射一枚水火箭 <span>↗</span></button>
+            <h3>归国，他站到了人民这一边</h3>
+            <p class="stage-quote">1927 年，他从苏联归国；随后，他参加了广州起义。</p>
+            <p>1927 年，带着学成的飞行技术，冯达飞从苏联归国。那是一个分岔的路口——他没有往安逸走，而是参加了中国共产党领导的广州起义，在红色南粤的大地上，再一次把枪口对准了旧世界。从这一刻起，他学来的那身本事，不再属于他自己，而是属于这个正在觉醒的国家。</p>
           </div>
-          <div id="rocketZone" class="rocket-zone">
-            <span class="cloud" aria-hidden="true"></span><span class="cloud two" aria-hidden="true"></span><div class="rocket" aria-hidden="true"></div>
-            <div class="rocket-gauge"><small>气压</small><span class="bar"><i id="pressureFill"></i></span></div>
-            <div id="rocketWish" class="rocket-wish" role="status">“我要像冯达飞爷爷一样，飞回我的家乡！”</div>
-            <span class="rocket-label">打气 · 发射</span><button id="rocketButton" class="rocket-btn" type="button">打气发射水火箭</button>
+          <figure class="stage-photo">
+            <div class="vis-fallback" aria-hidden="true"></div>
+            <span class="vis-year" aria-hidden="true">1927</span>
+            <figcaption><b>广州起义 · 抉择</b>真实影像以可核验公开资料为准</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="stage reveal">
+        <div class="stage-index">转<small>1929 百色</small></div>
+        <div class="stage-content flip">
+          <figure class="stage-photo">
+            <div class="vis-fallback" aria-hidden="true"></div>
+            <span class="vis-year" aria-hidden="true">1929</span>
+            <figcaption><b>百色起义 · 火种</b>真实影像以可核验公开资料为准</figcaption>
+          </figure>
+          <div class="stage-copy">
+            <h3>百色的火种</h3>
+            <p class="stage-quote">1929 年，他参加百色起义，成为红七军的一员。</p>
+            <p>1929 年，冯达飞参加百色起义，成为红七军的一员。南粤与广西的群山之间，革命的火焰越烧越旺。他走了很远的路——从连州的乡土，到黄埔的操场，到苏联的天空，再到右江两岸的群山，一路把他的信仰，种进了更多人的心里。</p>
           </div>
         </div>
       </article>
 
       <article class="stage reveal">
-        <div class="stage-index">04<small>红色 · 归</small></div>
+        <div class="stage-index">空<small>1932 漳州首飞</small></div>
         <div class="stage-content flip">
           <div class="dhu-card">
             <div class="dhu-photo"><img src="assets/digital_human.jpg" alt="冯达飞 AI 数字人" loading="lazy" decoding="async"><span class="dhu-badge">AI 数字人 · 基于史实艺术化演绎</span></div>
             <div class="dhu-content">
               <h4>先生，欢迎回家。</h4>
-              <p>我们把这位连州籍、被誉为“人民军队航空先驱、最早的飞行员之一、空军首位飞行教官”的冯达飞，做成一位会说话的“数字人”。请他从天上回到东陂，给今天的孩子，亲口讲一段当年没有导航的航程，和他那个“想折多少纸飞机就折多少”的愿望。</p>
+              <p>我们把这位连州籍、被誉为“人民军队航空先驱、最早的飞行员之一、空军首位飞行教官”的冯达飞，做成一位会说话的“数字人”。请他从天上回到东陂，给今天的孩子，亲口讲一段当年没有导航的航程。</p>
               <div class="dhu-actions">
                 <button id="dhuPlay" class="letter-open" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>听数字人讲一段</button>
                 <button id="letterOpen" class="letter-open" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>翻开这封红色来信</button>
@@ -626,12 +512,54 @@
             </div>
           </div>
           <div class="stage-copy">
-            <h3>他飞出去了，又飞回东陂的天空</h3>
-            <p>从前，我们把“听故事”讲成“看展板”；这一次，我们让冯达飞“亲自”飞回东陂，站到孩子们面前，用他自己的话说出那段航程。技术只是放大器，真正被留下的，是孩子心里那句：“原来我家乡，飞出去过这样一个人。”</p>
-            <button id="dhuHint" class="stage-action" type="button">听数字人讲一段历史 <span>↗</span></button>
+            <h3>一张地图，一个方向</h3>
+            <p class="stage-quote">1932 年，他随红军攻占漳州，驾驶缴获的飞机，首飞中央苏区。</p>
+            <p>1932 年，冯达飞随红军攻占福建漳州，缴获了一架飞机。没有导航，没有雷达，没有地面指挥；只有一张地图，和一个方向。他驾驶这架缴获的飞机，飞回中央苏区——那是人民军队历史上，<strong>首次由己方飞行员驾机飞回红色根据地</strong>。他把人民军队的航空史，从“一张地图、一个方向”开始，写进了天空。</p>
+            <p class="stage-note">※ “没有导航、没有雷达、只有一张地图和一个方向”为讲述性/画面意境，属基于公开史实的艺术化演绎，非正式史实口径。</p>
           </div>
         </div>
       </article>
+
+      <article class="stage reveal">
+        <div class="stage-index">殁<small>1942.6 上饶</small></div>
+        <div class="stage-content">
+          <div class="stage-copy">
+            <h3>他把名字，飞进了天空</h3>
+            <p class="stage-quote">1942 年 6 月，他在江西上饶集中营（茅家岭）壮烈牺牲。</p>
+            <p>1942 年 6 月，冯达飞在江西上饶集中营（茅家岭）壮烈牺牲。他没有死在驾驶舱里，而是把生命，留在了黑暗的牢狱中。他是人民军队航空先驱、最早的飞行员之一、空军首位飞行教官。今天，他的名字镌刻在中国人民空军英烈墙上——他飞进的那片天空，永远记得他。</p>
+          </div>
+          <figure class="stage-photo">
+            <div class="vis-fallback" aria-hidden="true"></div>
+            <span class="vis-year" aria-hidden="true">1942</span>
+            <figcaption><b>上饶集中营 · 英烈墙</b>真实影像以可核验公开资料为准</figcaption>
+          </figure>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="school" class="school">
+    <div class="school-inner reveal">
+      <div class="school-head">
+        <div class="overline">承 · 学校</div>
+        <h2>航天筑梦，党建筑魂，<br><span>连州市实验小学。</span></h2>
+      </div>
+      <div class="school-grid">
+        <div class="school-copy">
+          <p class="school-quote">一所把“飞”种进孩子心里的学校，接住了这位连州人的“飞行与信仰”。</p>
+          <p>航段到这里，转向今天。连州市实验小学，是一所把“航天”写进育人、把“党建”融进习惯的学校：这里是全国青少年航天科普活动基地校、广东省航空航天特色学校、清远市科学教育示范学校；校园里有飞享未来航空馆、科技长廊、航空航天科技馆，还有以科学家命名的班级文化。</p>
+          <p>从一年级的手抛飞机，到气球火箭，再到扑翼飞机，孩子的每一次起跑，都是同一句“飞出去”。每年四月的科技节上，液氮科学秀、机器狗、无人机、水火箭、纸飞机、激光切割轮番上场——这里的孩子，从很小就知道，天空是可以用手够到的地方。</p>
+          <p>红色教育也没有缺席。课本剧《赵一曼的故事》里，那场“跨时空对话”，打动了一届又一届孩子。今年，正是长征胜利 90 周年——而冯达飞，是连州唯一全程参加长征的红军将领。这所学校要做的，正是让那段“飞行与信仰”，穿过九十年，落在今天的红领巾上。</p>
+          <p>广东建设职业技术学院启智润心实践队的三下乡学子，和这里的老师、孩子一起，把这条航线讲下去——在“十五五”的新征程上，青年建功，少年筑梦。</p>
+          <p class="school-note">※ 学校名称、称号、党建品牌、设施与活动等表述，以校方正式确认为准；校训、校史、红色渊源与具体数据，请由指导老师核实补充。</p>
+        </div>
+        <div class="school-badges">
+          <div class="sb"><b>全国青少年航天科普活动基地校</b><small>航天筑梦</small></div>
+          <div class="sb"><b>广东省航空航天特色学校</b><small>特色称号</small></div>
+          <div class="sb"><b>清远市科学教育示范学校</b><small>区域示范</small></div>
+          <div class="sb"><b>党建品牌 · 航天筑梦 党建筑魂</b><small>学校灵魂</small></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -639,7 +567,7 @@
     <div class="timeline-inner reveal">
       <div class="timeline-head">
         <div><div class="overline">冯达飞生平 · 具体到年与地</div><h2>一个人的航线，<br>也是红色南粤的路。</h2></div>
-        <p>把“红色”落到每一座城、每一年——从东陂镇起飞，到黄埔，到漳州上空，再到他为中华献出生命。</p>
+        <p>把“红色”落到每一座城、每一年——从东陂镇起飞，到黄埔，到苏联，到漳州上空，再到他为中华献出生命。</p>
       </div>
       <div class="timeline-strip">
         <article class="tl-item reveal">
@@ -648,48 +576,67 @@
         </article>
         <article class="tl-item reveal">
           <div class="tl-year">1924</div>
-          <div class="tl-card"><h3>把青春交给黄埔</h3><p>考入黄埔军校第一期，同年冬加入中国共产党。</p></div>
+          <div class="tl-card"><h3>把青春交给黄埔</h3><p>考入黄埔军校第一期；同年冬，加入中国共产党。</p></div>
+        </article>
+        <article class="tl-item reveal">
+          <div class="tl-year">1925</div>
+          <div class="tl-card"><h3>打完仗，去学飞行</h3><p>参加黄埔东征（讨伐陈炯明）；随后赴苏联学习航空。</p></div>
+        </article>
+        <article class="tl-item reveal">
+          <div class="tl-year">1927</div>
+          <div class="tl-card"><h3>归国，站到人民一边</h3><p>学成归国；参加广州起义。</p></div>
+        </article>
+        <article class="tl-item reveal">
+          <div class="tl-year">1929</div>
+          <div class="tl-card"><h3>百色的火种</h3><p>参加百色起义，成为红七军一员。</p></div>
         </article>
         <article class="tl-item reveal">
           <div class="tl-year">1932</div>
-          <div class="tl-card"><h3>一张地图，一个方向</h3><p>1932 年，随红军攻占福建漳州，驾缴获飞机首飞中央苏区——人民军队首次由己方飞行员驾机飞回红色根据地。</p></div>
+          <div class="tl-card"><h3>一张地图，一个方向</h3><p>随红军攻占福建漳州，驾缴获飞机首飞中央苏区——人民军队首次由己方飞行员驾机飞回红色根据地。</p></div>
         </article>
         <article class="tl-item reveal">
-          <div class="tl-year">1942</div>
-          <div class="tl-card"><h3>飞出去，又留下</h3><p>回国后任红军/人民军队飞行教官；1942 年 6 月在江西上饶集中营（茅家岭）壮烈牺牲，名字镌刻在中国人民空军英烈墙上。</p></div>
+          <div class="tl-year">1942.6</div>
+          <div class="tl-card"><h3>他把名字飞进天空</h3><p>在江西上饶集中营（茅家岭）壮烈牺牲；名字镌刻在中国人民空军英烈墙上。</p></div>
+        </article>
+        <article class="tl-item reveal">
+          <div class="tl-year">今</div>
+          <div class="tl-card"><h3>今天，我们接着飞</h3><p>广东建院学子寻访故里、读他的信、讲他的故事，把红色南粤写进青春。</p></div>
         </article>
       </div>
-    </div>
-  </section>
-
-  <section id="artifacts" class="artifact-strip">
-    <div class="artifact-inner">
-      <div class="artifact-head reveal"><div><div class="overline">红色南粤 · 冯达飞</div><h2>沿他的航线，<br>他们留下的，不只是作品。</h2></div><p>这些作品与互动，共同组成孩子们“沿着冯达飞的航线继续飞”的创作档案：从被教，到会表达；从完成任务，到讲述家乡。</p></div>
-      <div class="artifacts">
-        <article class="artifact reveal"><img src="assets/real_lion.jpg" alt="醒狮教学现场" loading="lazy" decoding="async"><div class="artifact-info"><small>根脉</small><strong>醒狮 · 东陂的根</strong></div></article>
-        <article class="artifact reveal"><img src="assets/real_ai_works.jpg" alt="学生AI数字创作作品" loading="lazy" decoding="async"><div class="artifact-info"><small>愿望</small><strong>AI数字创作</strong></div></article>
-        <article class="artifact reveal"><img src="assets/real_rocket.jpg" alt="水火箭发射现场" loading="lazy" decoding="async"><div class="artifact-info"><small>航程</small><strong>水火箭 · 一张地图</strong></div></article>
-        <article class="artifact reveal"><img src="assets/real_exhibit.jpg" alt="启智润心实践队结营仪式成果展" loading="lazy" decoding="async"><div class="artifact-info"><small>归来</small><strong>成果展 · 飞回东陂</strong></div></article>
+      <div class="route-block reveal">
+        <div class="route-head">
+          <div><div class="overline">红色足迹 · 地理航线</div><h3>这辈子，他把地图走了个遍。</h3></div>
+          <p>连州 → 黄埔 → 苏联 → 广州 → 百色 → 漳州 → 上饶：每一站，都是一条红色南粤的航线。</p>
+        </div>
+        <div class="route-strip">
+          <span class="rt"><b>连州</b><small>1901 · 出生</small></span><i class="rt-link"></i>
+          <span class="rt"><b>黄埔</b><small>1924 · 入党</small></span><i class="rt-link"></i>
+          <span class="rt"><b>苏联</b><small>1925 · 学航空</small></span><i class="rt-link"></i>
+          <span class="rt"><b>广州</b><small>1927 · 起义</small></span><i class="rt-link"></i>
+          <span class="rt"><b>百色</b><small>1929 · 起义</small></span><i class="rt-link"></i>
+          <span class="rt"><b>漳州</b><small>1932 · 首飞</small></span><i class="rt-link"></i>
+          <span class="rt"><b>上饶</b><small>1942 · 牺牲</small></span>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="wish" class="wish">
     <div class="wish-inner reveal">
-      <div class="overline" style="justify-content:center;color:var(--brand-gold)">给孩子折一架纸飞机</div>
-      <h2>为连州孩子，<em>留下一句“飞出去”的祝福。</em></h2>
-      <p class="wish-lead">很多年前，冯达飞在天上往下看，想的是：“总有一天，连州的每一个孩子，都能坐在明亮的教室里，想折多少纸飞机就折多少，想飞多远就飞多远。”今天，这句愿望，就落在你手里——写下一句祝福，折成一架纸飞机，让它替他继续飞。</p>
+      <div class="overline" style="justify-content:center;color:var(--brand-gold)">红色南粤 · 冯达飞 · 传承</div>
+      <h2>折一架纸飞机，<em>把话送上他飞过的天空。</em></h2>
+      <p class="wish-lead">很多年前，冯达飞飞过这片天空；今天，他在天上看着我们。史书写不进去的话，留在这里。写下一句对他、对南粤先烈的缅怀或致敬，折成一架纸飞机，让它替他，继续被看见。</p>
       <div class="wish-form">
-        <input id="wishInput" class="wish-input" type="text" maxlength="40" placeholder="例如：愿你也像冯达飞一样，飞得更远。" aria-label="写下你对孩子的祝福">
-        <button id="makePlane" class="wish-btn" type="button">折一架纸飞机 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg></button>
+        <input id="wishInput" class="wish-input" type="text" maxlength="40" placeholder="例如：冯达飞前辈，连州记得您飞过的那片天。" aria-label="写下你想对冯达飞/南粤先烈说的话">
+        <button id="makeCard" class="wish-btn" type="button">折一架纸飞机 · 生成留言卡 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg></button>
       </div>
-      <p class="wish-hint">一句话，就能成为孩子记忆里的一段远方。</p>
+      <p class="wish-hint">一句话，就能让他飞过的那片天，再被看见一次。</p>
       <div id="cardStage" class="card-stage">
-        <div class="card-preview"><canvas id="wishCanvas" width="600" height="820" aria-label="纸飞机祝福分享卡片"></canvas></div>
+        <div class="card-preview"><canvas id="wishCanvas" width="600" height="820" aria-label="写给南粤先烈的一句话 · 红色留言卡"></canvas></div>
       </div>
       <div id="cardActions" class="card-actions" style="display:none">
         <button id="saveCard" class="card-btn solid" type="button">保存卡片图</button>
-        <button id="shareCard" class="card-btn" type="button">分享这段祝福</button>
+        <button id="shareCard" class="card-btn" type="button">分享这段致敬</button>
         <button id="againCard" class="card-btn" type="button">再写一句</button>
       </div>
     </div>
@@ -699,30 +646,28 @@
     <div class="final-inner reveal">
       <div class="final-logo"><img id="brandLogoFinal" src="assets/team_logo.png" alt="启智润心实践队队徽"></div>
       <div class="overline" style="justify-content:center">青年建功 · 沿东陂的航线，把专业写在乡土上</div>
-      <h2>记住冯达飞，<span>记住红色南粤。</span></h2>
-      <p>广东建设职业技术学院未来智能学院启智润心实践队，从粤港澳大湾区出发，来到清远连州。我们不是来做一堂“非遗课”，而是带着孩子，沿着一位连州先烈的航线走了一段路——把根留住，把愿望送上他飞过的天空，也把“飞出去”的种子，种进每个孩子心里。</p>
+      <h2>记住冯达飞，记住红色南粤，<span>也记住这所让“飞”与信仰传承下去的学校。</span></h2>
+      <p>广东建设职业技术学院未来智能学院启智润心实践队，从粤港澳大湾区出发，来到清远连州。我们不是来做一堂课，而是带着这里的老师和孩子，沿着一位连州先烈的航线，走了一遍他的一生——从东陂起飞，到漳州那片天空，再到他为中华献出生命的地方。记住他，就是把红色南粤，写进这一代人的青春。</p>
       <div class="final-cta">
-        <button id="goWish" class="share-btn solid" type="button">写一句祝福，带走专属卡</button>
+        <button id="goWish" class="share-btn solid" type="button">给冯达飞留一句话，生成红色留言卡</button>
         <button id="shareButton" class="share-btn" type="button"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4"/><path d="m15.4 6.5-6.8 4"/></svg>分享这段远行</button>
         <a class="share-btn" href="#top">再看一遍</a>
       </div>
       <div class="credit">
         <b>广东建设职业技术学院 · 未来智能学院 · 启智润心实践队</b><br>
-        清远连州 · 2026年7月<br>
+        清远连州 · 连州市实验小学 · 2026 年<br>
         指导教师：<span style="color:rgba(255,255,255,.4)">____（待补 / 真人填写）</span><br>
         作品链接：<span style="color:rgba(255,255,255,.4)">____（上线后补真实链接）</span> · 二维码：<span style="color:rgba(255,255,255,.4)">____（待补）</span>
-        <div class="ai-note">本页部分插图为 AI 辅助生成，用于艺术化演绎；冯达飞"数字人"形象与讲述为基于公开史实的艺术化演绎，非真实历史影像、照片与录音，人物语言以可核验史料为准，不虚构原话。历史与人物内容以可核验资料为准，提交前请由指导老师核对数据、作者署名与作品链接。</div>
+        <div class="ai-note">本页冯达飞“数字人”形象与讲述为基于公开史实的艺术化演绎，非真实历史影像、照片与录音，人物语言以可核验史料为准，不虚构原话；页面不用 AI 生成形象作主视觉，历史图片以可核验公开资料为准。冯达飞生平依据公开史料整理；涉及连州市实验小学的名称、称号、党建品牌、设施与活动的表述，以校方正式确认为准。提交前请由指导老师核对数据、作者署名与作品链接。</div>
       </div>
     </div>
   </section>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-  <div id="lionStamp" class="stamp" aria-live="polite"><div class="stamp-inner">已醒<small>THE LION WAKES</small></div></div>
+  <div id="dhuModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="dhuTitle"><div class="modal-card dhu-modal"><button id="dhuClose" class="modal-close" type="button" aria-label="关闭数字人视频">×</button><h3 id="dhuTitle">冯达飞 · 数字人（艺术化演绎）</h3><div class="dhu-media"><video id="dhuVideo" controls playsinline preload="none" poster="assets/digital_human.jpg"><source src="assets/videos/digital_human_intro.mp4" type="video/mp4"></video></div><p class="dhu-note"><b>AI 数字人讲述（选段）</b>：连州的孩子们，你们好。我叫冯达飞，东陂镇人。1924 年，我考进了黄埔军校第一期。1932 年，我在福建漳州，驾驶着一架没有导航、没有雷达、没有地面指挥的飞机——只有一张地图，和一个方向。那是人民军队历史上，首次由己方飞行员驾驶飞机飞回红色根据地。孩子们，飞出去吧。本段为基于公开史实的艺术化演绎，非真实历史影像、照片与录音；人物语言以可核验史料为准，不虚构原话。</p></div></div>
 
-  <div id="dhuModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="dhuTitle"><div class="modal-card dhu-modal"><button id="dhuClose" class="modal-close" type="button" aria-label="关闭数字人视频">×</button><h3 id="dhuTitle">冯达飞 · 数字人</h3><div class="dhu-media"><video id="dhuVideo" controls playsinline preload="none" poster="assets/digital_human.jpg"><source src="assets/videos/digital_human_intro.mp4" type="video/mp4"></video></div><p class="dhu-note"><b>AI 数字人讲述（选段）</b>：连州的孩子们，你们好。我叫冯达飞，东陂镇人。1924 年，我考进了黄埔军校第一期。1932 年，我在福建漳州，驾驶着一架没有导航、没有雷达、没有地面指挥的飞机——只有一张地图，和一个方向。那是人民军队历史上，首次由己方飞行员驾驶飞机飞回红色根据地。在天上往下看时，我见过很多风景；那时候我就想，总有一天，连州的每一个孩子，都能坐在明亮的教室里，想折多少纸飞机就折多少。孩子们，飞出去吧。本段为基于公开史实的艺术化演绎，非真实历史影像、照片与录音；人物语言以可核验史料为准，不虚构原话。</p></div></div>
-
-  <div id="letterModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="letterTitle"><div class="modal-card letter-card"><button id="letterClose" class="modal-close" type="button" aria-label="关闭来信">×</button><h3 id="letterTitle">致连州孩子的一封信</h3><div class="letter-body"><p>这封信，写给今天的孩子，也写给当年的冯达飞。</p><p><b>冯达飞</b>（1901—1942），广东连州东陂镇人，中共党员。1924 年考入黄埔军校第一期，同年冬加入中国共产党；1925 年参加黄埔东征（讨伐陈炯明），随后赴苏联学习航空；1927 年归国，参加广州起义，1929 年又参加百色起义；回国后任红军/人民军队飞行教官，被誉为“人民军队航空先驱、最早的飞行员之一、空军首位飞行教官”。1932 年，他随红军攻占福建漳州，驾驶缴获的飞机首次飞回中央苏区——那是人民军队历史上首次由己方飞行员驾机飞回红色根据地。1942 年 6 月，他在江西上饶集中营（茅家岭）壮烈牺牲，名字镌刻在中国人民空军英烈墙上。他把“为中华”三个字，写进了人民军队航空事业的每一次起飞。</p><p>今天，我们站在他出生的地方，把这段历史讲给下一代听——讲故事的人换了一批，故事里的赤诚没有变。</p><p class="letter-sign">—— 启智润心实践队</p></div><span class="cite">据公开史料整理（广东老区网、央视“矢志革命的红军飞行教官/红色雄鹰”、广东红色故事汇、连州市委党史办）；本页为基于公开史实的艺术化演绎，非真实历史影像与录音，具体用词请由指导老师复核。</span></div></div>
+  <div id="letterModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="letterTitle"><div class="modal-card letter-card"><button id="letterClose" class="modal-close" type="button" aria-label="关闭来信">×</button><h3 id="letterTitle">致连州孩子的一封信</h3><div class="letter-body"><p>这封信，写给今天的孩子，也写给当年的冯达飞。</p><p><b>冯达飞</b>（1901—1942），广东连州东陂镇人，中共党员，人民军队航空先驱、最早的飞行员之一、空军首位飞行教官。1924 年考入黄埔军校第一期，同年冬加入中国共产党；1925 年参加黄埔东征（讨伐陈炯明），随后赴苏联学习航空；1927 年归国，参加广州起义；1929 年参加百色起义；1932 年，他随红军攻占福建漳州，驾驶缴获的飞机首次飞回中央苏区——那是人民军队历史上首次由己方飞行员驾机飞回红色根据地。1942 年 6 月，他在江西上饶集中营（茅家岭）壮烈牺牲，名字镌刻在中国人民空军英烈墙上。他把“为中华”三个字，写进了人民军队航空事业的每一次起飞。</p><p>今天，我们站在他出生的地方，把这段历史讲给下一代听——讲故事的人换了一批，故事里的赤诚没有变。</p><p class="letter-sign">—— 启智润心实践队</p><span class="cite">据公开史料整理（广东老区网、央视“矢志革命的红军飞行教官/红色雄鹰”、广东红色故事汇、连州市委党史办）；本页为基于公开史实的艺术化演绎，非真实历史影像与录音，具体用词请由指导老师复核。</span></div></div>
 
   <script>
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -747,7 +692,7 @@
       const max=document.documentElement.scrollHeight-window.innerHeight;
       const value=max>0?Math.min(100,Math.max(0,window.scrollY/max*100)):0;
       progressBar.style.width=value.toFixed(1)+'%';
-      const sections=['top','manifesto','journey','timeline','artifacts','wish','final'].map(id=>document.getElementById(id));
+      const sections=['top','manifesto','journey','school','timeline','wish','final'].map(id=>document.getElementById(id));
       const dots=[...document.querySelectorAll('.chapter-dot')];
       let active=0;
       sections.forEach((section,index)=>{ if(section && window.scrollY+window.innerHeight*.36>=section.offsetTop) active=index });
@@ -791,76 +736,6 @@
     /* ---------- 开始旅程 ---------- */
     document.getElementById('startJourney').addEventListener('click',()=>{document.getElementById('manifesto').scrollIntoView({behavior:'smooth'});showToast('航线开始：先记住这一句话')});
 
-    /* ---------- 醒狮：粒子 + 鼓点 + 盖章 ---------- */
-    const lionStage=document.getElementById('lionStage'),lionStatus=document.getElementById('lionStatus'),lionTip=document.getElementById('lionTip');
-    const lionBurst=document.getElementById('lionBurst');
-    const lionStamp=document.getElementById('lionStamp');
-    let audioCtx=null;
-    function playDrum(){
-      try{
-        audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();
-        if(audioCtx.state==='suspended')audioCtx.resume();
-        const t=audioCtx.currentTime;
-        const o=audioCtx.createOscillator();o.type='sine';
-        o.frequency.setValueAtTime(150,t);o.frequency.exponentialRampToValueAtTime(42,t+.28);
-        const g=audioCtx.createGain();g.gain.setValueAtTime(.42,t);g.gain.exponentialRampToValueAtTime(.0001,t+.34);
-        o.connect(g);g.connect(audioCtx.destination);o.start(t);o.stop(t+.35);
-      }catch(e){}
-    }
-    function burstParticles(){
-      if(!lionBurst)return;
-      lionBurst.innerHTML='';
-      const colors=['#f4d38a','#dca23f','#c4263b','#4d9ba0'];
-      for(let i=0;i<18;i++){
-        const p=document.createElement('i');
-        const ang=(Math.PI*2*i)/18+Math.random()*.5;
-        const dist=44+Math.random()*64;
-        p.style.setProperty('--dx',(Math.cos(ang)*dist).toFixed(1)+'px');
-        p.style.setProperty('--dy',(Math.sin(ang)*dist).toFixed(1)+'px');
-        p.style.background=colors[i%4];
-        p.style.width=(6+Math.random()*4)+'px';p.style.height=(6+Math.random()*4)+'px';
-        lionBurst.appendChild(p);
-      }
-      lionBurst.classList.remove('pop');void lionBurst.offsetWidth;lionBurst.classList.add('pop');
-    }
-    function wakeLion(){
-      lionStage.classList.add('awake');lionStatus.textContent='已经醒来';lionTip.textContent='咚——第一声鼓点响起，故事继续向前。';
-      burstParticles();
-      lionStamp.classList.remove('show');void lionStamp.offsetWidth;lionStamp.classList.add('show');
-      setTimeout(()=>lionStamp.classList.remove('show'),1500);
-      playDrum();
-      showToast('醒狮已醒 · 咚！');
-    }
-    document.getElementById('lionButton').addEventListener('click',wakeLion);
-    document.getElementById('lionHint').addEventListener('click',()=>{document.getElementById('stageLion').scrollIntoView({behavior:'smooth',block:'center'});setTimeout(beatLion,500)});
-
-    /* ---------- 扎染 ---------- */
-    const paintPad=document.getElementById('paintPad');
-    function revealPaint(){
-      paintPad.classList.add('done');
-      paintPad.querySelector('.paint-copy').textContent='扎染纹样展开了：这匹布，属于完成它的孩子——也属于一百年前，把信仰染进青春的那个人。';
-      showToast('扎染纹样已展开');
-    }
-    paintPad.addEventListener('click',revealPaint);
-    paintPad.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();revealPaint()}});
-    document.getElementById('paintHint').addEventListener('click',()=>{paintPad.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(revealPaint,500)});
-    document.getElementById('paintSave').addEventListener('click',(e)=>{e.stopPropagation();savePaintCard();});
-
-    /* ---------- 水火箭 ---------- */
-    const rocketZone=document.getElementById('rocketZone');
-    const rocketWish=document.getElementById('rocketWish');
-    const wishes=['“我要像冯达飞爷爷一样，飞回我的家乡！”','“没有导航我也能飞到天上！”','“我想造一艘能飞到星星去的船！”','“我要把东陂的天空，画下来。”','“下一个飞出去的人，是我！”'];
-    function launchRocket(){
-      rocketZone.classList.remove('launch');void rocketZone.offsetWidth;rocketZone.classList.add('launch');
-      rocketWish.textContent=wishes[Math.floor(Math.random()*wishes.length)];
-      rocketWish.classList.remove('show');void rocketWish.offsetWidth;rocketWish.classList.add('show');
-      showToast('水火箭发射——把“飞出去”的愿望送上天空');
-      setTimeout(()=>rocketZone.classList.remove('launch'),1500);
-      setTimeout(()=>rocketWish.classList.remove('show'),4200);
-    }
-    document.getElementById('rocketButton').addEventListener('click',pumpRocket);
-    document.getElementById('launchHint').addEventListener('click',()=>{rocketZone.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(launchRocket,500)});
-
     /* ---------- 数字人视频弹窗 ---------- */
     const dhuModal=document.getElementById('dhuModal');
     const dhuPlay=document.getElementById('dhuPlay');
@@ -868,7 +743,6 @@
     const dhuVideo=document.getElementById('dhuVideo');
     const openDhu=()=>{if(dhuModal){dhuModal.classList.add('open');if(dhuVideo){try{dhuVideo.currentTime=0;dhuVideo.play().catch(()=>{})}catch(e){}}if(dhuClose)dhuClose.focus()}};
     const closeDhu=()=>{if(dhuModal){dhuModal.classList.remove('open');if(dhuVideo){try{dhuVideo.pause()}catch(e){}}}};
-    document.getElementById('dhuHint').addEventListener('click',openDhu);
     if(dhuPlay)dhuPlay.addEventListener('click',openDhu);
     if(dhuClose)dhuClose.addEventListener('click',closeDhu);
     if(dhuModal)dhuModal.addEventListener('click',e=>{if(e.target===dhuModal)closeDhu()});
@@ -899,181 +773,59 @@
           if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({title,text,files:[file]});showToast('感谢分享');return;}
         }catch(err){if(err&&err.name!=='AbortError'){}}
         try{
-          if(navigator.clipboard){await navigator.clipboard.writeText(text);showToast('祝福文字已复制，配合卡片图即可转发');}
+          if(navigator.clipboard){await navigator.clipboard.writeText(text);showToast('致敬文字已复制，配合卡片图即可转发');}
         }catch(err){showToast('分享未完成，可长按卡片保存');}
       },'image/png');
     }
 
-    /* ---------- 纸飞机祝福卡片（纯矢量绘制，杜绝 canvas 被污染） ---------- */
+    /* ---------- 红色留言卡（红色主题：红/烫金/航线，纯矢量绘制，杜绝 canvas 被污染） ---------- */
     const wishInput=document.getElementById('wishInput');
     const cardStage=document.getElementById('cardStage');
     const cardActions=document.getElementById('cardActions');
-    function drawPlane(ctx,cx,cy,scale){
-      ctx.save();ctx.translate(cx,cy);ctx.scale(scale,scale);ctx.lineJoin='round';
-      // 俯视纸飞机：机头朝右
-      ctx.fillStyle='#f4d38a';ctx.strokeStyle='rgba(255,255,255,.7)';ctx.lineWidth=2.5;
-      ctx.beginPath();ctx.moveTo(66,0);ctx.lineTo(-28,-25);ctx.lineTo(2,4);ctx.lineTo(-28,33);ctx.closePath();ctx.fill();ctx.stroke();
-      // 折痕
-      ctx.strokeStyle='rgba(124,22,41,.5)';ctx.lineWidth=1.5;
-      ctx.beginPath();ctx.moveTo(66,0);ctx.lineTo(2,4);ctx.stroke();
-      ctx.restore();
-    }
     function makeWishCanvas(){
       const canvas=document.getElementById('wishCanvas');
       const ctx=canvas.getContext('2d');
       const W=canvas.width,H=canvas.height;
       const g=ctx.createLinearGradient(0,0,W,H);
-      g.addColorStop(0,'#2a1120');g.addColorStop(.55,'#3a1626');g.addColorStop(1,'#1b0d13');
+      g.addColorStop(0,'#2a1120');g.addColorStop(.5,'#4a1426');g.addColorStop(1,'#1b0d13');
       ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
-      const rg=ctx.createRadialGradient(W/2,180,30,W/2,180,300);
-      rg.addColorStop(0,'rgba(232,182,76,.55)');rg.addColorStop(1,'rgba(232,182,76,0)');
+      const rg=ctx.createRadialGradient(W/2,150,30,W/2,150,300);
+      rg.addColorStop(0,'rgba(232,182,76,.5)');rg.addColorStop(1,'rgba(232,182,76,0)');
       ctx.fillStyle=rg;ctx.fillRect(0,0,W,H);
       ctx.strokeStyle='rgba(232,182,76,.14)';ctx.lineWidth=1;
-      for(let i=0;i<7;i++){ctx.beginPath();ctx.moveTo(W/2,200);ctx.lineTo(W/2+Math.cos(i/7*Math.PI*2)*260,200+Math.sin(i/7*Math.PI*2)*260);ctx.stroke();}
-      ctx.fillStyle='#f4d38a';ctx.textAlign='center';ctx.font='700 40px "Noto Serif SC",Georgia,serif';
-      ctx.fillText('沿东陂的航线，继续飞',W/2,110);
-      drawPlane(ctx,W/2,270,1.4);
+      for(let i=0;i<7;i++){ctx.beginPath();ctx.moveTo(W/2,220);ctx.lineTo(W/2+Math.cos(i/7*Math.PI*2)*290,220+Math.sin(i/7*Math.PI*2)*290);ctx.stroke();}
+      ctx.strokeStyle='rgba(244,211,138,.5)';ctx.lineWidth=2;ctx.setLineDash([8,9]);
+      ctx.beginPath();ctx.moveTo(58,H-64);ctx.quadraticCurveTo(W/2,150,W-60,118);ctx.stroke();ctx.setLineDash([]);
+      ctx.save();ctx.translate(W-92,118);ctx.rotate(-.6);
+      ctx.fillStyle='#f4d38a';ctx.strokeStyle='rgba(255,255,255,.75)';ctx.lineWidth=2;ctx.lineJoin='round';
+      ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(-22,-13);ctx.lineTo(-6,2);ctx.lineTo(-22,15);ctx.closePath();ctx.fill();ctx.stroke();
+      ctx.restore();
+      ctx.fillStyle='#f4d38a';ctx.textAlign='center';ctx.font='700 42px "Noto Serif SC",Georgia,serif';
+      ctx.fillText('写给南粤先烈的一句话',W/2,96);
       ctx.fillStyle='#fff';ctx.textAlign='center';
-      wrapText(ctx,(wishInput.value.trim()||'愿你也像冯达飞一样，飞得更远。'),W/2,420,W-120,46,'400 34px "PingFang SC","Microsoft YaHei",sans-serif',600);
-      ctx.fillStyle='rgba(255,255,255,.8)';ctx.textAlign='right';ctx.font='400 26px "PingFang SC","Microsoft YaHei",sans-serif';
-      ctx.fillText('—— 一位同行的远方朋友',W-52,646);
+      wrapText(ctx,(wishInput.value.trim()||'愿后人记得，有人为这片土地飞过。'),W/2,340,W-120,46,'400 34px "PingFang SC","Microsoft YaHei",sans-serif',560);
+      ctx.fillStyle='rgba(255,255,255,.82)';ctx.textAlign='right';ctx.font='400 26px "PingFang SC","Microsoft YaHei",sans-serif';
+      ctx.fillText('—— 红色南粤 · 一位同行者',W-52,600);
       ctx.fillStyle='rgba(244,211,138,.9)';ctx.textAlign='center';ctx.font='700 24px "PingFang SC","Microsoft YaHei",sans-serif';
       ctx.fillText('启智润心 · 广东建院',W/2,H-64);
       ctx.fillStyle='rgba(255,255,255,.5)';ctx.font='400 20px "PingFang SC","Microsoft YaHei",sans-serif';
       ctx.fillText('“粤易创新”创意作品展示活动',W/2,H-26);
       return canvas;
     }
-    document.getElementById('makePlane').addEventListener('click',()=>{
+    document.getElementById('makeCard').addEventListener('click',()=>{
       const v=wishInput.value.trim();
-      if(!v){showToast('先写一句祝福，再折纸飞机');wishInput.focus();wishInput.classList.add('gleam');setTimeout(()=>wishInput.classList.remove('gleam'),700);return;}
+      if(!v){showToast('先写一句想说的话，再折纸飞机');wishInput.focus();wishInput.classList.add('gleam');setTimeout(()=>wishInput.classList.remove('gleam'),700);return;}
       makeWishCanvas();
       cardStage.classList.add('show');cardActions.style.display='flex';
-      showToast('纸飞机折好了，带上一句话飞出去吧');
+      showToast('留言卡生成了——把它带回去，也送给同行的伙伴');
     });
-    document.getElementById('saveCard').addEventListener('click',()=>{saveCanvas(document.getElementById('wishCanvas').toDataURL('image/png'),'沿东陂的航线，继续飞.png');});
+    document.getElementById('saveCard').addEventListener('click',()=>{saveCanvas(document.getElementById('wishCanvas').toDataURL('image/png'),'写给南粤先烈的一句话.png');});
     document.getElementById('shareCard').addEventListener('click',()=>{
-      shareCanvas(document.getElementById('wishCanvas'),'东陂的天空',`给连州孩子的一句话：${wishInput.value.trim()||'愿你飞得更远。'} #东陂的天空 #红色南粤 #粤易创新`);
+      shareCanvas(document.getElementById('wishCanvas'),'飞出去——红色南粤 · 冯达飞 × 连州市实验小学',`给冯达飞 / 南粤先烈留的一句话：${wishInput.value.trim()||'愿后人记得，有人为这片土地飞过。'} #红色南粤 #飞出去 #粤易创新`);
     });
     document.getElementById('againCard').addEventListener('click',()=>{cardStage.classList.remove('show');cardActions.style.display='none';wishInput.value='';wishInput.focus();showToast('再写一句，再折一架');});
 
-    /* ---------- 扎染保存为卡（纯矢量，防污染） ---------- */
-    function paintCardCanvas(){
-      const c=document.createElement('canvas');c.width=600;c.height=820;const ctx=c.getContext('2d');
-      const g=ctx.createLinearGradient(0,0,600,820);g.addColorStop(0,'#f6efe2');g.addColorStop(1,'#d6e9e3');
-      ctx.fillStyle=g;ctx.fillRect(0,0,600,820);
-      ctx.strokeStyle='rgba(126,22,41,.18)';ctx.lineWidth=1;
-      for(let i=0;i<10;i++){ctx.beginPath();ctx.moveTo(0,i*82);ctx.lineTo(600,i*82);ctx.stroke();}
-      ctx.save();ctx.translate(300,300);ctx.rotate(-.2);
-      const fan=ctx.createLinearGradient(-160,-140,180,140);
-      fan.addColorStop(0,'#c4263b');fan.addColorStop(.4,'#dca23f');fan.addColorStop(.75,'#4d9ba0');fan.addColorStop(1,'#6c254e');
-      ctx.fillStyle=fan;ctx.fillRect(-22,-140,44,280);
-      ctx.restore();
-      ctx.fillStyle='#7e1629';ctx.textAlign='center';ctx.font='700 32px "Noto Serif SC",Georgia,serif';
-      ctx.fillText('这匹“只属于今天”的扎染',300,640);
-      ctx.fillStyle='rgba(126,22,41,.75)';ctx.font='400 24px "PingFang SC","Microsoft YaHei",sans-serif';
-      ctx.fillText('岭南颜色，在孩子的指尖重新长出来',300,690);
-      ctx.fillStyle='rgba(126,22,41,.6)';ctx.font='700 22px "PingFang SC","Microsoft YaHei",sans-serif';
-      ctx.fillText('启智润心 · 广东建院',300,H-48);
-      return c;
-    }
-    function savePaintCard(){saveCanvas(paintCardCanvas().toDataURL('image/png'),'这匹扎染只属于完成它的那个孩子.png');}
-
-    /* ---------- 结尾：引导生成传播卡 / 通用分享 ---------- */
-    document.getElementById('goWish').addEventListener('click',()=>{document.getElementById('wish').scrollIntoView({behavior:'smooth'});setTimeout(()=>wishInput.focus(),600);});
-    document.getElementById('shareButton').addEventListener('click',async()=>{
-      const data={title:'东陂的天空——红色南粤 · 冯达飞',text:'一个连州人飞出去了，就要让更多连州孩子飞得更远。 #粤易创新'};
-      try{
-        if(navigator.share){await navigator.share(data);showToast('感谢分享这段航程');}
-        else if(navigator.clipboard){await navigator.clipboard.writeText(location.href);showToast('链接已复制，可以发给队友了');}
-        else showToast('请复制当前页面链接分享');
-      }catch(error){if(error&&error.name!=='AbortError')showToast('分享未完成，可复制页面链接');}
-    });
-
-    /* ---------- 环境音（鼓点示例，正式版可接入现场鼓声） ---------- */
-    const soundToggle=document.getElementById('soundToggle');
-    let soundOn=false;
-    soundToggle.addEventListener('click',()=>{
-      soundOn=!soundOn;soundToggle.style.color=soundOn?'var(--gold-light)':'#fff';
-      showToast(soundOn?'环境音已开启（点击醒狮可听到鼓点）':'环境音已关闭');
-      if(soundOn)playDrum();
-    });
-
-    /* ---------- 01 醒狮：三声鼓唤醒 ---------- */
-    const stageLion=document.getElementById('stageLion');
-    const lionBeatsEls=[...document.querySelectorAll('.stage-photo .lion-beats i')];
-    const roarWord=document.querySelector('.roar-word');
-    let lionBeats=0;
-    function beatLion(){
-      if(!stageLion)return;
-      lionBeats=Math.min(lionBeats+1,3);
-      stageLion.classList.remove('ring');void stageLion.offsetWidth;stageLion.classList.add('ring');
-      try{playDrum()}catch(e){}
-      showToast(lionBeats>=3?'醒狮醒啦！锣鼓一响，好戏开场！':'咚——第 '+lionBeats+' 声鼓点');
-      lionBeatsEls.forEach((el,i)=>el.classList.toggle('on',i<lionBeats));
-      if(lionBeats>=3){
-        roarWord.classList.add('show');stageLion.classList.add('awake');
-        setTimeout(()=>{lionBeats=0;roarWord.classList.remove('show');stageLion.classList.remove('awake');lionBeatsEls.forEach(el=>el.classList.remove('on'))},2200);
-      }
-    }
-    if(stageLion)stageLion.addEventListener('click',e=>{e.stopPropagation();beatLion()});
-
-    /* ---------- 02 扎染：捆扎 → 浸染 → 解开 ---------- */
-    const dyeCloth=document.querySelector('.dye-cloth');
-    const dyePatternEl=document.querySelector('.dye-pattern');
-    const paintCounterEl=document.querySelector('.paint-counter');
-    const dyeRows=[...document.querySelectorAll('.dye-row')];
-    let bindSel='fold',dyeSel='#3b5b8c';
-    const bindMap={fold:'stripes',tie:'ring',pinch:'circle'};
-    const showDyeStep=(n)=>dyeRows.forEach((r,i)=>r.hidden=(i!==n));
-    document.querySelectorAll('.bind-opt').forEach(b=>{
-      b.addEventListener('click',e=>{
-        e.stopPropagation();bindSel=b.dataset.bind;
-        dyeCloth.className='dye-cloth '+bindSel;
-        dyePatternEl.className='dye-pattern '+bindMap[bindSel];
-        document.querySelectorAll('.bind-opt').forEach(x=>x.classList.toggle('sel',x===b));
-        if(paintCounterEl)paintCounterEl.textContent='第 2 步 · 选染料';
-        showDyeStep(1);showToast('已选「'+b.textContent+'」捆扎法');
-      });
-    });
-    document.querySelectorAll('.dye-opt').forEach(b=>{
-      b.addEventListener('click',e=>{
-        e.stopPropagation();dyeSel=b.dataset.c;
-        document.querySelectorAll('.dye-opt').forEach(x=>x.classList.toggle('sel',x===b));
-        dyeCloth.style.setProperty('--dye',dyeSel);dyePatternEl.style.setProperty('--dye',dyeSel);
-      });
-    });
-    const dyeSoak=document.getElementById('dyeSoak');
-    if(dyeSoak)dyeSoak.addEventListener('click',e=>{
-      e.stopPropagation();
-      dyeCloth.classList.add('soaked');
-      if(paintCounterEl)paintCounterEl.textContent='第 3 步 · 解开';
-      showDyeStep(2);showToast('布已浸入染缸，等它上色');
-    });
-    const dyeUntie=document.getElementById('dyeUntie');
-    if(dyeUntie)dyeUntie.addEventListener('click',e=>{e.stopPropagation();revealPaint()});
-
-    /* ---------- 03 水火箭：打气 → 发射 ---------- */
-    const pressureFill=document.getElementById('pressureFill');
-    const rocketBtn=document.getElementById('rocketButton');
-    let rocketCharged=false;
-    function pumpRocket(){
-      if(!rocketZone)return;
-      if(rocketCharged){launchRocket();return;}
-      rocketCharged=true;rocketZone.classList.add('charged');
-      if(pressureFill)pressureFill.style.width='100%';
-      if(rocketBtn)rocketBtn.textContent='发射！';
-      try{playDrum()}catch(e){}
-      showToast('正在打气——气压拉满');
-      setTimeout(()=>{
-        rocketZone.classList.add('shake');rocketZone.classList.remove('charged');
-        if(pressureFill)pressureFill.style.width='0%';
-        launchRocket();rocketCharged=false;
-        setTimeout(()=>rocketZone.classList.remove('shake'),450);
-        if(rocketBtn)rocketBtn.textContent='打气发射水火箭';
-      },900);
-    }
-
-    /* ---------- 04 红色：信件淡入小窗 ---------- */
+    /* ---------- 红色书信弹窗 ---------- */
     const letterModal=document.getElementById('letterModal');
     const letterOpenBtn=document.getElementById('letterOpen');
     const letterCloseBtn=document.getElementById('letterClose');
@@ -1083,6 +835,25 @@
     if(letterCloseBtn)letterCloseBtn.addEventListener('click',closeLetter);
     if(letterModal)letterModal.addEventListener('click',e=>{if(e.target===letterModal)closeLetter()});
     document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLetter()});
+
+    /* ---------- 结尾：引导生成留言卡 / 通用分享 ---------- */
+    document.getElementById('goWish').addEventListener('click',()=>{document.getElementById('wish').scrollIntoView({behavior:'smooth'});setTimeout(()=>wishInput.focus(),600);});
+    document.getElementById('shareButton').addEventListener('click',async()=>{
+      const data={title:'飞出去——红色南粤 · 冯达飞 × 连州市实验小学',text:'一个连州人飞出去了，就要让更多连州孩子飞得更远。 #红色南粤 #粤易创新'};
+      try{
+        if(navigator.share){await navigator.share(data);showToast('感谢分享这段航程');}
+        else if(navigator.clipboard){await navigator.clipboard.writeText(location.href);showToast('链接已复制，可以发给队友了');}
+        else showToast('请复制当前页面链接分享');
+      }catch(error){if(error&&error.name!=='AbortError')showToast('分享未完成，可复制页面链接');}
+    });
+
+    /* ---------- 环境音开关（本页讲述以数字人视频承载，此处为界面提示） ---------- */
+    const soundToggle=document.getElementById('soundToggle');
+    let soundOn=false;
+    soundToggle.addEventListener('click',()=>{
+      soundOn=!soundOn;soundToggle.style.color=soundOn?'var(--gold-light)':'#fff';
+      showToast(soundOn?'环境音已开启（数字人讲述以视频承载）':'环境音已关闭');
+    });
 
     initReveal();
     updateProgress();
