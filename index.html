@@ -401,6 +401,70 @@
 
     /* ③ 环境音开关：开启态 */
     .sound-toggle.on{color:var(--gold-light);border-color:var(--gold-light);background:rgba(232,182,76,.16)}
+
+    /* ==== 待机动效引擎：页面静止时也在呼吸 · 漂浮 · 流动（只动 transform/阴影，永不改动内容显隐） ==== */
+    @media (prefers-reduced-motion:no-preference){
+      /* 首屏印章徽章：缓慢起落 + 轻转 */
+      @keyframes sealDrift{0%,100%{transform:rotate(12deg) translateY(0)}50%{transform:rotate(14.5deg) translateY(-9px)}}
+      .seal-orbit{animation:sealDrift 5.4s ease-in-out infinite;will-change:transform}
+      /* 首屏主视觉照片卡：整体轻浮悬浮（标题条同节奏同步浮动，保持相对位置） */
+      @keyframes shotFloat{0%,100%{transform:rotate(2deg) translateY(0)}50%{transform:rotate(2.7deg) translateY(-10px)}}
+      .hero-collage .main-shot{animation:shotFloat 6s ease-in-out infinite;will-change:transform}
+      @keyframes captionFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+      .hero-caption{animation:captionFloat 6s ease-in-out infinite}
+      /* 滚动提示整条轻点 */
+      @keyframes cueBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+      .scroll-cue{animation:cueBob 3.2s ease-in-out infinite}
+      /* 顶栏队徽金环呼吸 */
+      @keyframes logoBreath{0%,100%{box-shadow:0 0 0 1px rgba(232,182,76,.55)}50%{box-shadow:0 0 0 1px rgba(232,182,76,.9),0 0 18px rgba(232,182,76,.45)}}
+      .brand-logo{animation:logoBreath 3.8s ease-in-out infinite}
+      /* 结尾队徽心跳缩放 */
+      @keyframes finalePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+      .final-logo{animation:finalePulse 4.6s ease-in-out infinite}
+      /* 主按钮 / 留言按钮：金光呼吸（不动 transform，悬停依旧跟手） */
+      @keyframes goldBreath{0%,100%{box-shadow:0 16px 38px rgba(220,162,63,.24)}50%{box-shadow:0 16px 44px rgba(220,162,63,.46),0 0 18px rgba(244,211,138,.38)}}
+      .primary-btn{animation:goldBreath 3.4s ease-in-out infinite}
+      @keyframes wishBreath{0%,100%{box-shadow:0 16px 38px rgba(232,182,76,.28)}50%{box-shadow:0 16px 46px rgba(232,182,76,.5),0 0 20px rgba(232,182,76,.42)}}
+      .wish-btn{animation:wishBreath 3.4s ease-in-out infinite .8s}
+      /* 六段航程章节大字：红色微光呼吸 */
+      @keyframes idxGlow{0%,100%{text-shadow:0 0 0 rgba(196,38,59,0)}50%{text-shadow:0 0 26px rgba(196,38,59,.35)}}
+      .stage-index{animation:idxGlow 5s ease-in-out infinite}
+      /* 首屏航线虚线：向前流动 */
+      @keyframes dashFlow{to{stroke-dashoffset:-136}}
+      .flight-route .route-dash{animation:dashFlow 2.4s linear infinite}
+      /* 数字人照片缓慢推近拉远（Ken Burns） */
+      @keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.08) translateY(-6px)}}
+      .dhu-photo img{animation:kenburns 16s ease-in-out infinite alternate;will-change:transform}
+      /* 时空对话：选中节点的红点脉冲 */
+      @keyframes nodePulse{0%{box-shadow:0 0 0 0 rgba(196,38,59,.45)}70%{box-shadow:0 0 0 9px rgba(196,38,59,0)}100%{box-shadow:0 0 0 0 rgba(196,38,59,0)}}
+      .dialog-node.active::before{animation:nodePulse 2s cubic-bezier(.2,.75,.25,1) infinite}
+      /* 互动地图：点亮站点的心跳光环 */
+      @keyframes litThrob{0%,100%{box-shadow:0 0 0 5px rgba(220,162,63,.18),0 0 12px rgba(220,162,63,.4)}50%{box-shadow:0 0 0 8px rgba(220,162,63,.32),0 0 26px rgba(220,162,63,.75)}}
+      .rt.lit::before{animation:litThrob 2.4s ease-in-out infinite}
+
+      /* 飘浮纸飞机装饰（随气流缓漂） */
+      .drift-plane{position:absolute;z-index:0;pointer-events:none;color:#fff;opacity:.12}
+      .drift-plane path{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+      .drift-plane .dp-trail{stroke-dasharray:3 7;opacity:.65;animation:dashFlow 3.6s linear infinite}
+      .dp-a{top:15%;left:52%;width:56px;height:56px;animation:driftA 9s ease-in-out infinite -2s}
+      .dp-b{top:64%;left:8%;width:84px;height:84px;opacity:.09;animation:driftB 11s ease-in-out infinite -6s}
+      .dp-c{top:30%;right:6%;width:40px;height:40px;opacity:.14;animation:driftC 8s ease-in-out infinite -4s}
+      #wish .dp-a{top:12%;left:auto;right:10%;opacity:.2;color:#f4d38a}
+      #wish .dp-b{display:none}
+      #wish .dp-c{top:60%;right:auto;left:9%;opacity:.18;color:#f4d38a}
+      @keyframes driftA{0%,100%{transform:rotate(-14deg) translate(0,0)}50%{transform:rotate(-6deg) translate(26px,-22px)}}
+      @keyframes driftB{0%,100%{transform:rotate(10deg) translate(0,0)}50%{transform:rotate(-4deg) translate(-34px,-18px)}}
+      @keyframes driftC{0%,100%{transform:rotate(-24deg) translate(0,0)}50%{transform:rotate(-10deg) translate(18px,-28px)}}
+      /* 按下反馈：所有可点元素轻轻一缩 */
+      .ghost-btn{transition:transform .18s ease,background .25s ease,border-color .25s ease}
+      .primary-btn:active,.wish-btn:active,.card-btn:active,.share-btn:active,.letter-open:active,.map-light-btn:active,.dialog-node:active,.ghost-btn:active,.sound-toggle:active{transform:scale(.95)}
+      /* 学校徽章悬停俏皮抬头 */
+      .sb{transition:transform .25s ease,box-shadow .25s ease}
+      .sb:hover{transform:translateY(-4px) rotate(-.6deg);box-shadow:0 18px 36px rgba(30,10,19,.12)}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .drift-plane,.flight-plane{display:none}
+    }
   </style>
 </head>
 <body>
@@ -425,7 +489,11 @@
   </nav>
 
   <header id="top" class="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-bg" aria-hidden="true">
+      <svg class="drift-plane dp-a" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13"/><path class="dp-trail" d="M11 13 15 22l-4-9-9-4 20-7Z"/></svg>
+      <svg class="drift-plane dp-b" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13"/><path class="dp-trail" d="M11 13 15 22l-4-9-9-4 20-7Z"/></svg>
+      <svg class="drift-plane dp-c" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13"/><path class="dp-trail" d="M11 13 15 22l-4-9-9-4 20-7Z"/></svg>
+    </div>
     <div class="hero-inner">
       <div class="hero-copy reveal">
         <div class="overline">红色南粤 · 冯达飞 × 连州市实验小学</div>
@@ -444,11 +512,16 @@
             <defs><linearGradient id="rgHero" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a1320"/><stop offset="1" stop-color="#7e1629"/></linearGradient></defs>
             <rect width="420" height="320" fill="url(#rgHero)"/>
             <path d="M20 300 C 110 250, 150 190, 235 150 S 360 80, 400 46" fill="none" stroke="#c4263b" stroke-width="8" opacity=".28"/>
-            <path d="M20 300 C 110 250, 150 190, 235 150 S 360 80, 400 46" fill="none" stroke="#f4d38a" stroke-width="2.5" stroke-dasharray="8 9" opacity=".9"/>
+            <path id="routeLine" class="route-dash" d="M20 300 C 110 250, 150 190, 235 150 S 360 80, 400 46" fill="none" stroke="#f4d38a" stroke-width="2.5" stroke-dasharray="8 9" opacity=".9"/>
             <circle cx="20" cy="300" r="6" fill="#f4d38a"/>
             <circle cx="235" cy="150" r="6" fill="#f4d38a"/>
             <circle cx="400" cy="46" r="6" fill="#f4d38a"/>
             <path d="M0 0 L-11 6 L-4 0 L-11 -6 Z" fill="#f4d38a" stroke="#fff" stroke-width="1" transform="translate(400 46) rotate(-38)"/>
+            <g class="flight-plane">
+              <path d="M12 0 L-10 7 L-4 0 L-10 -7 Z" fill="#f4d38a" stroke="#fff" stroke-width="1" stroke-linejoin="round"/>
+              <animateMotion dur="10s" repeatCount="indefinite" rotate="auto"><mpath href="#routeLine"/></animateMotion>
+              <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.06;.94;1" dur="10s" repeatCount="indefinite"/>
+            </g>
           </svg>
           <span class="flight-label">红色南粤 · 航线 1901→1942</span>
         </div>
@@ -688,6 +761,8 @@
   </section>
 
   <section id="wish" class="wish">
+    <svg class="drift-plane dp-a" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13"/><path class="dp-trail" d="M11 13 15 22l-4-9-9-4 20-7Z"/></svg>
+    <svg class="drift-plane dp-c" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13"/><path class="dp-trail" d="M11 13 15 22l-4-9-9-4 20-7Z"/></svg>
     <div class="wish-inner reveal">
       <div class="overline" style="justify-content:center;color:var(--brand-gold)">红色南粤 · 冯达飞 · 传承</div>
       <h2>折一架纸飞机，<em>把话送上他飞过的天空。</em></h2>
@@ -775,16 +850,33 @@
     }
     window.addEventListener('scroll',updateProgress,{passive:true});
 
-    /* ---------- 首屏滚动视差（内容不隐藏，仅位移；仅 transform，绝不 opacity） ---------- */
+    /* ---------- 首屏滚动视差 + 光标视差（内容不隐藏，仅位移；仅 transform，绝不 opacity） ---------- */
     const heroBg=document.querySelector('.hero-bg');
     const heroCollage=document.querySelector('.hero-collage');
+    const heroSec=document.querySelector('.hero');
+    if(!reducedMotion){
+      const pt={x:0,y:0},pe={x:0,y:0};
+      heroSec.addEventListener('pointermove',e=>{
+        if(e.pointerType==='touch')return;
+        pt.x=(e.clientX/window.innerWidth-.5)*2;
+        pt.y=(e.clientY/window.innerHeight-.5)*2;
+      },{passive:true});
+      heroSec.addEventListener('pointerleave',()=>{pt.x=0;pt.y=0});
+      // 单一 rAF：滚动纵向视差 + 鼠标横向轻摆合并写入（lerp 让运动有惯性）
+      const heroTick=()=>{
+        pe.x+=(pt.x-pe.x)*.055;pe.y+=(pt.y-pe.y)*.055;
+        if(heroBg){
+          const y=Math.min(window.scrollY*.3,window.innerHeight*.42);
+          heroBg.style.transform=`translate3d(${(pe.x*16).toFixed(2)}px,${(y+pe.y*10).toFixed(2)}px,0)`;
+        }
+        requestAnimationFrame(heroTick);
+      };
+      requestAnimationFrame(heroTick);
+    }
     window.addEventListener('scroll',()=>{
       if(reducedMotion)return;
       const y=window.scrollY;
-      if(y<=window.innerHeight*1.25){
-        if(heroBg)heroBg.style.transform=`translateY(${Math.min(y*.3,window.innerHeight*.42)}px)`;
-        if(heroCollage)heroCollage.style.transform=`translateY(${Math.min(y*.06,window.innerHeight*.09)}px)`;
-      }
+      if(y<=window.innerHeight*1.25&&heroCollage)heroCollage.style.transform=`translateY(${Math.min(y*.06,window.innerHeight*.09)}px)`;
     },{passive:true});
 
     /* ---------- 首屏标题逐字入场（仅 transform+blur，不透明度恒 1） ---------- */
